@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'football_model_data.json'
 OVERRIDES = ROOT / 'referee_overrides.csv'
 BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard'
+ESPN_LEAGUES = {'en.1': 'eng.1', 'es.1': 'esp.1', 'de.1': 'ger.1', 'it.1': 'ita.1', 'fr.1': 'fra.1'}
 UTC = dt.timezone.utc
 
 
@@ -105,28 +106,53 @@ def parse_time(value):
 
 
 def fetch(session, league, start, end):
-    """Fetch each calendar day separately to avoid unsupported ESPN date ranges.
+    """Try ESPN scoreboard without query params first, then date-filtered calls.
 
-    Raise on failed requests rather than treating partial results as complete.
+    The public ESPN endpoint is undocumented and can reject parameters with 400.
+    A no-parameter response may cover only a limited fixture window; it must
+    never be presented as proof of complete 14-day coverage.
     """
+    url = BASE.format(league=ESPN_LEAGUES.get(league, league))
+    headers = {'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'}
     events_by_id = {}
-    day = start
-    while day <= end:
-        response = session.get(
-            BASE.format(league=league),
-            params={'dates': day.strftime('%Y%m%d'), 'limit': 100},
-            timeout=20,
-            headers={'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'},
-        )
+    errors = []
+    successful_dates = 0
+
+    def ingest(response, label):
         response.raise_for_status()
         body = response.json()
         if not isinstance(body, dict) or not isinstance(body.get('events'), list):
-            raise ValueError(f'ESPN response missing events for {league} on {day}')
+            raise ValueError(f'ESPN missing events: {label}')
         for event in body['events']:
             if isinstance(event, dict):
-                events_by_id[str(event.get('id') or (event.get('date'), len(events_by_id)))]=event
+                key = str(event.get('id') or (event.get('date'), len(events_by_id)))
+                events_by_id[key] = event
+
+    # The bare endpoint is the least restrictive diagnostic request.
+    try:
+        ingest(session.get(url, timeout=20, headers=headers), 'unfiltered')
+    except (requests.RequestException, ValueError) as exc:
+        status = getattr(getattr(exc, 'response', None), 'status_code', None)
+        errors.append(f'unfiltered: {type(exc).__name__} HTTP {status or "unknown"}')
+
+    day = start
+    while day <= end:
+        try:
+            ingest(session.get(url, params={'dates': day.strftime('%Y%m%d')},
+                               timeout=20, headers=headers), str(day))
+            successful_dates += 1
+        except (requests.RequestException, ValueError) as exc:
+            status = getattr(getattr(exc, 'response', None), 'status_code', None)
+            errors.append(f'{day}: {type(exc).__name__} HTTP {status or "unknown"}')
+            # Repeated HTTP 400 is likely a rejected query format, not a
+            # day-specific problem. Avoid 14 identical requests.
+            if status == 400:
+                break
         day += dt.timedelta(days=1)
-    return list(events_by_id.values())
+
+    if not events_by_id and successful_dates == 0:
+        raise RuntimeError('; '.join(errors[:3]) or 'No ESPN data returned')
+    return list(events_by_id.values()), successful_dates, errors
 
 
 def sync(path=DATA, days=14, network=True):
@@ -143,9 +169,11 @@ def sync(path=DATA, days=14, network=True):
         with requests.Session() as session:
             for league, league_data in data['leagues'].items():
                 try:
-                    events = fetch(session, league, start, end)
-                    status_by_league[league] = 'ok'
-                except (requests.RequestException, ValueError, TypeError) as exc:
+                    events, covered_days, fetch_errors = fetch(session, league, start, end)
+                    status_by_league[league] = 'ok' if covered_days == (end - start).days + 1 else 'partial'
+                    if fetch_errors:
+                        warnings.append(f"{league}: partial ESPN coverage ({covered_days} dated days); " + "; ".join(fetch_errors[:2]))
+                except (requests.RequestException, ValueError, TypeError, RuntimeError) as exc:
                     status_by_league[league] = 'failed'
                     status = getattr(getattr(exc, 'response', None), 'status_code', None)
                     warnings.append(f'{league}: ESPN fetch failed ({type(exc).__name__}, HTTP {status or "unknown"})')
@@ -189,7 +217,7 @@ def sync(path=DATA, days=14, network=True):
         key = (league, fixture['h'], fixture['a'], kickoff.date().isoformat())
         event = matched_events.pop(key, None)
         # Rescheduled games: only match within 48h, same league/teams, uniquely.
-        if event is None and status_by_league.get(league) == 'ok':
+        if event is None and status_by_league.get(league) in ('ok', 'partial'):
             options = [(k, ev) for k, ev in matched_events.items()
                        if k[:3] == key[:3] and abs((parse_time(ev['date']) - kickoff).total_seconds()) <= 48 * 3600]
             if len(options) == 1:
@@ -245,7 +273,7 @@ def sync(path=DATA, days=14, network=True):
 
     output.sort(key=lambda x: x.get('t', ''))
     data['fixtures'] = output
-    if any(v == 'ok' for v in status_by_league.values()):
+    if any(v in ('ok', 'partial') for v in status_by_league.values()):
         data['updated'] = now.strftime('%Y-%m-%dT%H:%M:%SZ')
     data['sync_meta'] = {
         'last_attempt': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'source': 'ESPN public scoreboard (unofficial)',
@@ -255,6 +283,8 @@ def sync(path=DATA, days=14, network=True):
         'team_statistics_refreshed': False,
         'note': 'Goal, corner, card and referee historical rates are NOT refreshed by this script.'
     }
+    if network and not any(v in ('ok', 'partial') for v in status_by_league.values()):
+        raise RuntimeError('All ESPN leagues failed; original data file preserved. ' + '; '.join(warnings[:5]))
     # Atomic write. No ever-growing backup committed to Git.
     fd, tmp = tempfile.mkstemp(prefix='.football-data-', suffix='.json', dir=str(path.parent))
     try:
