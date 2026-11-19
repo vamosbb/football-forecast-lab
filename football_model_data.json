@@ -3437,7 +3437,7 @@
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-20T19:45Z",
+      "t": "2026-11-20T19:45:00Z",
       "h": "ES Troyes AC",
       "a": "Le Havre AC",
       "o": [
@@ -3455,11 +3455,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876395"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-20T20:00Z",
+      "t": "2026-11-20T20:00:00Z",
       "h": "Athletic Club",
       "a": "RCD Espanyol de Barcelona",
       "o": [
@@ -3476,11 +3477,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882805"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T12:30Z",
+      "t": "2026-11-21T12:30:00Z",
       "h": "Manchester City FC",
       "a": "Fulham FC",
       "o": [
@@ -3498,7 +3500,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879233"
     },
     {
       "lg": "es.1",
@@ -3523,6 +3526,29 @@
     },
     {
       "lg": "it.1",
+      "t": "2026-11-21T14:00:00Z",
+      "h": "SS Lazio",
+      "a": "US Lecce",
+      "o": [
+        70.7,
+        17.5,
+        11.8
+      ],
+      "ref": "Matteo Marcenaro",
+      "w": {
+        "c": "Roma",
+        "hi": 18.2,
+        "lo": 10.4,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false,
+      "espn_event_id": "401874981"
+    },
+    {
+      "lg": "it.1",
       "t": "2026-11-21T14:00Z",
       "h": "Como 1907",
       "a": "Cagliari Calcio",
@@ -3538,28 +3564,6 @@
         "lo": 5.1,
         "pc": 0,
         "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-21T14:00Z",
-      "h": "SS Lazio",
-      "a": "US Lecce",
-      "o": [
-        70.7,
-        17.5,
-        11.8
-      ],
-      "ref": "Matteo Marcenaro",
-      "w": {
-        "c": "Roma",
-        "hi": 18.2,
-        "lo": 10.4,
-        "pc": 10,
-        "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
@@ -3613,7 +3617,7 @@
     },
     {
       "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
+      "t": "2026-11-21T14:30:00Z",
       "h": "Bayer 04 Leverkusen",
       "a": "SC Paderborn 07",
       "o": [
@@ -3631,7 +3635,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884735"
     },
     {
       "lg": "de.1",
@@ -3679,7 +3684,7 @@
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
+      "t": "2026-11-21T15:00:00Z",
       "h": "Aston Villa FC",
       "a": "Sunderland AFC",
       "o": [
@@ -3697,11 +3702,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401878756"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
+      "t": "2026-11-21T15:00:00Z",
       "h": "AFC Bournemouth",
       "a": "Nottingham Forest FC",
       "o": [
@@ -3719,11 +3725,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879238"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
+      "t": "2026-11-21T15:00:00Z",
       "h": "Chelsea FC",
       "a": "Leeds United FC",
       "o": [
@@ -3741,11 +3748,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879236"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
+      "t": "2026-11-21T15:00:00Z",
       "h": "Coventry City FC",
       "a": "Crystal Palace FC",
       "o": [
@@ -3763,11 +3771,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879235"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
+      "t": "2026-11-21T15:00:00Z",
       "h": "Tottenham Hotspur FC",
       "a": "Ipswich Town FC",
       "o": [
@@ -3785,11 +3794,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401878754"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-21T15:15Z",
+      "t": "2026-11-21T15:15:00Z",
       "h": "Rayo Vallecano de Madrid",
       "a": "Valencia CF",
       "o": [
@@ -3806,11 +3816,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882799"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-21T16:15Z",
+      "t": "2026-11-21T16:15:00Z",
       "h": "OGC Nice",
       "a": "Paris Saint-Germain FC",
       "o": [
@@ -3828,11 +3839,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876398"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-21T17:00Z",
+      "t": "2026-11-21T17:00:00Z",
       "h": "Parma Calcio 1913",
       "a": "AS Roma",
       "o": [
@@ -3850,11 +3862,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401874967"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-21T17:30Z",
+      "t": "2026-11-21T17:30:00Z",
       "h": "Newcastle United FC",
       "a": "Arsenal FC",
       "o": [
@@ -3872,11 +3885,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879232"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-21T17:30Z",
+      "t": "2026-11-21T17:30:00Z",
       "h": "Sevilla FC",
       "a": "Real Betis Balompié",
       "o": [
@@ -3893,11 +3907,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882797"
     },
     {
       "lg": "de.1",
-      "t": "2026-11-21T17:30Z",
+      "t": "2026-11-21T17:30:00Z",
       "h": "FC Schalke 04",
       "a": "VfB Stuttgart",
       "o": [
@@ -3915,11 +3930,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884729"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-21T19:45Z",
+      "t": "2026-11-21T19:45:00Z",
       "h": "SSC Napoli",
       "a": "Torino FC",
       "o": [
@@ -3937,11 +3953,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875067"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-21T19:45Z",
+      "t": "2026-11-21T19:45:00Z",
       "h": "Racing Club de Lens",
       "a": "Toulouse FC",
       "o": [
@@ -3959,11 +3976,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876403"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-21T19:45Z",
+      "t": "2026-11-21T19:45:00Z",
       "h": "Lille OSC",
       "a": "Olympique Lyonnais",
       "o": [
@@ -3981,11 +3999,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876402"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-21T19:45Z",
+      "t": "2026-11-21T19:45:00Z",
       "h": "AS Monaco FC",
       "a": "AJ Auxerre",
       "o": [
@@ -4003,11 +4022,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876399"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-21T19:45Z",
+      "t": "2026-11-21T19:45:00Z",
       "h": "RC Strasbourg Alsace",
       "a": "Stade Brestois 29",
       "o": [
@@ -4025,11 +4045,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876396"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-21T20:00Z",
+      "t": "2026-11-21T20:00:00Z",
       "h": "Real Madrid CF",
       "a": "RC Celta de Vigo",
       "o": [
@@ -4046,11 +4067,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882798"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-22T11:30Z",
+      "t": "2026-11-22T11:30:00Z",
       "h": "Juventus FC",
       "a": "Venezia FC",
       "o": [
@@ -4067,11 +4089,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875008"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-22T13:00Z",
+      "t": "2026-11-22T13:00:00Z",
       "h": "FC Barcelona",
       "a": "Villarreal CF",
       "o": [
@@ -4088,11 +4111,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882804"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-22T14:00Z",
+      "t": "2026-11-22T14:00:00Z",
       "h": "Hull City AFC",
       "a": "Brighton & Hove Albion FC",
       "o": [
@@ -4110,11 +4134,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879234"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-22T14:00Z",
+      "t": "2026-11-22T14:00:00Z",
       "h": "Bologna FC 1909",
       "a": "Udinese Calcio",
       "o": [
@@ -4132,11 +4157,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875047"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-22T14:00Z",
+      "t": "2026-11-22T14:00:00Z",
       "h": "US Sassuolo Calcio",
       "a": "Genoa CFC",
       "o": [
@@ -4154,11 +4180,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401874960"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-22T14:00Z",
+      "t": "2026-11-22T14:00:00Z",
       "h": "Paris FC",
       "a": "Angers SCO",
       "o": [
@@ -4176,11 +4203,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876397"
     },
     {
       "lg": "de.1",
-      "t": "2026-11-22T14:30Z",
+      "t": "2026-11-22T14:30:00Z",
       "h": "FC Augsburg",
       "a": "1. FSV Mainz 05",
       "o": [
@@ -4197,11 +4225,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884733"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-22T15:15Z",
+      "t": "2026-11-22T15:15:00Z",
       "h": "Real Racing Club de Santander",
       "a": "Real Sociedad de Fútbol",
       "o": [
@@ -4218,7 +4247,8 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882800"
     },
     {
       "lg": "fr.1",
@@ -4244,7 +4274,7 @@
     },
     {
       "lg": "en.1",
-      "t": "2026-11-22T16:30Z",
+      "t": "2026-11-22T16:30:00Z",
       "h": "Liverpool FC",
       "a": "Manchester United FC",
       "o": [
@@ -4262,7 +4292,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401878755"
     },
     {
       "lg": "de.1",
@@ -4287,7 +4318,7 @@
     },
     {
       "lg": "it.1",
-      "t": "2026-11-22T17:00Z",
+      "t": "2026-11-22T17:00:00Z",
       "h": "AC Milan",
       "a": "Frosinone Calcio",
       "o": [
@@ -4305,11 +4336,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401874989"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-22T17:30Z",
+      "t": "2026-11-22T17:30:00Z",
       "h": "CA Osasuna",
       "a": "Málaga CF",
       "o": [
@@ -4326,11 +4358,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882801"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-22T19:45Z",
+      "t": "2026-11-22T19:45:00Z",
       "h": "Atalanta BC",
       "a": "FC Internazionale Milano",
       "o": [
@@ -4348,11 +4381,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875001"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-22T19:45Z",
+      "t": "2026-11-22T19:45:00Z",
       "h": "Olympique de Marseille",
       "a": "Le Mans FC",
       "o": [
@@ -4370,11 +4404,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876400"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-22T20:00Z",
+      "t": "2026-11-22T20:00:00Z",
       "h": "Getafe CF",
       "a": "Club Atlético de Madrid",
       "o": [
@@ -4391,11 +4426,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882803"
     },
     {
       "lg": "it.1",
-      "t": "2026-11-23T19:45Z",
+      "t": "2026-11-23T19:45:00Z",
       "h": "AC Monza",
       "a": "ACF Fiorentina",
       "o": [
@@ -4413,11 +4449,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875009"
     },
     {
       "lg": "en.1",
-      "t": "2026-11-23T20:00Z",
+      "t": "2026-11-23T20:00:00Z",
       "h": "Brentford FC",
       "a": "Everton FC",
       "o": [
@@ -4435,11 +4472,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401879237"
     },
     {
       "lg": "es.1",
-      "t": "2026-11-23T20:00Z",
+      "t": "2026-11-23T20:00:00Z",
       "h": "Levante UD",
       "a": "Elche CF",
       "o": [
@@ -4456,11 +4494,12 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882802"
     },
     {
       "lg": "de.1",
-      "t": "2026-11-27T19:30Z",
+      "t": "2026-11-27T19:30:00Z",
       "h": "SV Werder Bremen",
       "a": "Borussia Mönchengladbach",
       "o": [
@@ -4470,11 +4509,12 @@
       ],
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884720"
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-27T19:45Z",
+      "t": "2026-11-27T19:45:00Z",
       "h": "Stade Brestois 29",
       "a": "Paris FC",
       "o": [
@@ -4482,6 +4522,127 @@
         27.4,
         42.4
       ],
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false,
+      "espn_event_id": "401876392"
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-27T19:45:00Z",
+      "h": "Venezia FC",
+      "a": "Bologna FC 1909",
+      "espn_event_id": "401875004",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-27T20:00:00Z",
+      "h": "Nottingham Forest FC",
+      "a": "Chelsea FC",
+      "espn_event_id": "401879225",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-27T20:00:00Z",
+      "h": "Levante UD",
+      "a": "Real Racing Club de Santander",
+      "espn_event_id": "401882791",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-28T13:00:00Z",
+      "h": "Real Betis Balompié",
+      "a": "Rayo Vallecano de Madrid",
+      "espn_event_id": "401882796",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-28T14:00:00Z",
+      "h": "Frosinone Calcio",
+      "a": "Parma Calcio 1913",
+      "espn_event_id": "401875081",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-28T14:30:00Z",
+      "h": "1. FSV Mainz 05",
+      "a": "1. FC Union Berlin",
+      "espn_event_id": "401884723",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-28T14:30:00Z",
+      "h": "SC Paderborn 07",
+      "a": "FC Schalke 04",
+      "espn_event_id": "401884719",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-28T15:00:00Z",
+      "h": "Leeds United FC",
+      "a": "Coventry City FC",
+      "espn_event_id": "401879227",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-28T15:00:00Z",
+      "h": "Manchester United FC",
+      "a": "Brentford FC",
+      "espn_event_id": "401879226",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-28T15:15:00Z",
+      "h": "Málaga CF",
+      "a": "Athletic Club",
+      "espn_event_id": "401882790",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-28T16:15:00Z",
+      "h": "Angers SCO",
+      "a": "Racing Club de Lens",
+      "espn_event_id": "401876394",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-28T17:00:00Z",
+      "h": "Torino FC",
+      "a": "SS Lazio",
+      "espn_event_id": "401874826",
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
@@ -4497,11 +4658,371 @@
       "ref_stats_available": false
     },
     {
+      "lg": "en.1",
+      "t": "2026-11-28T17:30:00Z",
+      "h": "Ipswich Town FC",
+      "a": "Aston Villa FC",
+      "espn_event_id": "401878752",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-28T17:30:00Z",
+      "h": "Elche CF",
+      "a": "Club Atlético de Madrid",
+      "espn_event_id": "401882793",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-28T19:45:00Z",
+      "h": "FC Internazionale Milano",
+      "a": "Genoa CFC",
+      "espn_event_id": "401874977",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-28T19:45:00Z",
+      "h": "Le Havre AC",
+      "a": "RC Strasbourg Alsace",
+      "espn_event_id": "401876391",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-28T19:45:00Z",
+      "h": "Le Mans FC",
+      "a": "Lille OSC",
+      "espn_event_id": "401876390",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-28T19:45:00Z",
+      "h": "OGC Nice",
+      "a": "ES Troyes AC",
+      "espn_event_id": "401876388",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-28T19:45:00Z",
+      "h": "Paris Saint-Germain FC",
+      "a": "FC Lorient",
+      "espn_event_id": "401876387",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-28T20:00:00Z",
+      "h": "Real Madrid CF",
+      "a": "Deportivo Alavés",
+      "espn_event_id": "401882789",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-29T11:30:00Z",
+      "h": "Udinese Calcio",
+      "a": "ACF Fiorentina",
+      "espn_event_id": "401875031",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T12:00:00Z",
+      "h": "Everton FC",
+      "a": "Liverpool FC",
+      "espn_event_id": "401879229",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-29T13:00:00Z",
+      "h": "Valencia CF",
+      "a": "CA Osasuna",
+      "espn_event_id": "401882787",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-29T14:00:00Z",
+      "h": "US Sassuolo Calcio",
+      "a": "SSC Napoli",
+      "espn_event_id": "401874992",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-29T14:00:00Z",
+      "h": "AJ Auxerre",
+      "a": "Olympique de Marseille",
+      "espn_event_id": "401876393",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T14:05:00Z",
+      "h": "Brighton & Hove Albion FC",
+      "a": "Newcastle United FC",
+      "espn_event_id": "401879231",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T14:05:00Z",
+      "h": "Crystal Palace FC",
+      "a": "Hull City AFC",
+      "espn_event_id": "401879230",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T14:05:00Z",
+      "h": "Fulham FC",
+      "a": "AFC Bournemouth",
+      "espn_event_id": "401879228",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T14:05:00Z",
+      "h": "Sunderland AFC",
+      "a": "Tottenham Hotspur FC",
+      "espn_event_id": "401879224",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
       "lg": "de.1",
       "t": "2026-11-29T14:30:00Z",
       "h": "SC Freiburg",
       "a": "RB Leipzig",
       "espn_event_id": "401884724",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-29T16:30:00Z",
+      "h": "Arsenal FC",
+      "a": "Manchester City FC",
+      "espn_event_id": "401878753",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-29T17:00:00Z",
+      "h": "AS Roma",
+      "a": "AC Monza",
+      "espn_event_id": "401874769",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-29T17:30:00Z",
+      "h": "RC Celta de Vigo",
+      "a": "Villarreal CF",
+      "espn_event_id": "401882795",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-29T18:30:00Z",
+      "h": "Borussia Dortmund",
+      "a": "Bayer 04 Leverkusen",
+      "espn_event_id": "401884727",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-29T19:45:00Z",
+      "h": "Olympique Lyonnais",
+      "a": "AS Monaco FC",
+      "espn_event_id": "401876389",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-29T20:00:00Z",
+      "h": "Real Sociedad de Fútbol",
+      "a": "Sevilla FC",
+      "espn_event_id": "401882788",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-30T17:30:00Z",
+      "h": "US Lecce",
+      "a": "Atalanta BC",
+      "espn_event_id": "401875095",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-30T19:45:00Z",
+      "h": "Cagliari Calcio",
+      "a": "AC Milan",
+      "espn_event_id": "401875019",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-30T20:00:00Z",
+      "h": "RCD Espanyol de Barcelona",
+      "a": "Getafe CF",
+      "espn_event_id": "401882792",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-01T20:00:00Z",
+      "h": "Coventry City FC",
+      "a": "Ipswich Town FC",
+      "espn_event_id": "401879221",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-12-02T18:00:00Z",
+      "h": "Real Sociedad de Fútbol",
+      "a": "Real Madrid CF",
+      "espn_event_id": "401882698",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T19:30:00Z",
+      "h": "Chelsea FC",
+      "a": "Crystal Palace FC",
+      "espn_event_id": "401879222",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T19:30:00Z",
+      "h": "Hull City AFC",
+      "a": "Nottingham Forest FC",
+      "espn_event_id": "401879220",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T19:30:00Z",
+      "h": "Liverpool FC",
+      "a": "Sunderland AFC",
+      "espn_event_id": "401879219",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T19:30:00Z",
+      "h": "Manchester City FC",
+      "a": "Leeds United FC",
+      "espn_event_id": "401879218",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T20:15:00Z",
+      "h": "AFC Bournemouth",
+      "a": "Brighton & Hove Albion FC",
+      "espn_event_id": "401879223",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T20:15:00Z",
+      "h": "Aston Villa FC",
+      "a": "Everton FC",
+      "espn_event_id": "401878751",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T20:15:00Z",
+      "h": "Brentford FC",
+      "a": "Arsenal FC",
+      "espn_event_id": "401878750",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-02T20:15:00Z",
+      "h": "Newcastle United FC",
+      "a": "Manchester United FC",
+      "espn_event_id": "401879217",
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
@@ -4515,11 +5036,21 @@
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-12-03T20:00:00Z",
+      "h": "Tottenham Hotspur FC",
+      "a": "Fulham FC",
+      "espn_event_id": "401878749",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-19T20:53:19Z",
+  "updated": "2026-11-19T20:59:10Z",
   "sync_meta": {
-    "last_attempt": "2026-11-19T20:53:19Z",
+    "last_attempt": "2026-11-19T20:59:10Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
@@ -4529,112 +5060,23 @@
       "fr.1": "ok"
     },
     "warnings": [
-      "en.1: unmatched teams 'Manchester City' / 'Fulham'",
-      "en.1: unmatched teams 'AFC Bournemouth' / 'Nottingham Forest'",
-      "en.1: unmatched teams 'Aston Villa' / 'Sunderland'",
-      "en.1: unmatched teams 'Chelsea' / 'Leeds United'",
-      "en.1: unmatched teams 'Coventry City' / 'Crystal Palace'",
-      "en.1: unmatched teams 'Tottenham Hotspur' / 'Ipswich Town'",
-      "en.1: unmatched teams 'Newcastle United' / 'Arsenal'",
-      "en.1: unmatched teams 'Hull City' / 'Brighton & Hove Albion'",
-      "en.1: unmatched teams 'Liverpool' / 'Manchester United'",
-      "en.1: unmatched teams 'Brentford' / 'Everton'",
-      "en.1: unmatched teams 'Nottingham Forest' / 'Chelsea'",
-      "en.1: unmatched teams 'Leeds United' / 'Coventry City'",
-      "en.1: unmatched teams 'Manchester United' / 'Brentford'",
-      "en.1: unmatched teams 'Ipswich Town' / 'Aston Villa'",
-      "en.1: unmatched teams 'Everton' / 'Liverpool'",
-      "en.1: unmatched teams 'Brighton & Hove Albion' / 'Newcastle United'",
-      "en.1: unmatched teams 'Crystal Palace' / 'Hull City'",
-      "en.1: unmatched teams 'Fulham' / 'AFC Bournemouth'",
-      "en.1: unmatched teams 'Sunderland' / 'Tottenham Hotspur'",
-      "en.1: unmatched teams 'Arsenal' / 'Manchester City'",
-      "en.1: unmatched teams 'Coventry City' / 'Ipswich Town'",
-      "en.1: unmatched teams 'Chelsea' / 'Crystal Palace'",
-      "en.1: unmatched teams 'Hull City' / 'Nottingham Forest'",
-      "en.1: unmatched teams 'Liverpool' / 'Sunderland'",
-      "en.1: unmatched teams 'Manchester City' / 'Leeds United'",
-      "en.1: unmatched teams 'AFC Bournemouth' / 'Brighton & Hove Albion'",
-      "en.1: unmatched teams 'Aston Villa' / 'Everton'",
-      "en.1: unmatched teams 'Brentford' / 'Arsenal'",
-      "en.1: unmatched teams 'Newcastle United' / 'Manchester United'",
-      "en.1: unmatched teams 'Tottenham Hotspur' / 'Fulham'",
-      "es.1: unmatched teams 'Athletic Club' / 'Espanyol'",
       "es.1: unmatched teams 'Alavés' / 'Deportivo'",
-      "es.1: unmatched teams 'Rayo Vallecano' / 'Valencia'",
-      "es.1: unmatched teams 'Sevilla' / 'Real Betis'",
-      "es.1: unmatched teams 'Real Madrid' / 'Celta Vigo'",
-      "es.1: unmatched teams 'Barcelona' / 'Villarreal'",
-      "es.1: unmatched teams 'Racing Santander' / 'Real Sociedad'",
-      "es.1: unmatched teams 'Osasuna' / 'Málaga'",
-      "es.1: unmatched teams 'Getafe' / 'Atlético Madrid'",
-      "es.1: unmatched teams 'Levante' / 'Elche'",
-      "es.1: unmatched teams 'Levante' / 'Racing Santander'",
-      "es.1: unmatched teams 'Real Betis' / 'Rayo Vallecano'",
-      "es.1: unmatched teams 'Málaga' / 'Athletic Club'",
-      "es.1: unmatched teams 'Elche' / 'Atlético Madrid'",
-      "es.1: unmatched teams 'Real Madrid' / 'Alavés'",
-      "es.1: unmatched teams 'Valencia' / 'Osasuna'",
       "es.1: unmatched teams 'Deportivo' / 'Barcelona'",
-      "es.1: unmatched teams 'Celta Vigo' / 'Villarreal'",
-      "es.1: unmatched teams 'Real Sociedad' / 'Sevilla'",
-      "es.1: unmatched teams 'Espanyol' / 'Getafe'",
-      "es.1: unmatched teams 'Real Sociedad' / 'Real Madrid'",
-      "de.1: unmatched teams 'Bayer Leverkusen' / 'SC Paderborn 07'",
+      "de.1: unmatched teams 'Bayern Munich' / 'FC Cologne'",
       "de.1: unmatched teams 'Eintracht Frankfurt' / 'TSG Hoffenheim'",
       "de.1: unmatched teams 'SV Elversberg' / 'SC Freiburg'",
-      "de.1: unmatched teams 'Schalke 04' / 'VfB Stuttgart'",
-      "de.1: unmatched teams 'FC Augsburg' / 'Mainz'",
       "de.1: unmatched teams 'Werder Bremen' / 'Hamburg SV'",
-      "de.1: unmatched teams 'Werder Bremen' / 'Borussia Mönchengladbach'",
       "de.1: unmatched teams 'FC Cologne' / 'SV Elversberg'",
       "de.1: unmatched teams 'Hamburg SV' / 'Bayern Munich'",
-      "de.1: unmatched teams 'Mainz' / '1. FC Union Berlin'",
-      "de.1: unmatched teams 'SC Paderborn 07' / 'Schalke 04'",
       "de.1: unmatched teams 'TSG Hoffenheim' / 'FC Augsburg'",
-      "de.1: unmatched teams 'Borussia Dortmund' / 'Bayer Leverkusen'",
       "it.1: unmatched teams 'Como' / 'Cagliari'",
-      "it.1: unmatched teams 'Lazio' / 'Lecce'",
-      "it.1: unmatched teams 'Parma' / 'AS Roma'",
-      "it.1: unmatched teams 'Napoli' / 'Torino'",
-      "it.1: unmatched teams 'Juventus' / 'Venezia'",
-      "it.1: unmatched teams 'Bologna' / 'Udinese'",
-      "it.1: unmatched teams 'Sassuolo' / 'Genoa'",
-      "it.1: unmatched teams 'AC Milan' / 'Frosinone'",
-      "it.1: unmatched teams 'Atalanta' / 'Internazionale'",
-      "it.1: unmatched teams 'Monza' / 'Fiorentina'",
-      "it.1: unmatched teams 'Venezia' / 'Bologna'",
-      "it.1: unmatched teams 'Frosinone' / 'Parma'",
-      "it.1: unmatched teams 'Torino' / 'Lazio'",
-      "it.1: unmatched teams 'Internazionale' / 'Genoa'",
-      "it.1: unmatched teams 'Udinese' / 'Fiorentina'",
-      "it.1: unmatched teams 'Sassuolo' / 'Napoli'",
-      "it.1: unmatched teams 'AS Roma' / 'Monza'",
       "it.1: unmatched teams 'Como' / 'Juventus'",
-      "it.1: unmatched teams 'Lecce' / 'Atalanta'",
-      "it.1: unmatched teams 'Cagliari' / 'AC Milan'",
-      "fr.1: unmatched teams 'Troyes' / 'Le Havre AC'",
-      "fr.1: unmatched teams 'Nice' / 'Paris Saint-Germain'",
-      "fr.1: unmatched teams 'AS Monaco' / 'AJ Auxerre'",
-      "fr.1: unmatched teams 'Lens' / 'Toulouse'",
-      "fr.1: unmatched teams 'Lille' / 'Lyon'",
-      "fr.1: unmatched teams 'Strasbourg' / 'Brest'",
-      "fr.1: unmatched teams 'Paris FC' / 'Angers'",
       "fr.1: unmatched teams 'Lorient' / 'Stade Rennais'",
-      "fr.1: unmatched teams 'Marseille' / 'Le Mans'",
-      "fr.1: unmatched teams 'Brest' / 'Paris FC'",
-      "fr.1: unmatched teams 'Angers' / 'Lens'",
-      "fr.1: unmatched teams 'Le Havre AC' / 'Strasbourg'",
-      "fr.1: unmatched teams 'Le Mans' / 'Lille'",
-      "fr.1: unmatched teams 'Nice' / 'Troyes'",
-      "fr.1: unmatched teams 'Paris Saint-Germain' / 'Lorient'",
-      "fr.1: unmatched teams 'AJ Auxerre' / 'Marseille'",
-      "fr.1: unmatched teams 'Toulouse' / 'Stade Rennais'",
-      "fr.1: unmatched teams 'Lyon' / 'AS Monaco'"
+      "fr.1: unmatched teams 'Toulouse' / 'Stade Rennais'"
     ],
-    "warnings_count": 102,
-    "events_matched": 3,
-    "fixtures_added": 3,
+    "warnings_count": 13,
+    "events_matched": 46,
+    "fixtures_added": 49,
     "referees_verified_this_run": 0,
     "team_statistics_refreshed": false,
     "note": "Goal, corner, card and referee historical rates are NOT refreshed by this script."
