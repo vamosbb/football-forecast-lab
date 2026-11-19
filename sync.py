@@ -26,13 +26,63 @@ def norm(value):
     return ' '.join(re.findall(r'[a-z0-9]+', value))
 
 
+# ESPN display names mapped to the exact team keys in football_model_data.json.
+# Never create a team or invent its statistics when the name is unknown.
 ALIASES = {
-    'de.1': {'bayern munich': 'FC Bayern München', 'bayern munchen': 'FC Bayern München',
-             'fc cologne': '1. FC Köln', 'koln': '1. FC Köln', 'cologne': '1. FC Köln'},
-    'en.1': {'man city': 'Manchester City FC', 'man united': 'Manchester United FC',
-             'brighton': 'Brighton & Hove Albion FC', 'spurs': 'Tottenham Hotspur FC'},
-    'es.1': {'atletico madrid': 'Club Atlético de Madrid', 'barcelona': 'FC Barcelona',
-             'real madrid': 'Real Madrid CF'},
+    'en.1': {
+        'manchester city': 'Manchester City FC', 'manchester united': 'Manchester United FC',
+        'tottenham hotspur': 'Tottenham Hotspur FC', 'brighton hove albion': 'Brighton & Hove Albion FC',
+        'bournemouth': 'AFC Bournemouth', 'afc bournemouth': 'AFC Bournemouth',
+        'hull city': 'Hull City AFC', 'sunderland': 'Sunderland AFC',
+        'coventry city': 'Coventry City FC', 'ipswich town': 'Ipswich Town FC',
+        'nottingham forest': 'Nottingham Forest FC', 'newcastle united': 'Newcastle United FC',
+        'leeds united': 'Leeds United FC', 'crystal palace': 'Crystal Palace FC',
+        'aston villa': 'Aston Villa FC', 'west ham': None,
+        'man city': 'Manchester City FC', 'man united': 'Manchester United FC',
+        'spurs': 'Tottenham Hotspur FC',
+    },
+    'es.1': {
+        'atletico madrid': 'Club Atlético de Madrid', 'real betis': 'Real Betis Balompié',
+        'real sociedad': 'Real Sociedad de Fútbol', 'deportivo la coruna': 'RC Deportivo La Coruña',
+        'racing santander': 'Real Racing Club de Santander', 'celta vigo': 'RC Celta de Vigo',
+        'alaves': 'Deportivo Alavés', 'espanyol': 'RCD Espanyol de Barcelona',
+        'rayo vallecano': 'Rayo Vallecano de Madrid', 'osasuna': 'CA Osasuna',
+        'malaga': 'Málaga CF', 'barcelona': 'FC Barcelona', 'real madrid': 'Real Madrid CF',
+    },
+    'de.1': {
+        'bayern munich': 'FC Bayern München', 'bayern munchen': 'FC Bayern München',
+        'bayer leverkusen': 'Bayer 04 Leverkusen', 'werder bremen': 'SV Werder Bremen',
+        'hoffenheim': 'TSG 1899 Hoffenheim', 'mainz': '1. FSV Mainz 05',
+        'mainz 05': '1. FSV Mainz 05', 'paderborn': 'SC Paderborn 07',
+        'cologne': '1. FC Köln', 'koln': '1. FC Köln',
+        'union berlin': '1. FC Union Berlin', 'schalke': 'FC Schalke 04',
+        'monchengladbach': 'Borussia Mönchengladbach', 'gladbach': 'Borussia Mönchengladbach',
+        'elversberg': 'SV 07 Elversberg', 'freiburg': 'SC Freiburg',
+        'augsburg': 'FC Augsburg', 'stuttgart': 'VfB Stuttgart',
+    },
+    'it.1': {
+        'lazio': 'SS Lazio', 'inter': 'FC Internazionale Milano',
+        'internazionale': 'FC Internazionale Milano', 'roma': 'AS Roma',
+        'milan': 'AC Milan', 'frosinone': 'Frosinone Calcio',
+        'juventus': 'Juventus FC', 'bologna': 'Bologna FC 1909',
+        'cagliari': 'Cagliari Calcio', 'napoli': 'SSC Napoli',
+        'torino': 'Torino FC', 'atalanta': 'Atalanta BC',
+        'genoa': 'Genoa CFC', 'lecce': 'US Lecce',
+        'fiorentina': 'ACF Fiorentina', 'parma': 'Parma Calcio 1913',
+        'sassuolo': 'US Sassuolo Calcio', 'monza': 'AC Monza',
+        'venezia': 'Venezia FC', 'udinese': 'Udinese Calcio',
+    },
+    'fr.1': {
+        'psg': 'Paris Saint-Germain FC', 'paris saint germain': 'Paris Saint-Germain FC',
+        'lille': 'Lille OSC', 'marseille': 'Olympique de Marseille',
+        'lyon': 'Olympique Lyonnais', 'nice': 'OGC Nice',
+        'monaco': 'AS Monaco FC', 'rennes': 'Stade Rennais FC 1901',
+        'brest': 'Stade Brestois 29', 'lorient': 'FC Lorient',
+        'lens': 'Racing Club de Lens', 'toulouse': 'Toulouse FC',
+        'strasbourg': 'RC Strasbourg Alsace', 'auxerre': 'AJ Auxerre',
+        'le mans': 'Le Mans FC', 'angers': 'Angers SCO',
+        'troyes': 'ES Troyes AC', 'le havre': 'Le Havre AC',
+    },
 }
 
 
@@ -46,7 +96,17 @@ def match_team(name, league, known):
     alias = ALIASES.get(league, {}).get(target)
     if alias in known:
         return alias
-    # High threshold, unambiguous only; never silently guess a team.
+    # Strip only common football-club designators. Match ONLY if unique.
+    stop = {'fc', 'cf', 'afc', 'sc', 'ac', 'as', 'ss', 'rc', 'rcd', 'ca',
+            'ud', 'us', 'sv', 'vfb', 'tsg', 'ogc', 'osc', 'bc', 'cfc', 'sco'}
+    def simplified(value):
+        parts = norm(value).split()
+        return ' '.join(p for p in parts if p not in stop)
+    clean = simplified(name)
+    matches = [k for k in known if simplified(k) == clean]
+    if len(matches) == 1:
+        return matches[0]
+    # Fuzzy match remains deliberately conservative to avoid wrong statistics.
     scored = sorted(((difflib.SequenceMatcher(None, target, norm(k)).ratio(), k)
                      for k in known), reverse=True)
     if scored and scored[0][0] >= .94 and (len(scored) == 1 or scored[0][0] - scored[1][0] >= .09):
