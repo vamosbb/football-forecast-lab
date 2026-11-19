@@ -442,6 +442,79 @@ def collect_recent_matches(session, league, league_data, now, min_matches=10, ma
     return by_team, errors
 
 
+
+
+def collect_recent_details(session, league, history, cache, max_new_requests=35):
+    """Enrich the last ten games per team, caching match-level stats across runs.
+
+    A missing statistic stays None; zero is accepted only when ESPN reports zero.
+    """
+    league_cache = cache.setdefault(league, {})
+    event_ids = list(dict.fromkeys(g['id'] for games in history.values() for g in games))
+    event_ids.sort(reverse=True)
+    requested = 0
+    errors = 0
+    for eid in event_ids:
+        if eid in league_cache:
+            continue
+        if requested >= max_new_requests:
+            break
+        requested += 1
+        url = ('https://site.api.espn.com/apis/site/v2/sports/soccer/'
+               + ESPN_LEAGUES.get(league, league) + '/summary')
+        try:
+            resp = session.get(url, params={'event': eid}, timeout=12,
+                               headers={'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'})
+            resp.raise_for_status()
+            body = resp.json()
+            teams = (body.get('boxscore') or {}).get('teams') or []
+            by_id = {}
+            for side in teams:
+                tid = str((side.get('team') or {}).get('id') or '')
+                if not tid:
+                    continue
+                by_id[tid] = {
+                    'corners': stat_value(side, 'cornerKicks', 'corners', 'corner kicks'),
+                    'yellow': stat_value(side, 'yellowCards', 'yellow cards'),
+                    'red': stat_value(side, 'redCards', 'red cards'),
+                }
+            # Identify teams using ESPN IDs from summary header or boxscore.
+            header = body.get('header') or {}
+            comps = header.get('competitions') or []
+            sides = comps[0].get('competitors') or [] if comps else []
+            entry = {'by_team': {}, 'referee': None}
+            for side in sides:
+                tid = str((side.get('team') or {}).get('id') or '')
+                name = (side.get('team') or {}).get('displayName') or (side.get('team') or {}).get('name')
+                mapped = match_team(name, league, history)
+                if mapped and tid in by_id:
+                    entry['by_team'][mapped] = by_id[tid]
+            for official in (comps[0].get('officials') or []) if comps else []:
+                name = official.get('displayName') or official.get('fullName') or official.get('name')
+                if name:
+                    entry['referee'] = name
+                    break
+            # Cache even empty summaries to avoid endless retries of unsupported data.
+            league_cache[eid] = entry
+        except (requests.RequestException, ValueError, TypeError, KeyError):
+            errors += 1
+    # Attach verified per-team data, and opponent's corners when both exist.
+    for team, games in history.items():
+        for game in games:
+            record = league_cache.get(game['id'], {}).get('by_team', {})
+            own = record.get(team) or {}
+            opp = record.get(game['opponent']) or {}
+            if own.get('corners') is not None:
+                game['corners_for'] = own['corners']
+            if opp.get('corners') is not None:
+                game['corners_against'] = opp['corners']
+            if own.get('yellow') is not None:
+                game['yellow_cards'] = own['yellow']
+            if own.get('red') is not None:
+                game['red_cards'] = own['red']
+    return requested, errors
+
+
 def apply_recent_form(data, league, history):
     """Keep recent-10 form separate from existing season baseline aggregates."""
     team_data = data['leagues'][league]['teams']
@@ -457,11 +530,18 @@ def apply_recent_form(data, league, history):
             return {'n': n,
                     'goals_for_avg': round(sum(g['goals_for'] for g in rows) / n, 3) if n else None,
                     'goals_against_avg': round(sum(g['goals_against'] for g in rows) / n, 3) if n else None}
+        def stat_summary(rows, field):
+            values = [g[field] for g in rows if isinstance(g.get(field), (int, float))]
+            return {'n': len(values), 'avg': round(sum(values) / len(values), 3) if values else None}
         team_data[team]['recent_form'] = {
             'target': 10, 'count': len(games), 'complete': len(games) >= 10,
             'overall': summary(games), 'home': summary(home), 'away': summary(away),
             'matches': games,
-            'source': 'ESPN completed match scores',
+            'corners_for': stat_summary(games, 'corners_for'),
+            'corners_against': stat_summary(games, 'corners_against'),
+            'yellow_cards': stat_summary(games, 'yellow_cards'),
+            'red_cards': stat_summary(games, 'red_cards'),
+            'source': 'ESPN completed match scores and available summary statistics',
         }
 
 
@@ -479,6 +559,8 @@ def sync(path=DATA, days=14, network=True):
     goals_updated = corners_updated = cards_updated = 0
     recent_teams_complete = recent_teams_partial = 0
     history_errors = 0
+    details_requests = details_errors = 0
+    details_cache = data.setdefault('recent_details_cache', {})
 
     if network:
         with requests.Session() as session:
@@ -497,6 +579,9 @@ def sync(path=DATA, days=14, network=True):
                 # This is separate from incremental post-baseline updates.
                 history, recent_errors = collect_recent_matches(session, league, league_data, now)
                 history_errors += len(recent_errors)
+                req, err = collect_recent_details(session, league, history, details_cache)
+                details_requests += req
+                details_errors += err
                 apply_recent_form(data, league, history)
                 recent_teams_complete += sum(len(games) >= 10 for games in history.values())
                 recent_teams_partial += sum(0 < len(games) < 10 for games in history.values())
@@ -639,7 +724,10 @@ def sync(path=DATA, days=14, network=True):
               'league_fetch_status': status_by_league,
               'goals_updated': goals_updated, 'corners_updated': corners_updated,
               'cards_updated': cards_updated, 'recent_teams_complete': recent_teams_complete,
-              'recent_teams_partial': recent_teams_partial, 'history_request_errors': history_errors}
+              'recent_teams_partial': recent_teams_partial, 'history_request_errors': history_errors,
+               'recent_details_requests': details_requests, 'recent_details_errors': details_errors,
+               'teams_with_recent_corners': sum(1 for lg in data['leagues'].values() for t in lg['teams'].values() if (t.get('recent_form', {}).get('corners_for') or {}).get('n', 0) >= 5),
+               'teams_with_recent_cards': sum(1 for lg in data['leagues'].values() for t in lg['teams'].values() if (t.get('recent_form', {}).get('yellow_cards') or {}).get('n', 0) >= 5)}
     print(json.dumps(result, ensure_ascii=False))
     for warning in warnings[:15]:
         print('WARNING:', warning)

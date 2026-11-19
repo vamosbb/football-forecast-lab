@@ -34,6 +34,17 @@ def recent_goal_adjustment(team, venue, league):
     conceded_ratio = 1.0 + shrink_weight * (ga / baseline - 1.0)
     return max(.7, min(1.4, attack_ratio)), max(.7, min(1.4, conceded_ratio)), n
 
+def recent_stat(team, field, min_observations=5):
+    stat = (team.get('recent_form') or {}).get(field) or {}
+    n = stat.get('n', 0)
+    value = stat.get('avg')
+    if not isinstance(n, int) or n < min_observations:
+        return None
+    if not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+        return None
+    return value
+
+
 def predict(league, home, away, referee=None):
     teams=league['teams']; H=teams[home]; A=teams[away]
     base_h=league['avgH']*H['att']*A['dfn']
@@ -67,6 +78,16 @@ def predict(league, home, away, referee=None):
     conceded_h=shrink(hc['ag'],hc['n'],cf,ks)
     conceded_a=shrink(ac['ag'],ac['n'],cf,ks)
     corners_h=hw*conceded_a/cf; corners_a=aw*conceded_h/cf
+    # Apply a modest recent-match overlay only when both teams have enough
+    # independently reported statistics; otherwise keep the established model.
+    hcf = recent_stat(H, 'corners_for')
+    aca = recent_stat(A, 'corners_against')
+    acf = recent_stat(A, 'corners_for')
+    hca = recent_stat(H, 'corners_against')
+    recent_corners_used = all(v is not None for v in (hcf, aca, acf, hca))
+    if recent_corners_used:
+        corners_h = 0.75 * corners_h + 0.25 * (hcf + aca) / 2
+        corners_a = 0.75 * corners_a + 0.25 * (acf + hca) / 2
     # A referee appointment is independent of whether its historical statistics exist.
     ref_record=league.get('refs',{}).get(referee or '')
     factor=ref_record['f'] if ref_record else 1.0
@@ -74,9 +95,16 @@ def predict(league, home, away, referee=None):
         cd=team['cd']; n=cd['n']
         return shrink((cd['y']+cd['r'])/n if n else ext['kc'],n,ext['kc'],ks)*factor
     cards_h=card_rate(H);cards_a=card_rate(A)
+    hy, hr = recent_stat(H, 'yellow_cards'), recent_stat(H, 'red_cards')
+    ay, ar = recent_stat(A, 'yellow_cards'), recent_stat(A, 'red_cards')
+    recent_cards_used = all(v is not None for v in (hy, hr, ay, ar))
+    if recent_cards_used:
+        cards_h = 0.75 * cards_h + 0.25 * (hy + hr) * factor
+        cards_a = 0.75 * cards_a + 0.25 * (ay + ar) * factor
     return {'goals':(lh,la),'1X2':(p1,px,p2),'over2.5':over25,'btts':btts,
             'corners':(corners_h,corners_a),'cards':(cards_h,cards_a),
             'referee_factor':factor,'referee_stats_available':bool(ref_record),
+            'recent_corners_used':recent_corners_used,'recent_cards_used':recent_cards_used,
             'recent_form_used':bool(form_weight),'recent_form_matches':(hn,an),
             'scorelines':sorted(((matrix[i][j],f'{i}-{j}') for i in range(10) for j in range(10)),reverse=True)[:5]}
 
