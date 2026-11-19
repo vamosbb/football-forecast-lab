@@ -3505,7 +3505,7 @@
     },
     {
       "lg": "es.1",
-      "t": "2026-11-21T13:00Z",
+      "t": "2026-11-21T13:00:00Z",
       "h": "Deportivo Alavés",
       "a": "RC Deportivo La Coruña",
       "o": [
@@ -3522,7 +3522,8 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401882806"
     },
     {
       "lg": "it.1",
@@ -3549,7 +3550,7 @@
     },
     {
       "lg": "it.1",
-      "t": "2026-11-21T14:00Z",
+      "t": "2026-11-21T14:00:00Z",
       "h": "Como 1907",
       "a": "Cagliari Calcio",
       "o": [
@@ -3567,7 +3568,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401875056"
     },
     {
       "lg": "de.1",
@@ -3640,7 +3642,7 @@
     },
     {
       "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
+      "t": "2026-11-21T14:30:00Z",
       "h": "Eintracht Frankfurt",
       "a": "TSG 1899 Hoffenheim",
       "o": [
@@ -3658,11 +3660,12 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884734"
     },
     {
       "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
+      "t": "2026-11-21T14:30:00Z",
       "h": "SV 07 Elversberg",
       "a": "SC Freiburg",
       "o": [
@@ -3680,7 +3683,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884728"
     },
     {
       "lg": "en.1",
@@ -4252,7 +4256,7 @@
     },
     {
       "lg": "fr.1",
-      "t": "2026-11-22T16:15Z",
+      "t": "2026-11-22T16:15:00Z",
       "h": "FC Lorient",
       "a": "Stade Rennais FC 1901",
       "o": [
@@ -4270,7 +4274,8 @@
       },
       "ref_status": "previously_recorded_unverified",
       "ref_source": "existing JSON",
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401876401"
     },
     {
       "lg": "en.1",
@@ -4297,7 +4302,7 @@
     },
     {
       "lg": "de.1",
-      "t": "2026-11-22T16:30Z",
+      "t": "2026-11-22T16:30:00Z",
       "h": "SV Werder Bremen",
       "a": "Hamburger SV",
       "o": [
@@ -4314,7 +4319,8 @@
       },
       "ref_status": "not_confirmed",
       "ref_source": null,
-      "ref_stats_available": false
+      "ref_stats_available": false,
+      "espn_event_id": "401884730"
     },
     {
       "lg": "it.1",
@@ -4598,6 +4604,26 @@
       "ref_stats_available": false
     },
     {
+      "lg": "de.1",
+      "t": "2026-11-28T14:30:00Z",
+      "h": "1. FC Köln",
+      "a": "SV 07 Elversberg",
+      "espn_event_id": "401884721",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-28T14:30:00Z",
+      "h": "Hamburger SV",
+      "a": "FC Bayern München",
+      "espn_event_id": "401884722",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
       "lg": "en.1",
       "t": "2026-11-28T15:00:00Z",
       "h": "Leeds United FC",
@@ -4838,11 +4864,41 @@
       "ref_stats_available": false
     },
     {
+      "lg": "es.1",
+      "t": "2026-11-29T15:15:00Z",
+      "h": "RC Deportivo La Coruña",
+      "a": "FC Barcelona",
+      "espn_event_id": "401882794",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "fr.1",
+      "t": "2026-11-29T16:15:00Z",
+      "h": "Toulouse FC",
+      "a": "Stade Rennais FC 1901",
+      "espn_event_id": "401876386",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
       "lg": "en.1",
       "t": "2026-11-29T16:30:00Z",
       "h": "Arsenal FC",
       "a": "Manchester City FC",
       "espn_event_id": "401878753",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-29T16:30:00Z",
+      "h": "TSG 1899 Hoffenheim",
+      "a": "FC Augsburg",
+      "espn_event_id": "401884725",
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
@@ -4883,6 +4939,16 @@
       "h": "Olympique Lyonnais",
       "a": "AS Monaco FC",
       "espn_event_id": "401876389",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-29T19:45:00Z",
+      "h": "Como 1907",
+      "a": "Juventus FC",
+      "espn_event_id": "401874994",
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
@@ -5048,9 +5114,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-19T20:59:10Z",
+  "updated": "2026-11-19T21:03:58Z",
   "sync_meta": {
-    "last_attempt": "2026-11-19T20:59:10Z",
+    "last_attempt": "2026-11-19T21:03:58Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
@@ -5059,26 +5125,16 @@
       "it.1": "ok",
       "fr.1": "ok"
     },
-    "warnings": [
-      "es.1: unmatched teams 'Alavés' / 'Deportivo'",
-      "es.1: unmatched teams 'Deportivo' / 'Barcelona'",
-      "de.1: unmatched teams 'Bayern Munich' / 'FC Cologne'",
-      "de.1: unmatched teams 'Eintracht Frankfurt' / 'TSG Hoffenheim'",
-      "de.1: unmatched teams 'SV Elversberg' / 'SC Freiburg'",
-      "de.1: unmatched teams 'Werder Bremen' / 'Hamburg SV'",
-      "de.1: unmatched teams 'FC Cologne' / 'SV Elversberg'",
-      "de.1: unmatched teams 'Hamburg SV' / 'Bayern Munich'",
-      "de.1: unmatched teams 'TSG Hoffenheim' / 'FC Augsburg'",
-      "it.1: unmatched teams 'Como' / 'Cagliari'",
-      "it.1: unmatched teams 'Como' / 'Juventus'",
-      "fr.1: unmatched teams 'Lorient' / 'Stade Rennais'",
-      "fr.1: unmatched teams 'Toulouse' / 'Stade Rennais'"
-    ],
-    "warnings_count": 13,
-    "events_matched": 46,
-    "fixtures_added": 49,
+    "warnings": [],
+    "warnings_count": 0,
+    "events_matched": 102,
+    "fixtures_added": 6,
     "referees_verified_this_run": 0,
     "team_statistics_refreshed": false,
+    "completed_matches_applied": 0,
+    "matches_with_corners_updated": 0,
+    "matches_with_cards_updated": 0,
     "note": "Goal, corner, card and referee historical rates are NOT refreshed by this script."
-  }
+  },
+  "processed_espn_event_ids": []
 }
