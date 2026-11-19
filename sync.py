@@ -48,6 +48,7 @@ ALIASES = {
         'alaves': 'Deportivo Alavés', 'espanyol': 'RCD Espanyol de Barcelona',
         'rayo vallecano': 'Rayo Vallecano de Madrid', 'osasuna': 'CA Osasuna',
         'malaga': 'Málaga CF', 'barcelona': 'FC Barcelona', 'real madrid': 'Real Madrid CF',
+        'deportivo': 'RC Deportivo La Coruña',
     },
     'de.1': {
         'bayern munich': 'FC Bayern München', 'bayern munchen': 'FC Bayern München',
@@ -59,6 +60,9 @@ ALIASES = {
         'monchengladbach': 'Borussia Mönchengladbach', 'gladbach': 'Borussia Mönchengladbach',
         'elversberg': 'SV 07 Elversberg', 'freiburg': 'SC Freiburg',
         'augsburg': 'FC Augsburg', 'stuttgart': 'VfB Stuttgart',
+        'fc cologne': '1. FC Köln', 'eintracht frankfurt': 'Eintracht Frankfurt',
+        'hamburg sv': 'Hamburger SV', 'tsg hoffenheim': 'TSG 1899 Hoffenheim',
+        'sv elversberg': 'SV 07 Elversberg', 'sc freiburg': 'SC Freiburg',
     },
     'it.1': {
         'lazio': 'SS Lazio', 'inter': 'FC Internazionale Milano',
@@ -71,6 +75,7 @@ ALIASES = {
         'fiorentina': 'ACF Fiorentina', 'parma': 'Parma Calcio 1913',
         'sassuolo': 'US Sassuolo Calcio', 'monza': 'AC Monza',
         'venezia': 'Venezia FC', 'udinese': 'Udinese Calcio',
+        'como': 'Como 1907',
     },
     'fr.1': {
         'psg': 'Paris Saint-Germain FC', 'paris saint germain': 'Paris Saint-Germain FC',
@@ -82,6 +87,7 @@ ALIASES = {
         'strasbourg': 'RC Strasbourg Alsace', 'auxerre': 'AJ Auxerre',
         'le mans': 'Le Mans FC', 'angers': 'Angers SCO',
         'troyes': 'ES Troyes AC', 'le havre': 'Le Havre AC',
+        'stade rennais': 'Stade Rennais FC 1901',
     },
 }
 
@@ -215,6 +221,140 @@ def fetch(session, league, start, end):
     return list(events_by_id.values()), successful_dates, errors
 
 
+def enrich_completed(session, league, event):
+    """Best-effort ESPN match summary for corners/cards/officials."""
+    eid = event.get('id')
+    if not eid:
+        return event
+    url = ('https://site.api.espn.com/apis/site/v2/sports/soccer/'
+           + ESPN_LEAGUES.get(league, league) + '/summary')
+    try:
+        response = session.get(url, params={'event': str(eid)}, timeout=12,
+                               headers={'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'})
+        response.raise_for_status()
+        body = response.json()
+        # Header can contain appointed officials; keep original if absent.
+        header = body.get('header') or {}
+        comps = header.get('competitions') or []
+        if comps and comps[0].get('officials'):
+            event.setdefault('competitions', [{}])[0]['officials'] = comps[0]['officials']
+        # Boxscore teams may contain numeric team-level stats.
+        teams = (body.get('boxscore') or {}).get('teams') or []
+        sides = (event.get('competitions') or [{}])[0].get('competitors') or []
+        for side in sides:
+            sid = str(side.get('team', {}).get('id', ''))
+            for item in teams:
+                if sid and str(item.get('team', {}).get('id', '')) == sid and item.get('statistics'):
+                    side['statistics'] = item['statistics']
+                    break
+    except (requests.RequestException, ValueError, KeyError, TypeError):
+        pass  # Unavailable stats are never treated as zero.
+    return event
+
+
+def stat_value(side, *keys):
+    """Only accept a real ESPN reported number; missing is NOT zero."""
+    wanted = {norm(k).replace(' ', '') for k in keys}
+    for stat in side.get('statistics') or []:
+        label = norm(stat.get('name') or stat.get('label') or stat.get('abbreviation')).replace(' ', '')
+        if label in wanted:
+            raw = stat.get('value', stat.get('displayValue'))
+            try:
+                return float(str(raw).replace(',', ''))
+            except (ValueError, TypeError):
+                return None
+    return None
+
+
+def update_finished(data, league, event, seen, warnings):
+    """Incrementally apply only verified post-baseline final results, once per event."""
+    event_id = str(event.get('id') or '')
+    if not event_id or event_id in seen:
+        return False, False, False
+    lg = data['leagues'][league]
+    state = (event.get('status') or {}).get('type') or {}
+    if state.get('completed') is not True and state.get('name') not in ('STATUS_FINAL', 'STATUS_FULL_TIME'):
+        return False, False, False
+    try:
+        event_date = parse_time(event['date']).date()
+        baseline = dt.date.fromisoformat(data.setdefault('sync_baseline_dates', {}).setdefault(league, lg['asof']))
+        if event_date <= baseline:
+            return False, False, False
+        comp = (event.get('competitions') or [])[0]
+        sides = comp.get('competitors') or []
+        home = next(x for x in sides if x.get('homeAway') == 'home')
+        away = next(x for x in sides if x.get('homeAway') == 'away')
+        h = match_team(home.get('team', {}).get('displayName'), league, lg['teams'])
+        a = match_team(away.get('team', {}).get('displayName'), league, lg['teams'])
+        if not h or not a or h == a:
+            return False, False, False
+        # Score must be a final integer, never inferred from an absent field.
+        hs, aas = home.get('score'), away.get('score')
+        if isinstance(hs, dict): hs = hs.get('value', hs.get('displayValue'))
+        if isinstance(aas, dict): aas = aas.get('value', aas.get('displayValue'))
+        hg, ag = int(hs), int(aas)
+        if hg < 0 or ag < 0 or str(hs).strip() not in (str(hg), f'{hg}.0') or str(aas).strip() not in (str(ag), f'{ag}.0'):
+            return False, False, False
+    except (KeyError, ValueError, TypeError, IndexError, StopIteration):
+        warnings.append(f'{league}: incomplete final score event {event_id}')
+        return False, False, False
+    # Goals are authoritative from final scoreboard. Existing team P/F/A
+    # are a historical baseline; event IDs prevent duplicate additions.
+    for team, gf, ga in ((h, hg, ag), (a, ag, hg)):
+        t = lg['teams'][team]
+        t['P'] = int(t.get('P', 0)) + 1
+        t['F'] = int(t.get('F', 0)) + gf
+        t['A'] = int(t.get('A', 0)) + ga
+        # Preserve original prior shrinkage; do not fabricate missing games.
+        k = max(1, int(data.get('k', 12)))
+        avg = max(.1, (float(lg['avgH']) + float(lg['avgA'])) / 2)
+        t['att'] = round((t['F'] + k * avg * float(t.get('pa', 1))) / (t['P'] + k) / avg, 4)
+        t['dfn'] = round((t['A'] + k * avg * float(t.get('pd', 1))) / (t['P'] + k) / avg, 4)
+    lg['asof'] = max(lg['asof'], event_date.isoformat())
+    # ESPN may provide corners/cards in competitor statistics; never replace
+    # previous averages with missing values or an assumed zero.
+    corners = [stat_value(x, 'cornerKicks', 'corners', 'corner kicks') for x in (home, away)]
+    yellows = [stat_value(x, 'yellowCards', 'yellow cards') for x in (home, away)]
+    reds = [stat_value(x, 'redCards', 'red cards') for x in (home, away)]
+    corners_done = all(v is not None for v in corners)
+    cards_done = all(v is not None for v in yellows) and all(v is not None for v in reds)
+    for i, team in enumerate((h, a)):
+        t = lg['teams'][team]
+        if corners_done:
+            cr = t.setdefault('cr', {})
+            n = int(cr.get('n', 0))
+            cr['f'] = round((float(cr.get('f', 0)) * n + corners[i]) / (n + 1), 3)
+            cr['ag'] = round((float(cr.get('ag', 0)) * n + corners[1-i]) / (n + 1), 3)
+            cr['n'] = n + 1
+            # Separate home/away sample counts, initialized conservatively.
+            homekey = 'h' if i == 0 else 'a'
+            countkey = '_home_n' if i == 0 else '_away_n'
+            oldn = int(cr.get(countkey, n // 2))
+            cr[homekey] = round((float(cr.get(homekey, 0)) * oldn + corners[i]) / (oldn + 1), 3)
+            cr[countkey] = oldn + 1
+        if cards_done:
+            cd = t.setdefault('cd', {})
+            cd['n'] = int(cd.get('n', 0)) + 1
+            cd['y'] = int(cd.get('y', 0)) + int(yellows[i])
+            cd['r'] = int(cd.get('r', 0)) + int(reds[i])
+    # Update historical referee average only with an actual named referee and
+    # observed card totals; new referee entries are allowed with n=1.
+    if cards_done:
+        name = event_referee(event)
+        if name:
+            refs = lg.setdefault('refs', {})
+            key = match_referee(name, refs) or name
+            ref = refs.setdefault(key, {'n': 0, 'c': 0, 'f': 1.0})
+            n = int(ref.get('n', 0))
+            count = sum(yellows) + sum(reds)
+            ref['c'] = round((float(ref.get('c', 0)) * n + count) / (n + 1), 3)
+            ref['n'] = n + 1
+            ref['f'] = round((ref['c'] * ref['n'] + 5 * float(lg.get('ext', {}).get('rbar', 4))) /
+                             (ref['n'] + 5) / max(.1, float(lg.get('ext', {}).get('rbar', 4))), 3)
+    seen.add(event_id)
+    return True, corners_done, cards_done
+
+
 def sync(path=DATA, days=14, network=True):
     path = Path(path)
     original = json.loads(path.read_text(encoding='utf-8'))
@@ -224,6 +364,8 @@ def sync(path=DATA, days=14, network=True):
     warnings, status_by_league, matched_events = [], {}, {}
     overrides = load_overrides()
     existing = data.get('fixtures', [])
+    seen = set(str(x) for x in data.get('processed_espn_event_ids', []))
+    goals_updated = corners_updated = cards_updated = 0
 
     if network:
         with requests.Session() as session:
@@ -239,6 +381,15 @@ def sync(path=DATA, days=14, network=True):
                     warnings.append(f'{league}: ESPN fetch failed ({type(exc).__name__}, HTTP {status or "unknown"})')
                     continue
                 for event in events:
+                    state = (event.get('status') or {}).get('type') or {}
+                    if (state.get('completed') is True or state.get('name') in ('STATUS_FINAL', 'STATUS_FULL_TIME')):
+                        eid = str(event.get('id') or '')
+                        if eid and eid not in seen:
+                            event = enrich_completed(session, league, event)
+                    g, c, ca = update_finished(data, league, event, seen, warnings)
+                    goals_updated += int(g)
+                    corners_updated += int(c)
+                    cards_updated += int(ca)
                     try:
                         competition = (event.get('competitions') or [])[0]
                         sides = competition.get('competitors') or []
@@ -293,7 +444,7 @@ def sync(path=DATA, days=14, network=True):
             fixture['ref_source'] = override['verified_source'] if override else 'ESPN event officials'
             fixture['ref_stats_available'] = bool(matched_ref)
             verified += 1
-        elif fixture.get('ref_status') != 'appointed':
+        else:
             # Legacy refs are not verified; never label them confirmed.
             fixture['ref_status'] = 'previously_recorded_unverified' if fixture.get('ref') else 'not_confirmed'
             fixture['ref_source'] = fixture.get('ref_source') or ('existing JSON' if fixture.get('ref') else None)
@@ -331,6 +482,7 @@ def sync(path=DATA, days=14, network=True):
         output.append(fixture)
         added += 1
 
+    data['processed_espn_event_ids'] = sorted(seen)
     output.sort(key=lambda x: x.get('t', ''))
     data['fixtures'] = output
     if any(v in ('ok', 'partial') for v in status_by_league.values()):
@@ -340,7 +492,10 @@ def sync(path=DATA, days=14, network=True):
         'league_fetch_status': status_by_league, 'warnings': warnings[:250],
         'warnings_count': len(warnings), 'events_matched': updated_existing,
         'fixtures_added': added, 'referees_verified_this_run': verified,
-        'team_statistics_refreshed': False,
+        'team_statistics_refreshed': goals_updated > 0,
+        'completed_matches_applied': goals_updated,
+        'matches_with_corners_updated': corners_updated,
+        'matches_with_cards_updated': cards_updated,
         'note': 'Goal, corner, card and referee historical rates are NOT refreshed by this script.'
     }
     if network and not any(v in ('ok', 'partial') for v in status_by_league.values()):
@@ -357,7 +512,9 @@ def sync(path=DATA, days=14, network=True):
             os.unlink(tmp)
     result = {'fixtures': len(output), 'added': added, 'matched': updated_existing,
               'warnings': len(warnings), 'referees_verified': verified,
-              'league_fetch_status': status_by_league}
+              'league_fetch_status': status_by_league,
+              'goals_updated': goals_updated, 'corners_updated': corners_updated,
+              'cards_updated': cards_updated}
     print(json.dumps(result, ensure_ascii=False))
     for warning in warnings[:15]:
         print('WARNING:', warning)
