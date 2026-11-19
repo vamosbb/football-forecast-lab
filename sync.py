@@ -355,17 +355,130 @@ def update_finished(data, league, event, seen, warnings):
     return True, corners_done, cards_done
 
 
+def collect_recent_matches(session, league, league_data, now, min_matches=10, max_lookback_days=210):
+    """Collect actual latest N completed games per team, not N calendar days.
+
+    Fetch older match days in weekly blocks until all modeled teams have N
+    observations or the lookback limit is reached. Do not invent missing stats.
+    """
+    url = BASE.format(league=ESPN_LEAGUES.get(league, league))
+    headers = {'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+    by_team = {team: [] for team in league_data['teams']}
+    observed = set()
+    errors = []
+    today = now.date()
+
+    def consume(events):
+        for ev in events:
+            eid = str(ev.get('id') or '')
+            if not eid or eid in observed:
+                continue
+            observed.add(eid)
+            status = (ev.get('status') or {}).get('type') or {}
+            if status.get('completed') is not True and status.get('name') not in ('STATUS_FINAL', 'STATUS_FULL_TIME'):
+                continue
+            try:
+                kickoff = parse_time(ev['date'])
+                if kickoff > now:
+                    continue
+                comp = (ev.get('competitions') or [])[0]
+                sides = comp.get('competitors') or []
+                home = next(x for x in sides if x.get('homeAway') == 'home')
+                away = next(x for x in sides if x.get('homeAway') == 'away')
+                h = match_team(home.get('team', {}).get('displayName') or home.get('team', {}).get('name'), league, league_data['teams'])
+                a = match_team(away.get('team', {}).get('displayName') or away.get('team', {}).get('name'), league, league_data['teams'])
+                if not h or not a or h == a:
+                    continue
+                def score(side):
+                    val = side.get('score')
+                    if isinstance(val, dict):
+                        val = val.get('value', val.get('displayValue'))
+                    number = int(val)
+                    if number < 0 or str(val).strip() not in (str(number), f'{number}.0'):
+                        raise ValueError('invalid score')
+                    return number
+                hg, ag = score(home), score(away)
+                # Store verifiable raw results. Enrichment is done for the
+                # selected ten only, reducing unnecessary summary requests.
+                for team, opponent, gf, ga, venue in ((h,a,hg,ag,'home'), (a,h,ag,hg,'away')):
+                    by_team[team].append({'id': eid, 'date': kickoff.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                                          'opponent': opponent, 'venue': venue,
+                                          'goals_for': gf, 'goals_against': ga})
+            except (KeyError, IndexError, TypeError, ValueError, StopIteration):
+                continue
+
+    # Use weekly date ranges if ESPN accepts them. If not, fall back to
+    # individual days. Stop when every team has at least ten actual games.
+    for offset in range(0, max_lookback_days, 7):
+        if all(len(v) >= min_matches for v in by_team.values()):
+            break
+        end = today - dt.timedelta(days=offset)
+        start = max(today - dt.timedelta(days=max_lookback_days-1), end - dt.timedelta(days=6))
+        range_param = f'{start:%Y%m%d}-{end:%Y%m%d}'
+        try:
+            r = session.get(url, params={'dates': range_param}, timeout=20, headers=headers)
+            r.raise_for_status()
+            body = r.json()
+            if not isinstance(body.get('events'), list):
+                raise ValueError('No events list')
+            consume(body['events'])
+        except (requests.RequestException, ValueError):
+            day = end
+            while day >= start:
+                try:
+                    r = session.get(url, params={'dates': f'{day:%Y%m%d}'}, timeout=20, headers=headers)
+                    r.raise_for_status()
+                    body = r.json()
+                    if isinstance(body.get('events'), list):
+                        consume(body['events'])
+                except (requests.RequestException, ValueError) as exc:
+                    errors.append(f'{day}: {type(exc).__name__}')
+                day -= dt.timedelta(days=1)
+
+    # Sort and truncate to exactly the last N matches per team.
+    for team, games in by_team.items():
+        games.sort(key=lambda g: g['date'], reverse=True)
+        by_team[team] = games[:min_matches]
+    return by_team, errors
+
+
+def apply_recent_form(data, league, history):
+    """Keep recent-10 form separate from existing season baseline aggregates."""
+    team_data = data['leagues'][league]['teams']
+    for team, games in history.items():
+        if not games:
+            continue
+        # Do NOT overwrite P/F/A, att/dfn or historical corners/cards:
+        # their existing baselines can already include these fixtures.
+        home = [g for g in games if g['venue'] == 'home']
+        away = [g for g in games if g['venue'] == 'away']
+        def summary(rows):
+            n = len(rows)
+            return {'n': n,
+                    'goals_for_avg': round(sum(g['goals_for'] for g in rows) / n, 3) if n else None,
+                    'goals_against_avg': round(sum(g['goals_against'] for g in rows) / n, 3) if n else None}
+        team_data[team]['recent_form'] = {
+            'target': 10, 'count': len(games), 'complete': len(games) >= 10,
+            'overall': summary(games), 'home': summary(home), 'away': summary(away),
+            'matches': games,
+            'source': 'ESPN completed match scores',
+        }
+
+
 def sync(path=DATA, days=14, network=True):
     path = Path(path)
     original = json.loads(path.read_text(encoding='utf-8'))
     data = json.loads(json.dumps(original))
     now = dt.datetime.now(UTC)
-    start, end = now.date(), (now + dt.timedelta(days=days)).date()
+    # Include completed matches from the previous week; future-only windows cannot update statistics.
+    start, end = (now - dt.timedelta(days=7)).date(), (now + dt.timedelta(days=days)).date()
     warnings, status_by_league, matched_events = [], {}, {}
     overrides = load_overrides()
     existing = data.get('fixtures', [])
     seen = set(str(x) for x in data.get('processed_espn_event_ids', []))
     goals_updated = corners_updated = cards_updated = 0
+    recent_teams_complete = recent_teams_partial = 0
+    history_errors = 0
 
     if network:
         with requests.Session() as session:
@@ -380,6 +493,15 @@ def sync(path=DATA, days=14, network=True):
                     status = getattr(getattr(exc, 'response', None), 'status_code', None)
                     warnings.append(f'{league}: ESPN fetch failed ({type(exc).__name__}, HTTP {status or "unknown"})')
                     continue
+                # Rebuild recent form from the last ten *matches* per team.
+                # This is separate from incremental post-baseline updates.
+                history, recent_errors = collect_recent_matches(session, league, league_data, now)
+                history_errors += len(recent_errors)
+                apply_recent_form(data, league, history)
+                recent_teams_complete += sum(len(games) >= 10 for games in history.values())
+                recent_teams_partial += sum(0 < len(games) < 10 for games in history.values())
+                if recent_errors:
+                    warnings.append(f'{league}: {len(recent_errors)} historical date requests failed')
                 for event in events:
                     state = (event.get('status') or {}).get('type') or {}
                     if (state.get('completed') is True or state.get('name') in ('STATUS_FINAL', 'STATUS_FULL_TIME')):
@@ -496,7 +618,9 @@ def sync(path=DATA, days=14, network=True):
         'completed_matches_applied': goals_updated,
         'matches_with_corners_updated': corners_updated,
         'matches_with_cards_updated': cards_updated,
-        'note': 'Goal, corner, card and referee historical rates are NOT refreshed by this script.'
+        'recent_form_target_per_team': 10, 'recent_form_teams_complete': recent_teams_complete,
+        'recent_form_teams_partial': recent_teams_partial, 'history_request_errors': history_errors,
+        'note': 'Recent form is calculated from up to ten completed matches per team (up to 210 days), separately from baseline aggregates. Corners/cards are NOT backfilled by this recent-form collector.'
     }
     if network and not any(v in ('ok', 'partial') for v in status_by_league.values()):
         raise RuntimeError('All ESPN leagues failed; original data file preserved. ' + '; '.join(warnings[:5]))
@@ -514,7 +638,8 @@ def sync(path=DATA, days=14, network=True):
               'warnings': len(warnings), 'referees_verified': verified,
               'league_fetch_status': status_by_league,
               'goals_updated': goals_updated, 'corners_updated': corners_updated,
-              'cards_updated': cards_updated}
+              'cards_updated': cards_updated, 'recent_teams_complete': recent_teams_complete,
+              'recent_teams_partial': recent_teams_partial, 'history_request_errors': history_errors}
     print(json.dumps(result, ensure_ascii=False))
     for warning in warnings[:15]:
         print('WARNING:', warning)
