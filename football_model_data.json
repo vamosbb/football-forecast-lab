@@ -3413,416 +3413,6 @@
   },
   "fixtures": [
     {
-      "lg": "en.1",
-      "t": "2026-11-21T12:30Z",
-      "h": "Manchester City FC",
-      "a": "Fulham FC",
-      "o": [
-        70.6,
-        17.0,
-        12.4
-      ],
-      "ref": "Thomas Bramall",
-      "w": {
-        "c": "Manchester",
-        "hi": 7.6,
-        "lo": -0.7,
-        "pc": 5,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
-      "h": "Aston Villa FC",
-      "a": "Sunderland AFC",
-      "o": [
-        53.6,
-        24.8,
-        21.6
-      ],
-      "ref": "Andy Madley",
-      "w": {
-        "c": "Birmingham",
-        "hi": 7.7,
-        "lo": 0.1,
-        "pc": 5,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
-      "h": "AFC Bournemouth",
-      "a": "Nottingham Forest FC",
-      "o": [
-        49.7,
-        26.0,
-        24.3
-      ],
-      "ref": "Adam Herczeg",
-      "w": {
-        "c": "Bournemouth",
-        "hi": 11.8,
-        "lo": 3.8,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
-      "h": "Chelsea FC",
-      "a": "Leeds United FC",
-      "o": [
-        50.5,
-        25.4,
-        24.1
-      ],
-      "ref": "Michael Oliver",
-      "w": {
-        "c": "London",
-        "hi": 10.0,
-        "lo": 0.4,
-        "pc": 5,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
-      "h": "Coventry City FC",
-      "a": "Crystal Palace FC",
-      "o": [
-        39.1,
-        26.5,
-        34.4
-      ],
-      "ref": "Darren England",
-      "w": {
-        "c": "Coventry",
-        "hi": 8.0,
-        "lo": -0.2,
-        "pc": 5,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T15:00Z",
-      "h": "Tottenham Hotspur FC",
-      "a": "Ipswich Town FC",
-      "o": [
-        62.6,
-        20.7,
-        16.7
-      ],
-      "ref": "Robert Jones",
-      "w": {
-        "c": "London",
-        "hi": 10.0,
-        "lo": 0.4,
-        "pc": 5,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-21T17:30Z",
-      "h": "Newcastle United FC",
-      "a": "Arsenal FC",
-      "o": [
-        16.7,
-        21.9,
-        61.4
-      ],
-      "ref": "Chris Kavanagh",
-      "w": {
-        "c": "Newcastle",
-        "hi": 5.4,
-        "lo": -1.8,
-        "pc": 10,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-22T14:00Z",
-      "h": "Hull City AFC",
-      "a": "Brighton & Hove Albion FC",
-      "o": [
-        15.1,
-        20.2,
-        64.7
-      ],
-      "ref": "Peter Bankes",
-      "w": {
-        "c": "Hull",
-        "hi": 8.2,
-        "lo": 2.4,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-22T16:30Z",
-      "h": "Liverpool FC",
-      "a": "Manchester United FC",
-      "o": [
-        54.4,
-        22.6,
-        23.0
-      ],
-      "ref": "Samuel Barrott",
-      "w": {
-        "c": "Liverpool",
-        "hi": 7.6,
-        "lo": 2.9,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-23T20:00Z",
-      "h": "Brentford FC",
-      "a": "Everton FC",
-      "o": [
-        44.1,
-        26.7,
-        29.2
-      ],
-      "ref": "Craig Pawson",
-      "w": {
-        "c": "London",
-        "hi": 8.2,
-        "lo": 2.2,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-20T20:00Z",
-      "h": "Athletic Club",
-      "a": "RCD Espanyol de Barcelona",
-      "o": [
-        64.6,
-        20.9,
-        14.5
-      ],
-      "w": {
-        "c": "Bilbao",
-        "hi": 17.3,
-        "lo": 10.5,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-21T13:00Z",
-      "h": "Deportivo Alavés",
-      "a": "RC Deportivo La Coruña",
-      "o": [
-        42.8,
-        28.9,
-        28.3
-      ],
-      "w": {
-        "c": "Vitoria-Gasteiz",
-        "hi": 11.8,
-        "lo": 8.1,
-        "pc": 75,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-21T15:15Z",
-      "h": "Rayo Vallecano de Madrid",
-      "a": "Valencia CF",
-      "o": [
-        49.4,
-        27.2,
-        23.4
-      ],
-      "w": {
-        "c": "Madrid",
-        "hi": 12.1,
-        "lo": 9.3,
-        "pc": 30,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-21T17:30Z",
-      "h": "Sevilla FC",
-      "a": "Real Betis Balompié",
-      "o": [
-        32.1,
-        27.8,
-        40.1
-      ],
-      "w": {
-        "c": "Sevilla",
-        "hi": 20.7,
-        "lo": 9.6,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-21T20:00Z",
-      "h": "Real Madrid CF",
-      "a": "RC Celta de Vigo",
-      "o": [
-        83.5,
-        10.7,
-        5.8
-      ],
-      "w": {
-        "c": "Madrid",
-        "hi": 12.1,
-        "lo": 9.3,
-        "pc": 30,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T13:00Z",
-      "h": "FC Barcelona",
-      "a": "Villarreal CF",
-      "o": [
-        80.0,
-        11.3,
-        8.7
-      ],
-      "w": {
-        "c": "Barcelona",
-        "hi": 18.8,
-        "lo": 11.4,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T15:15Z",
-      "h": "Real Racing Club de Santander",
-      "a": "Real Sociedad de Fútbol",
-      "o": [
-        30.1,
-        23.0,
-        46.9
-      ],
-      "w": {
-        "c": "Santander",
-        "hi": 15.8,
-        "lo": 10.4,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T17:30Z",
-      "h": "CA Osasuna",
-      "a": "Málaga CF",
-      "o": [
-        52.5,
-        26.2,
-        21.3
-      ],
-      "w": {
-        "c": "Pamplona",
-        "hi": 12.8,
-        "lo": 5.7,
-        "pc": 30,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T20:00Z",
-      "h": "Getafe CF",
-      "a": "Club Atlético de Madrid",
-      "o": [
-        15.2,
-        23.1,
-        61.7
-      ],
-      "w": {
-        "c": "Madrid",
-        "hi": 14.1,
-        "lo": 3.1,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-23T20:00Z",
-      "h": "Levante UD",
-      "a": "Elche CF",
-      "o": [
-        43.6,
-        26.6,
-        29.8
-      ],
-      "w": {
-        "c": "Valencia",
-        "hi": 19.2,
-        "lo": 8.0,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
       "lg": "de.1",
       "t": "2026-11-20T19:30Z",
       "h": "FC Bayern München",
@@ -3841,395 +3431,8 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
-      "h": "Bayer 04 Leverkusen",
-      "a": "SC Paderborn 07",
-      "o": [
-        75.8,
-        14.0,
-        10.2
-      ],
-      "ref": "Tobias Reichel",
-      "w": {
-        "c": "Leverkusen",
-        "hi": 7.8,
-        "lo": -0.2,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
-      "h": "Eintracht Frankfurt",
-      "a": "TSG 1899 Hoffenheim",
-      "o": [
-        40.6,
-        23.9,
-        35.5
-      ],
-      "ref": "Max Burda",
-      "w": {
-        "c": "Frankfurt",
-        "hi": 7.4,
-        "lo": -1.4,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
-      "h": "1. FC Union Berlin",
-      "a": "RB Leipzig",
-      "o": [
-        17.0,
-        19.4,
-        63.6
-      ],
-      "ref": "Christian Dingert",
-      "w": {
-        "c": "Berlin",
-        "hi": 6.4,
-        "lo": 0.7,
-        "pc": 15,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
-      "h": "Borussia Mönchengladbach",
-      "a": "Borussia Dortmund",
-      "o": [
-        17.8,
-        20.4,
-        61.8
-      ],
-      "ref": "Robert Hartmann",
-      "w": {
-        "c": "Mönchengladbach",
-        "hi": 8.0,
-        "lo": -0.9,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T14:30Z",
-      "h": "SV 07 Elversberg",
-      "a": "SC Freiburg",
-      "o": [
-        27.5,
-        25.3,
-        47.2
-      ],
-      "ref": "Richard Hempel",
-      "w": {
-        "c": "Elversberg",
-        "hi": 7.0,
-        "lo": -0.6,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-21T17:30Z",
-      "h": "FC Schalke 04",
-      "a": "VfB Stuttgart",
-      "o": [
-        24.0,
-        23.3,
-        52.7
-      ],
-      "ref": "Daniel Siebert",
-      "w": {
-        "c": "Gelsenkirchen",
-        "hi": 7.5,
-        "lo": -0.5,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-22T14:30Z",
-      "h": "FC Augsburg",
-      "a": "1. FSV Mainz 05",
-      "o": [
-        35.4,
-        24.5,
-        40.1
-      ],
-      "w": {
-        "c": "Augsburg",
-        "hi": 2.5,
-        "lo": -1.2,
-        "pc": 35,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-22T16:30Z",
-      "h": "SV Werder Bremen",
-      "a": "Hamburger SV",
-      "o": [
-        57.3,
-        22.1,
-        20.6
-      ],
-      "w": {
-        "c": "Bremen",
-        "hi": 6.1,
-        "lo": -0.2,
-        "pc": 5,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-27T19:30Z",
-      "h": "SV Werder Bremen",
-      "a": "Borussia Mönchengladbach",
-      "o": [
-        54.1,
-        22.6,
-        23.3
-      ],
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-21T14:00Z",
-      "h": "Como 1907",
-      "a": "Cagliari Calcio",
-      "o": [
-        74.7,
-        15.4,
-        9.9
-      ],
-      "ref": "Andrea Calzavara",
-      "w": {
-        "c": "Como",
-        "hi": 15.0,
-        "lo": 5.1,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-21T14:00Z",
-      "h": "SS Lazio",
-      "a": "US Lecce",
-      "o": [
-        70.7,
-        17.5,
-        11.8
-      ],
-      "ref": "Matteo Marcenaro",
-      "w": {
-        "c": "Roma",
-        "hi": 18.2,
-        "lo": 10.4,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-21T17:00Z",
-      "h": "Parma Calcio 1913",
-      "a": "AS Roma",
-      "o": [
-        9.4,
-        15.4,
-        75.2
-      ],
-      "ref": "Simone Sozza",
-      "w": {
-        "c": "Parma",
-        "hi": 16.6,
-        "lo": 5.3,
-        "pc": 5,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-21T19:45Z",
-      "h": "SSC Napoli",
-      "a": "Torino FC",
-      "o": [
-        64.3,
-        20.4,
-        15.3
-      ],
-      "ref": "Antonio Rapuano",
-      "w": {
-        "c": "Napoli",
-        "hi": 18.0,
-        "lo": 14.2,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T11:30Z",
-      "h": "Juventus FC",
-      "a": "Venezia FC",
-      "o": [
-        71.9,
-        17.1,
-        11.0
-      ],
-      "w": {
-        "c": "Torino",
-        "hi": 7.8,
-        "lo": 4.7,
-        "pc": 60,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T14:00Z",
-      "h": "Bologna FC 1909",
-      "a": "Udinese Calcio",
-      "o": [
-        55.5,
-        24.9,
-        19.6
-      ],
-      "ref": "Livio Marinelli",
-      "w": {
-        "c": "Bologna",
-        "hi": 8.5,
-        "lo": 6.2,
-        "pc": 85,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T14:00Z",
-      "h": "US Sassuolo Calcio",
-      "a": "Genoa CFC",
-      "o": [
-        33.8,
-        28.2,
-        38.0
-      ],
-      "ref": "Maria Sole Ferrieri Caputi",
-      "w": {
-        "c": "Reggio Emilia",
-        "hi": 7.9,
-        "lo": 5.5,
-        "pc": 75,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T17:00Z",
-      "h": "AC Milan",
-      "a": "Frosinone Calcio",
-      "o": [
-        62.6,
-        19.5,
-        17.9
-      ],
-      "ref": "Luca Pairetto",
-      "w": {
-        "c": "Milano",
-        "hi": 7.3,
-        "lo": 4.8,
-        "pc": 75,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T19:45Z",
-      "h": "Atalanta BC",
-      "a": "FC Internazionale Milano",
-      "o": [
-        19.4,
-        20.7,
-        59.9
-      ],
-      "ref": "Fabio Maresca",
-      "w": {
-        "c": "Bergamo",
-        "hi": 6.6,
-        "lo": 4.5,
-        "pc": 65,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-23T19:45Z",
-      "h": "AC Monza",
-      "a": "ACF Fiorentina",
-      "o": [
-        26.1,
-        24.7,
-        49.2
-      ],
-      "ref": "Daniele Doveri",
-      "w": {
-        "c": "Monza",
-        "hi": 13.4,
-        "lo": 3.6,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4250,7 +3453,357 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-20T20:00Z",
+      "h": "Athletic Club",
+      "a": "RCD Espanyol de Barcelona",
+      "o": [
+        64.6,
+        20.9,
+        14.5
+      ],
+      "w": {
+        "c": "Bilbao",
+        "hi": 17.3,
+        "lo": 10.5,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T12:30Z",
+      "h": "Manchester City FC",
+      "a": "Fulham FC",
+      "o": [
+        70.6,
+        17.0,
+        12.4
+      ],
+      "ref": "Thomas Bramall",
+      "w": {
+        "c": "Manchester",
+        "hi": 7.6,
+        "lo": -0.7,
+        "pc": 5,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-21T13:00Z",
+      "h": "Deportivo Alavés",
+      "a": "RC Deportivo La Coruña",
+      "o": [
+        42.8,
+        28.9,
+        28.3
+      ],
+      "w": {
+        "c": "Vitoria-Gasteiz",
+        "hi": 11.8,
+        "lo": 8.1,
+        "pc": 75,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-21T14:00Z",
+      "h": "Como 1907",
+      "a": "Cagliari Calcio",
+      "o": [
+        74.7,
+        15.4,
+        9.9
+      ],
+      "ref": "Andrea Calzavara",
+      "w": {
+        "c": "Como",
+        "hi": 15.0,
+        "lo": 5.1,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-21T14:00Z",
+      "h": "SS Lazio",
+      "a": "US Lecce",
+      "o": [
+        70.7,
+        17.5,
+        11.8
+      ],
+      "ref": "Matteo Marcenaro",
+      "w": {
+        "c": "Roma",
+        "hi": 18.2,
+        "lo": 10.4,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T14:30Z",
+      "h": "Bayer 04 Leverkusen",
+      "a": "SC Paderborn 07",
+      "o": [
+        75.8,
+        14.0,
+        10.2
+      ],
+      "ref": "Tobias Reichel",
+      "w": {
+        "c": "Leverkusen",
+        "hi": 7.8,
+        "lo": -0.2,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T14:30Z",
+      "h": "Eintracht Frankfurt",
+      "a": "TSG 1899 Hoffenheim",
+      "o": [
+        40.6,
+        23.9,
+        35.5
+      ],
+      "ref": "Max Burda",
+      "w": {
+        "c": "Frankfurt",
+        "hi": 7.4,
+        "lo": -1.4,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T14:30Z",
+      "h": "1. FC Union Berlin",
+      "a": "RB Leipzig",
+      "o": [
+        17.0,
+        19.4,
+        63.6
+      ],
+      "ref": "Christian Dingert",
+      "w": {
+        "c": "Berlin",
+        "hi": 6.4,
+        "lo": 0.7,
+        "pc": 15,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T14:30Z",
+      "h": "Borussia Mönchengladbach",
+      "a": "Borussia Dortmund",
+      "o": [
+        17.8,
+        20.4,
+        61.8
+      ],
+      "ref": "Robert Hartmann",
+      "w": {
+        "c": "Mönchengladbach",
+        "hi": 8.0,
+        "lo": -0.9,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T14:30Z",
+      "h": "SV 07 Elversberg",
+      "a": "SC Freiburg",
+      "o": [
+        27.5,
+        25.3,
+        47.2
+      ],
+      "ref": "Richard Hempel",
+      "w": {
+        "c": "Elversberg",
+        "hi": 7.0,
+        "lo": -0.6,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T15:00Z",
+      "h": "Aston Villa FC",
+      "a": "Sunderland AFC",
+      "o": [
+        53.6,
+        24.8,
+        21.6
+      ],
+      "ref": "Andy Madley",
+      "w": {
+        "c": "Birmingham",
+        "hi": 7.7,
+        "lo": 0.1,
+        "pc": 5,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T15:00Z",
+      "h": "AFC Bournemouth",
+      "a": "Nottingham Forest FC",
+      "o": [
+        49.7,
+        26.0,
+        24.3
+      ],
+      "ref": "Adam Herczeg",
+      "w": {
+        "c": "Bournemouth",
+        "hi": 11.8,
+        "lo": 3.8,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T15:00Z",
+      "h": "Chelsea FC",
+      "a": "Leeds United FC",
+      "o": [
+        50.5,
+        25.4,
+        24.1
+      ],
+      "ref": "Michael Oliver",
+      "w": {
+        "c": "London",
+        "hi": 10.0,
+        "lo": 0.4,
+        "pc": 5,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T15:00Z",
+      "h": "Coventry City FC",
+      "a": "Crystal Palace FC",
+      "o": [
+        39.1,
+        26.5,
+        34.4
+      ],
+      "ref": "Darren England",
+      "w": {
+        "c": "Coventry",
+        "hi": 8.0,
+        "lo": -0.2,
+        "pc": 5,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T15:00Z",
+      "h": "Tottenham Hotspur FC",
+      "a": "Ipswich Town FC",
+      "o": [
+        62.6,
+        20.7,
+        16.7
+      ],
+      "ref": "Robert Jones",
+      "w": {
+        "c": "London",
+        "hi": 10.0,
+        "lo": 0.4,
+        "pc": 5,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-21T15:15Z",
+      "h": "Rayo Vallecano de Madrid",
+      "a": "Valencia CF",
+      "o": [
+        49.4,
+        27.2,
+        23.4
+      ],
+      "w": {
+        "c": "Madrid",
+        "hi": 12.1,
+        "lo": 9.3,
+        "pc": 30,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4271,7 +3824,117 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-21T17:00Z",
+      "h": "Parma Calcio 1913",
+      "a": "AS Roma",
+      "o": [
+        9.4,
+        15.4,
+        75.2
+      ],
+      "ref": "Simone Sozza",
+      "w": {
+        "c": "Parma",
+        "hi": 16.6,
+        "lo": 5.3,
+        "pc": 5,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-21T17:30Z",
+      "h": "Newcastle United FC",
+      "a": "Arsenal FC",
+      "o": [
+        16.7,
+        21.9,
+        61.4
+      ],
+      "ref": "Chris Kavanagh",
+      "w": {
+        "c": "Newcastle",
+        "hi": 5.4,
+        "lo": -1.8,
+        "pc": 10,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-21T17:30Z",
+      "h": "Sevilla FC",
+      "a": "Real Betis Balompié",
+      "o": [
+        32.1,
+        27.8,
+        40.1
+      ],
+      "w": {
+        "c": "Sevilla",
+        "hi": 20.7,
+        "lo": 9.6,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-21T17:30Z",
+      "h": "FC Schalke 04",
+      "a": "VfB Stuttgart",
+      "o": [
+        24.0,
+        23.3,
+        52.7
+      ],
+      "ref": "Daniel Siebert",
+      "w": {
+        "c": "Gelsenkirchen",
+        "hi": 7.5,
+        "lo": -0.5,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-21T19:45Z",
+      "h": "SSC Napoli",
+      "a": "Torino FC",
+      "o": [
+        64.3,
+        20.4,
+        15.3
+      ],
+      "ref": "Antonio Rapuano",
+      "w": {
+        "c": "Napoli",
+        "hi": 18.0,
+        "lo": 14.2,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4292,7 +3955,8 @@
         "pt": null
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4313,7 +3977,8 @@
         "pt": null
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4334,7 +3999,8 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4355,7 +4021,137 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-21T20:00Z",
+      "h": "Real Madrid CF",
+      "a": "RC Celta de Vigo",
+      "o": [
+        83.5,
+        10.7,
+        5.8
+      ],
+      "w": {
+        "c": "Madrid",
+        "hi": 12.1,
+        "lo": 9.3,
+        "pc": 30,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-22T11:30Z",
+      "h": "Juventus FC",
+      "a": "Venezia FC",
+      "o": [
+        71.9,
+        17.1,
+        11.0
+      ],
+      "w": {
+        "c": "Torino",
+        "hi": 7.8,
+        "lo": 4.7,
+        "pc": 60,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-22T13:00Z",
+      "h": "FC Barcelona",
+      "a": "Villarreal CF",
+      "o": [
+        80.0,
+        11.3,
+        8.7
+      ],
+      "w": {
+        "c": "Barcelona",
+        "hi": 18.8,
+        "lo": 11.4,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-22T14:00Z",
+      "h": "Hull City AFC",
+      "a": "Brighton & Hove Albion FC",
+      "o": [
+        15.1,
+        20.2,
+        64.7
+      ],
+      "ref": "Peter Bankes",
+      "w": {
+        "c": "Hull",
+        "hi": 8.2,
+        "lo": 2.4,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-22T14:00Z",
+      "h": "Bologna FC 1909",
+      "a": "Udinese Calcio",
+      "o": [
+        55.5,
+        24.9,
+        19.6
+      ],
+      "ref": "Livio Marinelli",
+      "w": {
+        "c": "Bologna",
+        "hi": 8.5,
+        "lo": 6.2,
+        "pc": 85,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-22T14:00Z",
+      "h": "US Sassuolo Calcio",
+      "a": "Genoa CFC",
+      "o": [
+        33.8,
+        28.2,
+        38.0
+      ],
+      "ref": "Maria Sole Ferrieri Caputi",
+      "w": {
+        "c": "Reggio Emilia",
+        "hi": 7.9,
+        "lo": 5.5,
+        "pc": 75,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4376,7 +4172,50 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-22T14:30Z",
+      "h": "FC Augsburg",
+      "a": "1. FSV Mainz 05",
+      "o": [
+        35.4,
+        24.5,
+        40.1
+      ],
+      "w": {
+        "c": "Augsburg",
+        "hi": 2.5,
+        "lo": -1.2,
+        "pc": 35,
+        "pt": null
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-22T15:15Z",
+      "h": "Real Racing Club de Santander",
+      "a": "Real Sociedad de Fútbol",
+      "o": [
+        30.1,
+        23.0,
+        46.9
+      ],
+      "w": {
+        "c": "Santander",
+        "hi": 15.8,
+        "lo": 10.4,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4397,7 +4236,116 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-22T16:30Z",
+      "h": "Liverpool FC",
+      "a": "Manchester United FC",
+      "o": [
+        54.4,
+        22.6,
+        23.0
+      ],
+      "ref": "Samuel Barrott",
+      "w": {
+        "c": "Liverpool",
+        "hi": 7.6,
+        "lo": 2.9,
+        "pc": 15,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-22T16:30Z",
+      "h": "SV Werder Bremen",
+      "a": "Hamburger SV",
+      "o": [
+        57.3,
+        22.1,
+        20.6
+      ],
+      "w": {
+        "c": "Bremen",
+        "hi": 6.1,
+        "lo": -0.2,
+        "pc": 5,
+        "pt": null
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-22T17:00Z",
+      "h": "AC Milan",
+      "a": "Frosinone Calcio",
+      "o": [
+        62.6,
+        19.5,
+        17.9
+      ],
+      "ref": "Luca Pairetto",
+      "w": {
+        "c": "Milano",
+        "hi": 7.3,
+        "lo": 4.8,
+        "pc": 75,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-22T17:30Z",
+      "h": "CA Osasuna",
+      "a": "Málaga CF",
+      "o": [
+        52.5,
+        26.2,
+        21.3
+      ],
+      "w": {
+        "c": "Pamplona",
+        "hi": 12.8,
+        "lo": 5.7,
+        "pc": 30,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-22T19:45Z",
+      "h": "Atalanta BC",
+      "a": "FC Internazionale Milano",
+      "o": [
+        19.4,
+        20.7,
+        59.9
+      ],
+      "ref": "Fabio Maresca",
+      "w": {
+        "c": "Bergamo",
+        "hi": 6.6,
+        "lo": 4.5,
+        "pc": 65,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4418,7 +4366,108 @@
         "pt": "rain"
       },
       "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON"
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-22T20:00Z",
+      "h": "Getafe CF",
+      "a": "Club Atlético de Madrid",
+      "o": [
+        15.2,
+        23.1,
+        61.7
+      ],
+      "w": {
+        "c": "Madrid",
+        "hi": 14.1,
+        "lo": 3.1,
+        "pc": 0,
+        "pt": null
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-11-23T19:45Z",
+      "h": "AC Monza",
+      "a": "ACF Fiorentina",
+      "o": [
+        26.1,
+        24.7,
+        49.2
+      ],
+      "ref": "Daniele Doveri",
+      "w": {
+        "c": "Monza",
+        "hi": 13.4,
+        "lo": 3.6,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "en.1",
+      "t": "2026-11-23T20:00Z",
+      "h": "Brentford FC",
+      "a": "Everton FC",
+      "o": [
+        44.1,
+        26.7,
+        29.2
+      ],
+      "ref": "Craig Pawson",
+      "w": {
+        "c": "London",
+        "hi": 8.2,
+        "lo": 2.2,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "previously_recorded_unverified",
+      "ref_source": "existing JSON",
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-11-23T20:00Z",
+      "h": "Levante UD",
+      "a": "Elche CF",
+      "o": [
+        43.6,
+        26.6,
+        29.8
+      ],
+      "w": {
+        "c": "Valencia",
+        "hi": 19.2,
+        "lo": 8.0,
+        "pc": 10,
+        "pt": "rain"
+      },
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "de.1",
+      "t": "2026-11-27T19:30Z",
+      "h": "SV Werder Bremen",
+      "a": "Borussia Mönchengladbach",
+      "o": [
+        54.1,
+        22.6,
+        23.3
+      ],
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
     },
     {
       "lg": "fr.1",
@@ -4431,62 +4480,33 @@
         42.4
       ],
       "ref_status": "not_confirmed",
-      "ref_source": null
+      "ref_source": null,
+      "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-19T19:56:29Z",
+  "updated": "2026-11-19T20:13:33Z",
   "sync_meta": {
-    "last_attempt": "2026-11-19T19:56:29Z",
-    "sources": [
-      "ESPN scoreboard (best effort)",
-      "verified referee CSV"
-    ],
+    "last_attempt": "2026-11-19T20:13:33Z",
+    "source": "ESPN public scoreboard (unofficial)",
+    "league_fetch_status": {
+      "en.1": "failed",
+      "es.1": "failed",
+      "de.1": "failed",
+      "it.1": "failed",
+      "fr.1": "failed"
+    },
     "warnings": [
-      "en.1 2026-11-19: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-20: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-21: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-22: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-23: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-24: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-25: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-26: ESPN unavailable (HTTPError)",
-      "en.1 2026-11-27: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-19: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-20: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-21: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-22: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-23: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-24: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-25: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-26: ESPN unavailable (HTTPError)",
-      "es.1 2026-11-27: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-19: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-20: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-21: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-22: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-23: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-24: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-25: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-26: ESPN unavailable (HTTPError)",
-      "de.1 2026-11-27: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-19: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-20: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-21: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-22: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-23: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-24: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-25: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-26: ESPN unavailable (HTTPError)",
-      "it.1 2026-11-27: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-19: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-20: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-21: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-22: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-23: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-24: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-25: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-26: ESPN unavailable (HTTPError)",
-      "fr.1 2026-11-27: ESPN unavailable (HTTPError)"
-    ]
+      "en.1: ESPN fetch failed (HTTPError, HTTP 400)",
+      "es.1: ESPN fetch failed (HTTPError, HTTP 400)",
+      "de.1: ESPN fetch failed (HTTPError, HTTP 400)",
+      "it.1: ESPN fetch failed (HTTPError, HTTP 400)",
+      "fr.1: ESPN fetch failed (HTTPError, HTTP 400)"
+    ],
+    "warnings_count": 5,
+    "events_matched": 0,
+    "fixtures_added": 0,
+    "referees_verified_this_run": 0,
+    "team_statistics_refreshed": false,
+    "note": "Goal, corner, card and referee historical rates are NOT refreshed by this script."
   }
 }
