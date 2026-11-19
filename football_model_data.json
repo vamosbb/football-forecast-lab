@@ -4484,9 +4484,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-19T20:13:33Z",
+  "updated": "2026-11-19T20:30:33Z",
   "sync_meta": {
-    "last_attempt": "2026-11-19T20:13:33Z",
+    "last_attempt": "2026-11-19T20:30:33Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "failed",
