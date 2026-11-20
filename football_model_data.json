@@ -20314,9 +20314,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T22:10:02Z",
+  "updated": "2026-11-20T22:35:17Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T22:10:02Z",
+    "last_attempt": "2026-11-20T22:35:17Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
@@ -20338,10 +20338,10 @@
       "referee_types": {},
       "referee_names_present": 0
     },
-    "team_statistics_refreshed": true,
-    "completed_matches_applied": 3,
+    "team_statistics_refreshed": false,
+    "completed_matches_applied": 0,
     "matches_with_corners_updated": 0,
-    "matches_with_cards_updated": 3,
+    "matches_with_cards_updated": 0,
     "recent_form_target_per_team": 10,
     "recent_form_teams_complete": 93,
     "recent_form_teams_partial": 3,
