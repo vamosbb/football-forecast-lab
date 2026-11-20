@@ -1,0 +1,26 @@
+{
+  "note": "Only pre-kickoff saved production-engine predictions. Results require both teams in recent match histories; coverage may be incomplete.",
+  "recorded": 109,
+  "completed": 0,
+  "pending": 109,
+  "1x2_logloss": {
+    "n": 0,
+    "mean": null
+  },
+  "1x2_brier": {
+    "n": 0,
+    "mean": null
+  },
+  "goals_over_2_5_brier": {
+    "n": 0,
+    "mean": null
+  },
+  "corners_over_8_5_brier": {
+    "n": 0,
+    "mean": null
+  },
+  "cards_over_4_5_brier": {
+    "n": 0,
+    "mean": null
+  }
+}
