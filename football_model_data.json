@@ -18641,29 +18641,6 @@
   },
   "fixtures": [
     {
-      "lg": "de.1",
-      "t": "2026-11-20T19:30:00Z",
-      "h": "FC Bayern München",
-      "a": "1. FC Köln",
-      "o": [
-        91.0,
-        6.0,
-        3.0
-      ],
-      "ref": "Robin Braun",
-      "w": {
-        "c": "München",
-        "hi": 9.3,
-        "lo": 5.1,
-        "pc": 35,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401884736"
-    },
-    {
       "lg": "fr.1",
       "t": "2026-11-20T19:45:00Z",
       "h": "ES Troyes AC",
@@ -20382,9 +20359,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T19:14:51Z",
+  "updated": "2026-11-20T19:31:36Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T19:14:51Z",
+    "last_attempt": "2026-11-20T19:31:36Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
