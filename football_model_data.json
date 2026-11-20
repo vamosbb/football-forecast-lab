@@ -18641,28 +18641,6 @@
   },
   "fixtures": [
     {
-      "lg": "es.1",
-      "t": "2026-11-20T20:00:00Z",
-      "h": "Athletic Club",
-      "a": "RCD Espanyol de Barcelona",
-      "o": [
-        64.6,
-        20.9,
-        14.5
-      ],
-      "w": {
-        "c": "Bilbao",
-        "hi": 17.3,
-        "lo": 10.5,
-        "pc": 10,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401882805"
-    },
-    {
       "lg": "en.1",
       "t": "2026-11-21T12:30:00Z",
       "h": "Manchester City FC",
@@ -20336,9 +20314,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T19:49:33Z",
+  "updated": "2026-11-20T20:16:00Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T19:49:33Z",
+    "last_attempt": "2026-11-20T20:16:00Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
@@ -20349,9 +20327,14 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 111,
+    "events_matched": 110,
     "fixtures_added": 0,
     "referees_verified_this_run": 0,
+    "football_data_referee_lookup": {
+      "requests": 5,
+      "matched": 109,
+      "appointed": 0
+    },
     "team_statistics_refreshed": false,
     "completed_matches_applied": 0,
     "matches_with_corners_updated": 0,
