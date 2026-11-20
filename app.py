@@ -27,7 +27,10 @@ with st.sidebar:
     bookmaker=st.number_input('Bookmaker home-win odds',min_value=1.01,value=2.00,step=0.05)
 
 if home==away:st.error('Teams must differ');st.stop()
-r=predict(league,home,away,ref)
+# Only verified appointments may influence the automated forecast.
+# A custom referee is an explicit user-entered scenario.
+ref_for_model = ref if (fx is None or fx.get('ref_status') == 'appointed') else None
+r=predict(league,home,away,ref_for_model)
 st.subheader(f'{home}  vs  {away}')
 for label, team in [('Home', home), ('Away', away)]:
     form = league['teams'][team].get('recent_form') or {}
@@ -40,7 +43,9 @@ if fx:
     status=fx.get('ref_status') or ('previously_recorded_unverified' if ref else 'not_confirmed')
     st.info(f"Referee: **{ref or 'Not confirmed'}** | Status: **{status}** | Source: {fx.get('ref_source','existing dataset')}")
 else:st.info(f"Referee: **{ref or 'Not confirmed'}**")
-if ref and not r['referee_stats_available']:
+if fx and ref and fx.get('ref_status') != 'appointed':
+    st.warning('Referee appointment is unverified. The displayed name is informational only; neutral referee factor 1.0 is used.')
+if ref_for_model and not r['referee_stats_available']:
     st.warning('Referee name is retained, but historical statistics are unavailable. Neutral factor 1.0 is applied; this does NOT mean the referee is unappointed.')
 cols=st.columns(3)
 for col,label,p in zip(cols,['Home win','Draw','Away win'],r['1X2']):
@@ -62,6 +67,7 @@ with c3:
     st.subheader('Cards')
     h,a=r['cards'];st.write(f'Expected: **{h:.2f} – {a:.2f}**')
     st.write(f"Referee factor: **{r['referee_factor']:.3f}**")
+    st.caption('Referee factor applies only to verified appointments or custom scenarios with available historical data.')
     for line in [3.5,4.5,5.5]:st.write(f'Over {line}: **{poisson_over(h+a,line):.1%}**')
 st.caption(f"Recent-match adjustment: corners {'used' if r['recent_corners_used'] else 'not used (insufficient verified observations)'}; cards {'used' if r['recent_cards_used'] else 'not used (insufficient verified observations)'}")
 st.divider()

@@ -155,11 +155,25 @@ def load_overrides():
 
 
 def event_referee(event):
+    """Select only an explicitly identified match referee; never guess an official.
+
+    ESPN may list assistant, VAR and fourth officials. An untyped official
+    is ambiguous, even if it is the first entry.
+    """
     for comp in event.get('competitions') or []:
         for official in comp.get('officials') or []:
-            role = norm(official.get('position', {}).get('name', '') if isinstance(official.get('position'), dict)
-                        else official.get('position', '') or official.get('type', ''))
-            if role and any(x in role for x in ('assistant', 'video', 'fourth', 'var')):
+            position = official.get('position')
+            if isinstance(position, dict):
+                role_text = position.get('name') or position.get('displayName') or ''
+            else:
+                role_text = position or ''
+            typ = official.get('type')
+            if isinstance(typ, dict):
+                typ = typ.get('name') or typ.get('displayName') or ''
+            role = norm(str(role_text or typ or ''))
+            if not role or any(x in role for x in ('assistant', 'video', 'fourth', 'var', 'linesman')):
+                continue
+            if role not in ('referee', 'main referee', 'head referee', 'center referee', 'centre referee'):
                 continue
             name = official.get('displayName') or official.get('fullName') or official.get('name')
             if name:
