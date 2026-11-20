@@ -20359,9 +20359,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T19:31:36Z",
+  "updated": "2026-11-20T19:38:22Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T19:31:36Z",
+    "last_attempt": "2026-11-20T19:38:22Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
@@ -20372,7 +20372,7 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 112,
+    "events_matched": 111,
     "fixtures_added": 0,
     "referees_verified_this_run": 0,
     "team_statistics_refreshed": false,
