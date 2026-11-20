@@ -18641,29 +18641,6 @@
   },
   "fixtures": [
     {
-      "lg": "fr.1",
-      "t": "2026-11-20T19:45:00Z",
-      "h": "ES Troyes AC",
-      "a": "Le Havre AC",
-      "o": [
-        42.9,
-        27.6,
-        29.5
-      ],
-      "ref": "Jérémie Pignard",
-      "w": {
-        "c": "Troyes",
-        "hi": 12.3,
-        "lo": 5.5,
-        "pc": 35,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401876395"
-    },
-    {
       "lg": "es.1",
       "t": "2026-11-20T20:00:00Z",
       "h": "Athletic Club",
@@ -20359,9 +20336,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T19:38:22Z",
+  "updated": "2026-11-20T19:49:33Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T19:38:22Z",
+    "last_attempt": "2026-11-20T19:49:33Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "en.1": "ok",
