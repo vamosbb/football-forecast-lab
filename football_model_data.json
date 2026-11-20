@@ -20314,16 +20314,16 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-20T22:46:06Z",
+  "updated": "2026-11-20T22:59:42Z",
   "sync_meta": {
-    "last_attempt": "2026-11-20T22:46:06Z",
+    "last_attempt": "2026-11-20T22:59:42Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
-      "en.1": "ok",
       "es.1": "ok",
       "de.1": "ok",
-      "it.1": "ok",
-      "fr.1": "ok"
+      "en.1": "ok",
+      "fr.1": "ok",
+      "it.1": "ok"
     },
     "warnings": [],
     "warnings_count": 0,
