@@ -1852,6 +1852,431 @@
       "p_corners_over": 0.41693063,
       "p_cards_over": 0.51992668,
       "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879213",
+      "kickoff": "2026-12-05T12:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Chelsea FC",
+      "away": "Liverpool FC",
+      "p_1x2": [
+        0.40167113,
+        0.26236627,
+        0.3359626
+      ],
+      "p_goals_over_2_5": 0.63762297,
+      "p_corners_over": 0.74181391,
+      "p_cards_over": 0.48112931,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882780",
+      "kickoff": "2026-12-05T13:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Real Racing Club de Santander",
+      "away": "RC Deportivo La Coruña",
+      "p_1x2": [
+        0.36789847,
+        0.25038733,
+        0.38171421
+      ],
+      "p_goals_over_2_5": 0.55240864,
+      "p_corners_over": 0.87927803,
+      "p_cards_over": 0.50280884,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401874975",
+      "kickoff": "2026-12-05T14:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "AC Monza",
+      "away": "Como 1907",
+      "p_1x2": [
+        0.09939997,
+        0.15777756,
+        0.74282247
+      ],
+      "p_goals_over_2_5": 0.62795629,
+      "p_corners_over": 0.61175957,
+      "p_cards_over": 0.21319572,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884712",
+      "kickoff": "2026-12-05T14:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "1. FC Union Berlin",
+      "away": "Hamburger SV",
+      "p_1x2": [
+        0.46042489,
+        0.26990445,
+        0.26967065
+      ],
+      "p_goals_over_2_5": 0.46013809,
+      "p_corners_over": 0.48927454,
+      "p_cards_over": 0.42180979,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884716",
+      "kickoff": "2026-12-05T14:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Bayer 04 Leverkusen",
+      "away": "Borussia Mönchengladbach",
+      "p_1x2": [
+        0.82018558,
+        0.11023973,
+        0.06957469
+      ],
+      "p_goals_over_2_5": 0.80382567,
+      "p_corners_over": 0.84874002,
+      "p_cards_over": 0.52555028,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884713",
+      "kickoff": "2026-12-05T14:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "FC Augsburg",
+      "away": "1. FC Köln",
+      "p_1x2": [
+        0.56360316,
+        0.21668289,
+        0.21971395
+      ],
+      "p_goals_over_2_5": 0.63820659,
+      "p_corners_over": 0.72315332,
+      "p_cards_over": 0.34851723,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884717",
+      "kickoff": "2026-12-05T14:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "RB Leipzig",
+      "away": "1. FSV Mainz 05",
+      "p_1x2": [
+        0.79324712,
+        0.12000311,
+        0.08674977
+      ],
+      "p_goals_over_2_5": 0.8182819,
+      "p_corners_over": 0.72739062,
+      "p_cards_over": 0.23143286,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884715",
+      "kickoff": "2026-12-05T14:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "SC Freiburg",
+      "away": "TSG 1899 Hoffenheim",
+      "p_1x2": [
+        0.62814631,
+        0.18920421,
+        0.18264948
+      ],
+      "p_goals_over_2_5": 0.71213593,
+      "p_corners_over": 0.58598247,
+      "p_cards_over": 0.31470172,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879216",
+      "kickoff": "2026-12-05T15:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "AFC Bournemouth",
+      "away": "Hull City AFC",
+      "p_1x2": [
+        0.53483699,
+        0.27580967,
+        0.18935335
+      ],
+      "p_goals_over_2_5": 0.4937831,
+      "p_corners_over": 0.58588171,
+      "p_cards_over": 0.60139531,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879215",
+      "kickoff": "2026-12-05T15:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Aston Villa FC",
+      "away": "Crystal Palace FC",
+      "p_1x2": [
+        0.65550958,
+        0.21472938,
+        0.12976104
+      ],
+      "p_goals_over_2_5": 0.61733692,
+      "p_corners_over": 0.4309113,
+      "p_cards_over": 0.35065909,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879211",
+      "kickoff": "2026-12-05T15:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Leeds United FC",
+      "away": "Ipswich Town FC",
+      "p_1x2": [
+        0.55734098,
+        0.26370129,
+        0.17895773
+      ],
+      "p_goals_over_2_5": 0.52259957,
+      "p_corners_over": 0.35541407,
+      "p_cards_over": 0.35065909,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879210",
+      "kickoff": "2026-12-05T15:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Manchester United FC",
+      "away": "Coventry City FC",
+      "p_1x2": [
+        0.67190797,
+        0.1957909,
+        0.13230112
+      ],
+      "p_goals_over_2_5": 0.69392886,
+      "p_corners_over": 0.54468086,
+      "p_cards_over": 0.29260571,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882779",
+      "kickoff": "2026-12-05T15:15:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Rayo Vallecano de Madrid",
+      "away": "Levante UD",
+      "p_1x2": [
+        0.50235059,
+        0.24353022,
+        0.25411919
+      ],
+      "p_goals_over_2_5": 0.53391139,
+      "p_corners_over": 0.59240417,
+      "p_cards_over": 0.41073525,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876384",
+      "kickoff": "2026-12-05T16:15:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Lille OSC",
+      "away": "AJ Auxerre",
+      "p_1x2": [
+        0.73850093,
+        0.17278853,
+        0.08871054
+      ],
+      "p_goals_over_2_5": 0.53290232,
+      "p_corners_over": 0.6320186,
+      "p_cards_over": 0.30741964,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875023",
+      "kickoff": "2026-12-05T17:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Frosinone Calcio",
+      "away": "FC Internazionale Milano",
+      "p_1x2": [
+        0.16711008,
+        0.17014527,
+        0.66274465
+      ],
+      "p_goals_over_2_5": 0.74393214,
+      "p_corners_over": 0.84138761,
+      "p_cards_over": 0.21706775,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882777",
+      "kickoff": "2026-12-05T17:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Villarreal CF",
+      "away": "Real Sociedad de Fútbol",
+      "p_1x2": [
+        0.59185837,
+        0.1965629,
+        0.21157872
+      ],
+      "p_goals_over_2_5": 0.70373974,
+      "p_corners_over": 0.90906151,
+      "p_cards_over": 0.42951689,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884714",
+      "kickoff": "2026-12-05T17:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Eintracht Frankfurt",
+      "away": "SV Werder Bremen",
+      "p_1x2": [
+        0.53257693,
+        0.21192984,
+        0.25549323
+      ],
+      "p_goals_over_2_5": 0.6988963,
+      "p_corners_over": 0.68680458,
+      "p_cards_over": 0.31539188,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401878747",
+      "kickoff": "2026-12-05T17:30:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Nottingham Forest FC",
+      "away": "Brighton & Hove Albion FC",
+      "p_1x2": [
+        0.16369853,
+        0.27712824,
+        0.55917323
+      ],
+      "p_goals_over_2_5": 0.4559383,
+      "p_corners_over": 0.54490588,
+      "p_cards_over": 0.50908417,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876382",
+      "kickoff": "2026-12-05T19:45:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "AS Monaco FC",
+      "away": "Angers SCO",
+      "p_1x2": [
+        0.69276376,
+        0.19223851,
+        0.11499773
+      ],
+      "p_goals_over_2_5": 0.52399846,
+      "p_corners_over": 0.75844347,
+      "p_cards_over": 0.30741964,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876385",
+      "kickoff": "2026-12-05T19:45:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Racing Club de Lens",
+      "away": "Le Havre AC",
+      "p_1x2": [
+        0.80651024,
+        0.12588,
+        0.06760976
+      ],
+      "p_goals_over_2_5": 0.68164675,
+      "p_corners_over": 0.68165654,
+      "p_cards_over": 0.31829642,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876381",
+      "kickoff": "2026-12-05T19:45:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Paris FC",
+      "away": "Le Mans FC",
+      "p_1x2": [
+        0.70011818,
+        0.174281,
+        0.12560082
+      ],
+      "p_goals_over_2_5": 0.6336583,
+      "p_corners_over": 0.25221184,
+      "p_cards_over": 0.43866917,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876379",
+      "kickoff": "2026-12-05T19:45:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "RC Strasbourg Alsace",
+      "away": "FC Lorient",
+      "p_1x2": [
+        0.44713949,
+        0.25122086,
+        0.30163965
+      ],
+      "p_goals_over_2_5": 0.52082948,
+      "p_corners_over": 0.22377655,
+      "p_cards_over": 0.22335201,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401874788",
+      "kickoff": "2026-12-05T19:45:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "SSC Napoli",
+      "away": "US Lecce",
+      "p_1x2": [
+        0.71285699,
+        0.18215099,
+        0.10499202
+      ],
+      "p_goals_over_2_5": 0.53077248,
+      "p_corners_over": 0.60239353,
+      "p_cards_over": 0.20443001,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882783",
+      "kickoff": "2026-12-05T20:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "FC Barcelona",
+      "away": "RC Celta de Vigo",
+      "p_1x2": [
+        0.8409529,
+        0.10779719,
+        0.05124992
+      ],
+      "p_goals_over_2_5": 0.70880261,
+      "p_corners_over": 0.59787532,
+      "p_cards_over": 0.2937498,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879214",
+      "kickoff": "2026-12-05T20:00:00Z",
+      "recorded_at": "2026-11-21T06:29:58.781912+00:00",
+      "home": "Brentford FC",
+      "away": "Manchester City FC",
+      "p_1x2": [
+        0.30802036,
+        0.2749966,
+        0.41698305
+      ],
+      "p_goals_over_2_5": 0.58298752,
+      "p_corners_over": 0.67653241,
+      "p_cards_over": 0.36530228,
+      "result": null
     }
   ]
 }
