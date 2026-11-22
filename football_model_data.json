@@ -11238,7 +11238,7 @@
       "prevH": 1.2763,
       "prevA": 1.15,
       "rho": 0.01,
-      "asof": "2026-11-21",
+      "asof": "2026-11-22",
       "teams": {
         "SS Lazio": {
           "att": 1.2826,
@@ -12357,10 +12357,10 @@
           }
         },
         "Juventus FC": {
-          "att": 1.1099,
-          "dfn": 0.7204,
-          "P": 11,
-          "F": 15,
+          "att": 1.2302,
+          "dfn": 0.7282,
+          "P": 12,
+          "F": 19,
           "A": 12,
           "prior": "last",
           "pa": 1.323,
@@ -12371,7 +12371,7 @@
             7.641
           ],
           "cd": {
-            "n": 11,
+            "n": 12,
             "y": 16,
             "r": 0
           },
@@ -12388,12 +12388,12 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.4,
+              "goals_for_avg": 1.6,
               "goals_against_avg": 1.2
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 1.4,
+              "goals_for_avg": 1.8,
               "goals_against_avg": 0.8
             },
             "away": {
@@ -12402,6 +12402,18 @@
               "goals_against_avg": 1.6
             },
             "matches": [
+              {
+                "id": "401875008",
+                "date": "2026-11-22T11:30:00Z",
+                "opponent": "Venezia FC",
+                "venue": "home",
+                "goals_for": 4,
+                "goals_against": 0,
+                "corners_for": 5.0,
+                "corners_against": 2.0,
+                "yellow_cards": 0.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401875003",
                 "date": "2026-11-08T19:45:00Z",
@@ -12509,23 +12521,11 @@
                 "corners_against": 1.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874746",
-                "date": "2026-08-29T18:45:00Z",
-                "opponent": "Parma Calcio 1913",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 0,
-                "corners_for": 10.0,
-                "corners_against": 2.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 8.2
+              "avg": 7.7
             },
             "corners_against": {
               "n": 10,
@@ -12533,7 +12533,7 @@
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.4
+              "avg": 1.2
             },
             "red_cards": {
               "n": 10,
@@ -14589,11 +14589,11 @@
           }
         },
         "Venezia FC": {
-          "att": 0.6161,
-          "dfn": 1.2588,
-          "P": 11,
+          "att": 0.6155,
+          "dfn": 1.3918,
+          "P": 12,
           "F": 8,
-          "A": 21,
+          "A": 25,
           "prior": "promoted",
           "pa": 0.752,
           "pd": 1.287,
@@ -14603,7 +14603,7 @@
             12.364
           ],
           "cd": {
-            "n": 11,
+            "n": 12,
             "y": 23,
             "r": 0
           },
@@ -14621,7 +14621,7 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 0.8,
-              "goals_against_avg": 1.9
+              "goals_against_avg": 2.1
             },
             "home": {
               "n": 5,
@@ -14631,9 +14631,21 @@
             "away": {
               "n": 5,
               "goals_for_avg": 0.6,
-              "goals_against_avg": 2.0
+              "goals_against_avg": 2.4
             },
             "matches": [
+              {
+                "id": "401875008",
+                "date": "2026-11-22T11:30:00Z",
+                "opponent": "Juventus FC",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 4,
+                "corners_for": 2.0,
+                "corners_against": 5.0,
+                "yellow_cards": 0.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874815",
                 "date": "2026-11-06T19:45:00Z",
@@ -14741,31 +14753,19 @@
                 "corners_against": 5.0,
                 "yellow_cards": 4.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874758",
-                "date": "2026-08-28T18:45:00Z",
-                "opponent": "AC Milan",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 2,
-                "corners_for": 3.0,
-                "corners_against": 2.0,
-                "yellow_cards": 3.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.8
+              "avg": 3.7
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.6
+              "avg": 5.9
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.2
+              "avg": 1.9
             },
             "red_cards": {
               "n": 10,
@@ -18677,142 +18677,6 @@
   },
   "fixtures": [
     {
-      "lg": "it.1",
-      "t": "2026-11-22T11:30:00Z",
-      "h": "Juventus FC",
-      "a": "Venezia FC",
-      "o": [
-        71.9,
-        17.1,
-        11.0
-      ],
-      "w": {
-        "c": "Torino",
-        "hi": 7.8,
-        "lo": 4.7,
-        "pc": 60,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401875008"
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T13:00:00Z",
-      "h": "FC Barcelona",
-      "a": "Villarreal CF",
-      "o": [
-        80.0,
-        11.3,
-        8.7
-      ],
-      "w": {
-        "c": "Barcelona",
-        "hi": 18.8,
-        "lo": 11.4,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401882804"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-22T14:00:00Z",
-      "h": "Hull City AFC",
-      "a": "Brighton & Hove Albion FC",
-      "o": [
-        15.1,
-        20.2,
-        64.7
-      ],
-      "ref": "Peter Bankes",
-      "w": {
-        "c": "Hull",
-        "hi": 8.2,
-        "lo": 2.4,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401879234"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T14:00:00Z",
-      "h": "Bologna FC 1909",
-      "a": "Udinese Calcio",
-      "o": [
-        55.5,
-        24.9,
-        19.6
-      ],
-      "ref": "Livio Marinelli",
-      "w": {
-        "c": "Bologna",
-        "hi": 8.5,
-        "lo": 6.2,
-        "pc": 85,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401875047"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T14:00:00Z",
-      "h": "US Sassuolo Calcio",
-      "a": "Genoa CFC",
-      "o": [
-        33.8,
-        28.2,
-        38.0
-      ],
-      "ref": "Maria Sole Ferrieri Caputi",
-      "w": {
-        "c": "Reggio Emilia",
-        "hi": 7.9,
-        "lo": 5.5,
-        "pc": 75,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401874960"
-    },
-    {
-      "lg": "fr.1",
-      "t": "2026-11-22T14:00:00Z",
-      "h": "Paris FC",
-      "a": "Angers SCO",
-      "o": [
-        73.3,
-        16.4,
-        10.3
-      ],
-      "ref": "Aurélien Petit",
-      "w": {
-        "c": "Paris",
-        "hi": 7.3,
-        "lo": 4.6,
-        "pc": 60,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401876397"
-    },
-    {
       "lg": "de.1",
       "t": "2026-11-22T14:30:00Z",
       "h": "FC Augsburg",
@@ -18829,10 +18693,11 @@
         "pc": 35,
         "pt": null
       },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401884733"
+      "ref_status": "appointed",
+      "ref_source": "Football-Data.org match referees",
+      "ref_stats_available": true,
+      "espn_event_id": "401884733",
+      "ref": "Martin Petersen"
     },
     {
       "lg": "es.1",
@@ -18851,10 +18716,11 @@
         "pc": 15,
         "pt": "rain"
       },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
+      "ref_status": "appointed",
+      "ref_source": "Football-Data.org match referees",
       "ref_stats_available": false,
-      "espn_event_id": "401882800"
+      "espn_event_id": "401882800",
+      "ref": "Manuel Orellana Cid"
     },
     {
       "lg": "fr.1",
@@ -18874,9 +18740,9 @@
         "pc": 45,
         "pt": "rain"
       },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
+      "ref_status": "appointed",
+      "ref_source": "Football-Data.org match referees",
+      "ref_stats_available": true,
       "espn_event_id": "401876401"
     },
     {
@@ -20166,9 +20032,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-22T05:57:13Z",
+  "updated": "2026-11-22T14:27:16Z",
   "sync_meta": {
-    "last_attempt": "2026-11-22T05:57:13Z",
+    "last_attempt": "2026-11-22T14:27:16Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "es.1": "ok",
@@ -20179,21 +20045,23 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 114,
-    "fixtures_added": 16,
-    "referees_verified_this_run": 0,
+    "events_matched": 124,
+    "fixtures_added": 0,
+    "referees_verified_this_run": 3,
     "football_data_referee_lookup": {
       "requests": 5,
       "matched": 108,
-      "appointed": 0,
-      "matches_with_referees": 0,
-      "referee_types": {},
-      "referee_names_present": 0
+      "appointed": 3,
+      "matches_with_referees": 3,
+      "referee_types": {
+        "REFEREE": 3
+      },
+      "referee_names_present": 3
     },
     "team_statistics_refreshed": true,
-    "completed_matches_applied": 9,
+    "completed_matches_applied": 1,
     "matches_with_corners_updated": 0,
-    "matches_with_cards_updated": 9,
+    "matches_with_cards_updated": 1,
     "recent_form_target_per_team": 10,
     "recent_form_teams_complete": 96,
     "recent_form_teams_partial": 0,
@@ -20203,6 +20071,7 @@
   "processed_espn_event_ids": [
     "401874967",
     "401874981",
+    "401875008",
     "401875056",
     "401875067",
     "401876395",
@@ -26841,6 +26710,22 @@
           "Torino FC": {
             "corners": 5.0,
             "yellow": 1.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401875008": {
+        "by_team": {
+          "Juventus FC": {
+            "corners": 5.0,
+            "yellow": 0.0,
+            "red": 0.0
+          },
+          "Venezia FC": {
+            "corners": 2.0,
+            "yellow": 0.0,
             "red": 0.0
           }
         },

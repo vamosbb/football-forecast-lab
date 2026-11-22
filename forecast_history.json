@@ -691,7 +691,16 @@
       "p_goals_over_2_5": 0.49430413,
       "p_corners_over": 0.84764071,
       "p_cards_over": 0.27445179,
-      "result": null
+      "result": {
+        "home_goals": 4,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.300067,
+        "brier": 0.105086,
+        "goals_over_2_5_brier": 0.255728,
+        "corners_brier": 0.718495,
+        "cards_brier": 0.075324
+      }
     },
     {
       "league": "es.1",
