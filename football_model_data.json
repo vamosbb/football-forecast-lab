@@ -7,7 +7,7 @@
       "prevH": 1.5263,
       "prevA": 1.2237,
       "rho": -0.16,
-      "asof": "2026-11-21",
+      "asof": "2026-11-22",
       "teams": {
         "Arsenal FC": {
           "att": 1.2486,
@@ -196,11 +196,11 @@
           }
         },
         "Brighton & Hove Albion FC": {
-          "att": 1.4086,
-          "dfn": 0.7133,
-          "P": 10,
+          "att": 1.3443,
+          "dfn": 0.7448,
+          "P": 11,
           "F": 26,
-          "A": 7,
+          "A": 9,
           "prior": "last",
           "pa": 0.995,
           "pd": 0.88,
@@ -210,9 +210,9 @@
             -0.083
           ],
           "cd": {
-            "n": 10,
-            "y": 24,
-            "r": 1
+            "n": 11,
+            "y": 26,
+            "r": 2
           },
           "cr": {
             "n": 10,
@@ -227,20 +227,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.6,
-              "goals_against_avg": 0.7
+              "goals_for_avg": 2.2,
+              "goals_against_avg": 0.9
             },
             "home": {
-              "n": 5,
-              "goals_for_avg": 3.0,
-              "goals_against_avg": 0.2
+              "n": 4,
+              "goals_for_avg": 2.75,
+              "goals_against_avg": 0.25
             },
             "away": {
-              "n": 5,
-              "goals_for_avg": 2.2,
-              "goals_against_avg": 1.2
+              "n": 6,
+              "goals_for_avg": 1.833,
+              "goals_against_avg": 1.333
             },
             "matches": [
+              {
+                "id": "401879234",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Hull City AFC",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 2,
+                "corners_for": 5.0,
+                "corners_against": 3.0,
+                "yellow_cards": 2.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401879244",
                 "date": "2026-11-08T14:00:00Z",
@@ -348,18 +360,6 @@
                 "corners_against": 4.0,
                 "yellow_cards": 3.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401879297",
-                "date": "2026-08-23T13:00:00Z",
-                "opponent": "Aston Villa FC",
-                "venue": "home",
-                "goals_for": 4,
-                "goals_against": 0,
-                "corners_for": 5.0,
-                "corners_against": 2.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
@@ -368,7 +368,7 @@
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.0
+              "avg": 5.1
             },
             "yellow_cards": {
               "n": 10,
@@ -376,7 +376,7 @@
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.1
+              "avg": 0.2
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -568,10 +568,10 @@
           }
         },
         "Liverpool FC": {
-          "att": 1.1239,
-          "dfn": 0.8863,
-          "P": 10,
-          "F": 14,
+          "att": 1.2005,
+          "dfn": 0.8464,
+          "P": 11,
+          "F": 18,
           "A": 10,
           "prior": "last",
           "pa": 1.206,
@@ -582,8 +582,8 @@
             -2.961
           ],
           "cd": {
-            "n": 10,
-            "y": 25,
+            "n": 11,
+            "y": 26,
             "r": 1
           },
           "cr": {
@@ -599,20 +599,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.4,
-              "goals_against_avg": 1.0
-            },
-            "home": {
-              "n": 5,
-              "goals_for_avg": 0.8,
-              "goals_against_avg": 1.2
-            },
-            "away": {
-              "n": 5,
-              "goals_for_avg": 2.0,
+              "goals_for_avg": 1.6,
               "goals_against_avg": 0.8
             },
+            "home": {
+              "n": 6,
+              "goals_for_avg": 1.333,
+              "goals_against_avg": 1.0
+            },
+            "away": {
+              "n": 4,
+              "goals_for_avg": 2.0,
+              "goals_against_avg": 0.5
+            },
             "matches": [
+              {
+                "id": "401878755",
+                "date": "2026-11-22T16:30:00Z",
+                "opponent": "Manchester United FC",
+                "venue": "home",
+                "goals_for": 4,
+                "goals_against": 0,
+                "corners_for": 15.0,
+                "corners_against": 5.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401879243",
                 "date": "2026-11-08T14:00:00Z",
@@ -720,31 +732,19 @@
                 "corners_against": 5.0,
                 "yellow_cards": 4.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401879319",
-                "date": "2026-08-23T15:30:00Z",
-                "opponent": "Newcastle United FC",
-                "venue": "away",
-                "goals_for": 2,
-                "goals_against": 2,
-                "corners_for": 6.0,
-                "corners_against": 2.0,
-                "yellow_cards": 3.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.2
+              "avg": 6.1
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.1
+              "avg": 4.4
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.5
+              "avg": 2.3
             },
             "red_cards": {
               "n": 10,
@@ -2242,10 +2242,10 @@
           }
         },
         "Hull City AFC": {
-          "att": 0.8152,
-          "dfn": 0.9892,
-          "P": 10,
-          "F": 11,
+          "att": 0.842,
+          "dfn": 0.9449,
+          "P": 11,
+          "F": 13,
           "A": 11,
           "prior": "promoted",
           "pa": 0.823,
@@ -2256,8 +2256,8 @@
             -0.368
           ],
           "cd": {
-            "n": 10,
-            "y": 29,
+            "n": 11,
+            "y": 31,
             "r": 0
           },
           "cr": {
@@ -2287,6 +2287,18 @@
               "goals_against_avg": 1.2
             },
             "matches": [
+              {
+                "id": "401879234",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Brighton & Hove Albion FC",
+                "venue": "home",
+                "goals_for": 2,
+                "goals_against": 0,
+                "corners_for": 3.0,
+                "corners_against": 5.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401878760",
                 "date": "2026-11-07T15:00:00Z",
@@ -2394,27 +2406,15 @@
                 "corners_against": 6.0,
                 "yellow_cards": 4.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401879322",
-                "date": "2026-08-22T11:30:00Z",
-                "opponent": "Manchester United FC",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 0,
-                "corners_for": 1.0,
-                "corners_against": 6.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.1
+              "avg": 4.3
             },
             "corners_against": {
               "n": 10,
-              "avg": 6.3
+              "avg": 6.2
             },
             "yellow_cards": {
               "n": 10,
@@ -3172,11 +3172,11 @@
           }
         },
         "Manchester United FC": {
-          "att": 1.1865,
-          "dfn": 1.1547,
-          "P": 10,
+          "att": 1.1335,
+          "dfn": 1.2292,
+          "P": 11,
           "F": 14,
-          "A": 19,
+          "A": 23,
           "prior": "last",
           "pa": 1.321,
           "pd": 0.957,
@@ -3186,9 +3186,9 @@
             -2.291
           ],
           "cd": {
-            "n": 10,
+            "n": 11,
             "y": 21,
-            "r": 1
+            "r": 2
           },
           "cr": {
             "n": 10,
@@ -3204,7 +3204,7 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 1.4,
-              "goals_against_avg": 1.9
+              "goals_against_avg": 2.1
             },
             "home": {
               "n": 5,
@@ -3214,9 +3214,21 @@
             "away": {
               "n": 5,
               "goals_for_avg": 0.8,
-              "goals_against_avg": 1.6
+              "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401878755",
+                "date": "2026-11-22T16:30:00Z",
+                "opponent": "Liverpool FC",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 4,
+                "corners_for": 5.0,
+                "corners_against": 15.0,
+                "yellow_cards": 0.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401879240",
                 "date": "2026-11-08T16:30:00Z",
@@ -3324,35 +3336,23 @@
                 "corners_against": 4.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401879322",
-                "date": "2026-08-22T11:30:00Z",
-                "opponent": "Hull City AFC",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 2,
-                "corners_for": 6.0,
-                "corners_against": 1.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 6.3
+              "avg": 6.2
             },
             "corners_against": {
               "n": 10,
-              "avg": 3.8
+              "avg": 5.2
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.1
+              "avg": 2.0
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.1
+              "avg": 0.2
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -3868,14 +3868,14 @@
       "prevH": 1.5737,
       "prevA": 1.1211,
       "rho": -0.01,
-      "asof": "2026-11-21",
+      "asof": "2026-11-22",
       "teams": {
         "FC Barcelona": {
-          "att": 2.3115,
-          "dfn": 0.7263,
-          "P": 12,
-          "F": 48,
-          "A": 13,
+          "att": 2.3469,
+          "dfn": 0.7658,
+          "P": 13,
+          "F": 51,
+          "A": 15,
           "prior": "last",
           "pa": 1.855,
           "pd": 0.703,
@@ -3885,9 +3885,9 @@
             2.123
           ],
           "cd": {
-            "n": 11,
-            "y": 17,
-            "r": 0
+            "n": 12,
+            "y": 19,
+            "r": 1
           },
           "cr": {
             "n": 12,
@@ -3902,12 +3902,12 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 4.1,
+              "goals_for_avg": 3.9,
               "goals_against_avg": 1.3
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 4.4,
+              "goals_for_avg": 4.0,
               "goals_against_avg": 1.4
             },
             "away": {
@@ -3916,6 +3916,18 @@
               "goals_against_avg": 1.2
             },
             "matches": [
+              {
+                "id": "401882804",
+                "date": "2026-11-22T13:00:00Z",
+                "opponent": "Villarreal CF",
+                "venue": "home",
+                "goals_for": 3,
+                "goals_against": 2,
+                "corners_for": 10.0,
+                "corners_against": 0.0,
+                "yellow_cards": 2.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401882816",
                 "date": "2026-11-08T20:00:00Z",
@@ -4023,35 +4035,23 @@
                 "corners_against": 1.0,
                 "yellow_cards": 3.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882903",
-                "date": "2026-08-31T19:30:00Z",
-                "opponent": "Rayo Vallecano de Madrid",
-                "venue": "home",
-                "goals_for": 5,
-                "goals_against": 2,
-                "corners_for": 9.0,
-                "corners_against": 5.0,
-                "yellow_cards": 0.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 6.5
+              "avg": 6.6
             },
             "corners_against": {
               "n": 10,
-              "avg": 2.8
+              "avg": 2.3
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.7
+              "avg": 1.9
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.0
+              "avg": 0.1
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -4243,10 +4243,10 @@
           }
         },
         "Club Atlético de Madrid": {
-          "att": 1.2685,
-          "dfn": 0.718,
-          "P": 12,
-          "F": 23,
+          "att": 1.3238,
+          "dfn": 0.6979,
+          "P": 13,
+          "F": 26,
           "A": 10,
           "prior": "last",
           "pa": 1.211,
@@ -4257,8 +4257,8 @@
             -3.599
           ],
           "cd": {
-            "n": 11,
-            "y": 24,
+            "n": 12,
+            "y": 26,
             "r": 1
           },
           "cr": {
@@ -4275,7 +4275,7 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 1.9,
-              "goals_against_avg": 0.8
+              "goals_against_avg": 0.7
             },
             "home": {
               "n": 4,
@@ -4285,9 +4285,21 @@
             "away": {
               "n": 6,
               "goals_for_avg": 1.833,
-              "goals_against_avg": 0.833
+              "goals_against_avg": 0.667
             },
             "matches": [
+              {
+                "id": "401882803",
+                "date": "2026-11-22T20:00:00Z",
+                "opponent": "Getafe CF",
+                "venue": "away",
+                "goals_for": 3,
+                "goals_against": 0,
+                "corners_for": 7.0,
+                "corners_against": 2.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401882816",
                 "date": "2026-11-08T20:00:00Z",
@@ -4395,27 +4407,15 @@
                 "corners_against": 3.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882897",
-                "date": "2026-08-29T19:30:00Z",
-                "opponent": "Sevilla FC",
-                "venue": "away",
-                "goals_for": 3,
-                "goals_against": 1,
-                "corners_for": 2.0,
-                "corners_against": 4.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.6
+              "avg": 6.1
             },
             "corners_against": {
               "n": 10,
-              "avg": 3.2
+              "avg": 3.0
             },
             "yellow_cards": {
               "n": 10,
@@ -4615,11 +4615,11 @@
           }
         },
         "Real Sociedad de Fútbol": {
-          "att": 1.1815,
-          "dfn": 1.1723,
-          "P": 12,
-          "F": 21,
-          "A": 20,
+          "att": 1.2098,
+          "dfn": 1.2285,
+          "P": 13,
+          "F": 23,
+          "A": 23,
           "prior": "last",
           "pa": 1.152,
           "pd": 1.191,
@@ -4629,8 +4629,8 @@
             -1.974
           ],
           "cd": {
-            "n": 10,
-            "y": 18,
+            "n": 11,
+            "y": 20,
             "r": 3
           },
           "cr": {
@@ -4647,19 +4647,31 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 2.0,
-              "goals_against_avg": 1.5
+              "goals_against_avg": 1.7
             },
             "home": {
-              "n": 6,
-              "goals_for_avg": 1.333,
-              "goals_against_avg": 1.167
+              "n": 5,
+              "goals_for_avg": 1.2,
+              "goals_against_avg": 1.2
             },
             "away": {
-              "n": 4,
-              "goals_for_avg": 3.0,
-              "goals_against_avg": 2.0
+              "n": 5,
+              "goals_for_avg": 2.8,
+              "goals_against_avg": 2.2
             },
             "matches": [
+              {
+                "id": "401882800",
+                "date": "2026-11-22T15:15:00Z",
+                "opponent": "Real Racing Club de Santander",
+                "venue": "away",
+                "goals_for": 2,
+                "goals_against": 3,
+                "corners_for": 14.0,
+                "corners_against": 7.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401882810",
                 "date": "2026-11-08T15:15:00Z",
@@ -4767,27 +4779,15 @@
                 "corners_against": 3.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882898",
-                "date": "2026-08-29T17:00:00Z",
-                "opponent": "RCD Espanyol de Barcelona",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 1,
-                "corners_for": 7.0,
-                "corners_against": 3.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 6.8
+              "avg": 7.5
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.0
+              "avg": 5.4
             },
             "yellow_cards": {
               "n": 10,
@@ -5173,11 +5173,11 @@
           }
         },
         "Villarreal CF": {
-          "att": 1.1932,
-          "dfn": 0.8816,
-          "P": 12,
-          "F": 17,
-          "A": 15,
+          "att": 1.2175,
+          "dfn": 0.9451,
+          "P": 13,
+          "F": 19,
+          "A": 18,
           "prior": "last",
           "pa": 1.406,
           "pd": 0.898,
@@ -5187,9 +5187,9 @@
             -0.104
           ],
           "cd": {
-            "n": 11,
-            "y": 23,
-            "r": 1
+            "n": 12,
+            "y": 27,
+            "r": 2
           },
           "cr": {
             "n": 12,
@@ -5204,8 +5204,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.3,
-              "goals_against_avg": 1.1
+              "goals_for_avg": 1.5,
+              "goals_against_avg": 1.3
             },
             "home": {
               "n": 6,
@@ -5214,10 +5214,22 @@
             },
             "away": {
               "n": 4,
-              "goals_for_avg": 1.25,
-              "goals_against_avg": 1.0
+              "goals_for_avg": 1.75,
+              "goals_against_avg": 1.5
             },
             "matches": [
+              {
+                "id": "401882804",
+                "date": "2026-11-22T13:00:00Z",
+                "opponent": "FC Barcelona",
+                "venue": "away",
+                "goals_for": 2,
+                "goals_against": 3,
+                "corners_for": 0.0,
+                "corners_against": 10.0,
+                "yellow_cards": 4.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401882807",
                 "date": "2026-11-08T17:30:00Z",
@@ -5325,35 +5337,23 @@
                 "corners_against": 1.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882906",
-                "date": "2026-08-28T19:30:00Z",
-                "opponent": "Deportivo Alavés",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 1,
-                "corners_for": 9.0,
-                "corners_against": 5.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 7.6
+              "avg": 6.7
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.2
+              "avg": 4.7
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.9
+              "avg": 2.1
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.1
+              "avg": 0.2
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -5545,11 +5545,11 @@
           }
         },
         "Real Racing Club de Santander": {
-          "att": 0.8872,
-          "dfn": 1.4443,
-          "P": 12,
-          "F": 17,
-          "A": 30,
+          "att": 0.9523,
+          "dfn": 1.4702,
+          "P": 13,
+          "F": 20,
+          "A": 32,
           "prior": "promoted",
           "pa": 0.794,
           "pd": 1.159,
@@ -5559,8 +5559,8 @@
             -3.794
           ],
           "cd": {
-            "n": 10,
-            "y": 27,
+            "n": 11,
+            "y": 29,
             "r": 1
           },
           "cr": {
@@ -5590,6 +5590,18 @@
               "goals_against_avg": 3.6
             },
             "matches": [
+              {
+                "id": "401882800",
+                "date": "2026-11-22T15:15:00Z",
+                "opponent": "Real Sociedad de Fútbol",
+                "venue": "home",
+                "goals_for": 3,
+                "goals_against": 2,
+                "corners_for": 7.0,
+                "corners_against": 14.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401882812",
                 "date": "2026-11-07T13:00:00Z",
@@ -5697,27 +5709,15 @@
                 "corners_against": 9.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882900",
-                "date": "2026-08-28T17:00:00Z",
-                "opponent": "Elche CF",
-                "venue": "home",
-                "goals_for": 3,
-                "goals_against": 2,
-                "corners_for": 5.0,
-                "corners_against": 10.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.6
+              "avg": 4.8
             },
             "corners_against": {
               "n": 10,
-              "avg": 7.2
+              "avg": 7.6
             },
             "yellow_cards": {
               "n": 10,
@@ -6475,11 +6475,11 @@
           }
         },
         "Getafe CF": {
-          "att": 0.5431,
-          "dfn": 0.89,
-          "P": 12,
+          "att": 0.5285,
+          "dfn": 0.9559,
+          "P": 13,
           "F": 8,
-          "A": 18,
+          "A": 21,
           "prior": "last",
           "pa": 0.625,
           "pd": 0.742,
@@ -6489,9 +6489,9 @@
             -3.715
           ],
           "cd": {
-            "n": 10,
-            "y": 33,
-            "r": 5
+            "n": 11,
+            "y": 35,
+            "r": 6
           },
           "cr": {
             "n": 12,
@@ -6507,19 +6507,31 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 0.7,
-              "goals_against_avg": 1.5
+              "goals_against_avg": 1.7
             },
             "home": {
-              "n": 5,
-              "goals_for_avg": 1.4,
-              "goals_against_avg": 0.8
+              "n": 6,
+              "goals_for_avg": 1.167,
+              "goals_against_avg": 1.167
             },
             "away": {
-              "n": 5,
+              "n": 4,
               "goals_for_avg": 0.0,
-              "goals_against_avg": 2.2
+              "goals_against_avg": 2.5
             },
             "matches": [
+              {
+                "id": "401882803",
+                "date": "2026-11-22T20:00:00Z",
+                "opponent": "Club Atlético de Madrid",
+                "venue": "home",
+                "goals_for": 0,
+                "goals_against": 3,
+                "corners_for": 2.0,
+                "corners_against": 7.0,
+                "yellow_cards": 2.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401882807",
                 "date": "2026-11-08T17:30:00Z",
@@ -6627,44 +6639,32 @@
                 "corners_against": 5.0,
                 "yellow_cards": 2.0,
                 "red_cards": 1.0
-              },
-              {
-                "id": "401882901",
-                "date": "2026-08-31T17:30:00Z",
-                "opponent": "CA Osasuna",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 1,
-                "corners_for": 3.0,
-                "corners_against": 1.0,
-                "yellow_cards": 4.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.8
+              "avg": 3.7
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.6
+              "avg": 6.2
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 3.3
+              "avg": 3.1
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.4
+              "avg": 0.5
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
         },
         "CA Osasuna": {
-          "att": 0.7756,
-          "dfn": 1.1513,
-          "P": 12,
-          "F": 12,
+          "att": 0.7836,
+          "dfn": 1.1258,
+          "P": 13,
+          "F": 13,
           "A": 23,
           "prior": "last",
           "pa": 0.859,
@@ -6675,9 +6675,9 @@
             -1.637
           ],
           "cd": {
-            "n": 10,
-            "y": 26,
-            "r": 0
+            "n": 11,
+            "y": 28,
+            "r": 1
           },
           "cr": {
             "n": 12,
@@ -6706,6 +6706,18 @@
               "goals_against_avg": 3.6
             },
             "matches": [
+              {
+                "id": "401882801",
+                "date": "2026-11-22T17:30:00Z",
+                "opponent": "Málaga CF",
+                "venue": "home",
+                "goals_for": 1,
+                "goals_against": 0,
+                "corners_for": 4.0,
+                "corners_against": 1.0,
+                "yellow_cards": 2.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401882811",
                 "date": "2026-11-07T17:30:00Z",
@@ -6813,35 +6825,23 @@
                 "corners_against": 4.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882901",
-                "date": "2026-08-31T17:30:00Z",
-                "opponent": "Getafe CF",
-                "venue": "home",
-                "goals_for": 1,
-                "goals_against": 0,
-                "corners_for": 1.0,
-                "corners_against": 3.0,
-                "yellow_cards": 5.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.3
+              "avg": 3.6
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.4
+              "avg": 5.2
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 3.0
+              "avg": 2.7
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.0
+              "avg": 0.1
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -7405,11 +7405,11 @@
           }
         },
         "Málaga CF": {
-          "att": 0.6566,
-          "dfn": 1.2425,
-          "P": 12,
+          "att": 0.6381,
+          "dfn": 1.2417,
+          "P": 13,
           "F": 9,
-          "A": 23,
+          "A": 24,
           "prior": "promoted",
           "pa": 0.794,
           "pd": 1.159,
@@ -7419,7 +7419,7 @@
             -4.427
           ],
           "cd": {
-            "n": 11,
+            "n": 12,
             "y": 25,
             "r": 0
           },
@@ -7437,7 +7437,7 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 0.8,
-              "goals_against_avg": 2.0
+              "goals_against_avg": 1.7
             },
             "home": {
               "n": 5,
@@ -7447,9 +7447,21 @@
             "away": {
               "n": 5,
               "goals_for_avg": 0.6,
-              "goals_against_avg": 1.8
+              "goals_against_avg": 1.2
             },
             "matches": [
+              {
+                "id": "401882801",
+                "date": "2026-11-22T17:30:00Z",
+                "opponent": "CA Osasuna",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 1,
+                "corners_for": 1.0,
+                "corners_against": 4.0,
+                "yellow_cards": 0.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401882812",
                 "date": "2026-11-07T13:00:00Z",
@@ -7557,31 +7569,19 @@
                 "corners_against": 4.0,
                 "yellow_cards": 4.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401882899",
-                "date": "2026-08-30T15:00:00Z",
-                "opponent": "Real Madrid CF",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 4,
-                "corners_for": 6.0,
-                "corners_against": 9.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.3
+              "avg": 4.8
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.4
+              "avg": 4.9
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.5
+              "avg": 2.3
             },
             "red_cards": {
               "n": 10,
@@ -7734,7 +7734,7 @@
       "prevH": 1.7778,
       "prevA": 1.4575,
       "rho": -0.03,
-      "asof": "2026-11-21",
+      "asof": "2026-11-22",
       "teams": {
         "FC Bayern München": {
           "att": 2.025,
@@ -8667,10 +8667,10 @@
           }
         },
         "SV Werder Bremen": {
-          "att": 0.8495,
-          "dfn": 1.0337,
-          "P": 9,
-          "F": 17,
+          "att": 0.9377,
+          "dfn": 1.0027,
+          "P": 10,
+          "F": 21,
           "A": 15,
           "prior": "last",
           "pa": 0.673,
@@ -8681,8 +8681,8 @@
             8.838
           ],
           "cd": {
-            "n": 9,
-            "y": 14,
+            "n": 10,
+            "y": 17,
             "r": 0
           },
           "cr": {
@@ -8698,13 +8698,13 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.7,
-              "goals_against_avg": 1.7
+              "goals_for_avg": 2.1,
+              "goals_against_avg": 1.5
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 2.0,
-              "goals_against_avg": 1.4
+              "goals_for_avg": 2.8,
+              "goals_against_avg": 1.0
             },
             "away": {
               "n": 5,
@@ -8712,6 +8712,18 @@
               "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401884730",
+                "date": "2026-11-22T16:30:00Z",
+                "opponent": "Hamburger SV",
+                "venue": "home",
+                "goals_for": 4,
+                "goals_against": 0,
+                "corners_for": 1.0,
+                "corners_against": 8.0,
+                "yellow_cards": 3.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401884743",
                 "date": "2026-11-07T17:30:00Z",
@@ -8819,31 +8831,19 @@
                 "corners_against": 6.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "747022",
-                "date": "2026-05-16T13:30:00Z",
-                "opponent": "Borussia Dortmund",
-                "venue": "home",
-                "goals_for": 0,
-                "goals_against": 2,
-                "corners_for": 4.0,
-                "corners_against": 5.0,
-                "yellow_cards": 0.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.5
+              "avg": 4.2
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.4
+              "avg": 5.7
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.4
+              "avg": 1.7
             },
             "red_cards": {
               "n": 10,
@@ -9597,11 +9597,11 @@
           }
         },
         "Hamburger SV": {
-          "att": 0.6891,
-          "dfn": 1.1082,
-          "P": 9,
+          "att": 0.6683,
+          "dfn": 1.1878,
+          "P": 10,
           "F": 10,
-          "A": 20,
+          "A": 24,
           "prior": "last",
           "pa": 0.727,
           "pd": 0.982,
@@ -9611,8 +9611,8 @@
             9.899
           ],
           "cd": {
-            "n": 9,
-            "y": 15,
+            "n": 10,
+            "y": 18,
             "r": 0
           },
           "cr": {
@@ -9628,8 +9628,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.1,
-              "goals_against_avg": 2.1
+              "goals_for_avg": 1.0,
+              "goals_against_avg": 2.4
             },
             "home": {
               "n": 4,
@@ -9638,10 +9638,22 @@
             },
             "away": {
               "n": 6,
-              "goals_for_avg": 0.833,
-              "goals_against_avg": 2.333
+              "goals_for_avg": 0.667,
+              "goals_against_avg": 2.833
             },
             "matches": [
+              {
+                "id": "401884730",
+                "date": "2026-11-22T16:30:00Z",
+                "opponent": "SV Werder Bremen",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 4,
+                "corners_for": 8.0,
+                "corners_against": 1.0,
+                "yellow_cards": 3.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401884739",
                 "date": "2026-11-06T19:30:00Z",
@@ -9749,31 +9761,19 @@
                 "corners_against": 3.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "747017",
-                "date": "2026-05-16T13:30:00Z",
-                "opponent": "Bayer 04 Leverkusen",
-                "venue": "away",
-                "goals_for": 1,
-                "goals_against": 1,
-                "corners_for": 3.0,
-                "corners_against": 8.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.0
+              "avg": 4.5
             },
             "corners_against": {
               "n": 10,
-              "avg": 6.0
+              "avg": 5.3
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.7
+              "avg": 1.8
             },
             "red_cards": {
               "n": 10,
@@ -9783,11 +9783,11 @@
           }
         },
         "1. FSV Mainz 05": {
-          "att": 0.9495,
-          "dfn": 1.0704,
-          "P": 9,
-          "F": 18,
-          "A": 19,
+          "att": 0.9527,
+          "dfn": 1.1236,
+          "P": 10,
+          "F": 19,
+          "A": 22,
           "prior": "last",
           "pa": 0.8,
           "pd": 0.964,
@@ -9797,8 +9797,8 @@
             8.224
           ],
           "cd": {
-            "n": 9,
-            "y": 19,
+            "n": 10,
+            "y": 22,
             "r": 1
           },
           "cr": {
@@ -9818,16 +9818,28 @@
               "goals_against_avg": 2.2
             },
             "home": {
-              "n": 6,
-              "goals_for_avg": 1.333,
-              "goals_against_avg": 2.5
+              "n": 5,
+              "goals_for_avg": 1.4,
+              "goals_against_avg": 2.4
             },
             "away": {
-              "n": 4,
-              "goals_for_avg": 2.75,
-              "goals_against_avg": 1.75
+              "n": 5,
+              "goals_for_avg": 2.4,
+              "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401884733",
+                "date": "2026-11-22T14:30:00Z",
+                "opponent": "FC Augsburg",
+                "venue": "away",
+                "goals_for": 1,
+                "goals_against": 3,
+                "corners_for": 0.0,
+                "corners_against": 6.0,
+                "yellow_cards": 3.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401884740",
                 "date": "2026-11-07T14:30:00Z",
@@ -9935,31 +9947,19 @@
                 "corners_against": 2.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "747007",
-                "date": "2026-05-10T17:30:00Z",
-                "opponent": "1. FC Union Berlin",
-                "venue": "home",
-                "goals_for": 1,
-                "goals_against": 3,
-                "corners_for": 7.0,
-                "corners_against": 8.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 6.0
+              "avg": 5.3
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.2
+              "avg": 5.0
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.1
+              "avg": 2.2
             },
             "red_cards": {
               "n": 10,
@@ -10155,11 +10155,11 @@
           }
         },
         "FC Augsburg": {
-          "att": 1.0146,
-          "dfn": 1.1809,
-          "P": 9,
-          "F": 20,
-          "A": 20,
+          "att": 1.0712,
+          "dfn": 1.1756,
+          "P": 10,
+          "F": 23,
+          "A": 21,
           "prior": "last",
           "pa": 0.818,
           "pd": 1.109,
@@ -10169,8 +10169,8 @@
             10.886
           ],
           "cd": {
-            "n": 9,
-            "y": 13,
+            "n": 10,
+            "y": 14,
             "r": 1
           },
           "cr": {
@@ -10186,20 +10186,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.0,
-              "goals_against_avg": 2.4
+              "goals_for_avg": 2.3,
+              "goals_against_avg": 2.1
             },
             "home": {
-              "n": 5,
-              "goals_for_avg": 1.8,
-              "goals_against_avg": 1.4
+              "n": 6,
+              "goals_for_avg": 2.0,
+              "goals_against_avg": 1.333
             },
             "away": {
-              "n": 5,
-              "goals_for_avg": 2.2,
-              "goals_against_avg": 3.4
+              "n": 4,
+              "goals_for_avg": 2.75,
+              "goals_against_avg": 3.25
             },
             "matches": [
+              {
+                "id": "401884733",
+                "date": "2026-11-22T14:30:00Z",
+                "opponent": "1. FSV Mainz 05",
+                "venue": "home",
+                "goals_for": 3,
+                "goals_against": 1,
+                "corners_for": 6.0,
+                "corners_against": 0.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401884744",
                 "date": "2026-11-07T14:30:00Z",
@@ -10307,27 +10319,15 @@
                 "corners_against": 3.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "747016",
-                "date": "2026-05-16T13:30:00Z",
-                "opponent": "1. FC Union Berlin",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 4,
-                "corners_for": 9.0,
-                "corners_against": 4.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.3
+              "avg": 5.0
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.0
+              "avg": 4.6
             },
             "yellow_cards": {
               "n": 10,
@@ -11427,11 +11427,11 @@
           }
         },
         "FC Internazionale Milano": {
-          "att": 1.7904,
-          "dfn": 0.7597,
-          "P": 11,
-          "F": 28,
-          "A": 13,
+          "att": 1.9234,
+          "dfn": 0.8884,
+          "P": 12,
+          "F": 32,
+          "A": 17,
           "prior": "last",
           "pa": 1.931,
           "pd": 0.759,
@@ -11441,8 +11441,8 @@
             9.124
           ],
           "cd": {
-            "n": 11,
-            "y": 15,
+            "n": 12,
+            "y": 16,
             "r": 0
           },
           "cr": {
@@ -11458,8 +11458,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.4,
-              "goals_against_avg": 1.2
+              "goals_for_avg": 2.7,
+              "goals_against_avg": 1.6
             },
             "home": {
               "n": 5,
@@ -11468,10 +11468,22 @@
             },
             "away": {
               "n": 5,
-              "goals_for_avg": 1.8,
-              "goals_against_avg": 1.2
+              "goals_for_avg": 2.4,
+              "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401875001",
+                "date": "2026-11-22T19:45:00Z",
+                "opponent": "Atalanta BC",
+                "venue": "away",
+                "goals_for": 4,
+                "goals_against": 4,
+                "corners_for": 6.0,
+                "corners_against": 5.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874808",
                 "date": "2026-11-08T17:00:00Z",
@@ -11579,18 +11591,6 @@
                 "corners_against": 5.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874938",
-                "date": "2026-08-30T18:45:00Z",
-                "opponent": "Cagliari Calcio",
-                "venue": "away",
-                "goals_for": 1,
-                "goals_against": 0,
-                "corners_for": 6.0,
-                "corners_against": 8.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
@@ -11599,7 +11599,7 @@
             },
             "corners_against": {
               "n": 10,
-              "avg": 3.0
+              "avg": 2.7
             },
             "yellow_cards": {
               "n": 10,
@@ -11799,11 +11799,11 @@
           }
         },
         "AC Milan": {
-          "att": 1.2431,
-          "dfn": 0.7597,
-          "P": 11,
-          "F": 23,
-          "A": 13,
+          "att": 1.4131,
+          "dfn": 0.7986,
+          "P": 12,
+          "F": 28,
+          "A": 14,
           "prior": "last",
           "pa": 1.15,
           "pd": 0.759,
@@ -11813,8 +11813,8 @@
             9.124
           ],
           "cd": {
-            "n": 11,
-            "y": 21,
+            "n": 12,
+            "y": 22,
             "r": 0
           },
           "cr": {
@@ -11830,13 +11830,13 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.1,
-              "goals_against_avg": 1.2
+              "goals_for_avg": 2.4,
+              "goals_against_avg": 1.3
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 2.6,
-              "goals_against_avg": 1.4
+              "goals_for_avg": 3.2,
+              "goals_against_avg": 1.6
             },
             "away": {
               "n": 5,
@@ -11844,6 +11844,18 @@
               "goals_against_avg": 1.0
             },
             "matches": [
+              {
+                "id": "401874989",
+                "date": "2026-11-22T17:00:00Z",
+                "opponent": "Frosinone Calcio",
+                "venue": "home",
+                "goals_for": 5,
+                "goals_against": 1,
+                "corners_for": 2.0,
+                "corners_against": 9.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401875018",
                 "date": "2026-11-08T14:00:00Z",
@@ -11951,18 +11963,6 @@
                 "corners_against": 7.0,
                 "yellow_cards": 3.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874758",
-                "date": "2026-08-28T18:45:00Z",
-                "opponent": "Venezia FC",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 0,
-                "corners_for": 2.0,
-                "corners_against": 3.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
@@ -11971,7 +11971,7 @@
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.2
+              "avg": 4.8
             },
             "yellow_cards": {
               "n": 10,
@@ -12171,11 +12171,11 @@
           }
         },
         "Frosinone Calcio": {
-          "att": 1.0636,
-          "dfn": 1.091,
-          "P": 11,
-          "F": 24,
-          "A": 15,
+          "att": 1.1243,
+          "dfn": 1.2422,
+          "P": 12,
+          "F": 25,
+          "A": 20,
           "prior": "promoted",
           "pa": 0.752,
           "pd": 1.287,
@@ -12185,8 +12185,8 @@
             13.33
           ],
           "cd": {
-            "n": 11,
-            "y": 20,
+            "n": 12,
+            "y": 24,
             "r": 0
           },
           "cr": {
@@ -12202,8 +12202,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.4,
-              "goals_against_avg": 1.4
+              "goals_for_avg": 2.2,
+              "goals_against_avg": 1.9
             },
             "home": {
               "n": 5,
@@ -12212,10 +12212,22 @@
             },
             "away": {
               "n": 5,
-              "goals_for_avg": 1.6,
-              "goals_against_avg": 1.8
+              "goals_for_avg": 1.2,
+              "goals_against_avg": 2.8
             },
             "matches": [
+              {
+                "id": "401874989",
+                "date": "2026-11-22T17:00:00Z",
+                "opponent": "AC Milan",
+                "venue": "away",
+                "goals_for": 1,
+                "goals_against": 5,
+                "corners_for": 9.0,
+                "corners_against": 2.0,
+                "yellow_cards": 4.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874791",
                 "date": "2026-11-07T14:00:00Z",
@@ -12323,31 +12335,19 @@
                 "corners_against": 2.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874942",
-                "date": "2026-08-29T16:30:00Z",
-                "opponent": "ACF Fiorentina",
-                "venue": "away",
-                "goals_for": 3,
-                "goals_against": 0,
-                "corners_for": 5.0,
-                "corners_against": 8.0,
-                "yellow_cards": 3.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 7.4
+              "avg": 7.8
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.7
+              "avg": 5.1
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.8
+              "avg": 1.9
             },
             "red_cards": {
               "n": 10,
@@ -12543,11 +12543,11 @@
           }
         },
         "Bologna FC 1909": {
-          "att": 1.0021,
-          "dfn": 0.9122,
-          "P": 11,
-          "F": 16,
-          "A": 14,
+          "att": 1.0404,
+          "dfn": 0.948,
+          "P": 12,
+          "F": 17,
+          "A": 15,
           "prior": "last",
           "pa": 1.063,
           "pd": 0.998,
@@ -12557,8 +12557,8 @@
             11.31
           ],
           "cd": {
-            "n": 11,
-            "y": 23,
+            "n": 12,
+            "y": 24,
             "r": 0
           },
           "cr": {
@@ -12574,20 +12574,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.6,
+              "goals_for_avg": 1.7,
               "goals_against_avg": 1.3
             },
             "home": {
-              "n": 4,
-              "goals_for_avg": 1.5,
-              "goals_against_avg": 1.75
+              "n": 5,
+              "goals_for_avg": 1.4,
+              "goals_against_avg": 1.6
             },
             "away": {
-              "n": 6,
-              "goals_for_avg": 1.667,
+              "n": 5,
+              "goals_for_avg": 2.0,
               "goals_against_avg": 1.0
             },
             "matches": [
+              {
+                "id": "401875047",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Udinese Calcio",
+                "venue": "home",
+                "goals_for": 1,
+                "goals_against": 1,
+                "corners_for": 8.0,
+                "corners_against": 4.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874974",
                 "date": "2026-11-07T17:00:00Z",
@@ -12695,31 +12707,19 @@
                 "corners_against": 7.0,
                 "yellow_cards": 3.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874970",
-                "date": "2026-08-31T18:45:00Z",
-                "opponent": "Atalanta BC",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 1,
-                "corners_for": 2.0,
-                "corners_against": 1.0,
-                "yellow_cards": 0.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.7
+              "avg": 5.3
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.7
+              "avg": 5.0
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.9
+              "avg": 2.0
             },
             "red_cards": {
               "n": 10,
@@ -13287,11 +13287,11 @@
           }
         },
         "Atalanta BC": {
-          "att": 1.0527,
-          "dfn": 0.9668,
-          "P": 11,
-          "F": 17,
-          "A": 20,
+          "att": 1.1816,
+          "dfn": 1.1089,
+          "P": 12,
+          "F": 21,
+          "A": 24,
           "prior": "last",
           "pa": 1.106,
           "pd": 0.781,
@@ -13301,8 +13301,8 @@
             9.681
           ],
           "cd": {
-            "n": 11,
-            "y": 11,
+            "n": 12,
+            "y": 13,
             "r": 2
           },
           "cr": {
@@ -13318,13 +13318,13 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.5,
-              "goals_against_avg": 1.9
+              "goals_for_avg": 1.8,
+              "goals_against_avg": 2.3
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 1.8,
-              "goals_against_avg": 2.0
+              "goals_for_avg": 2.4,
+              "goals_against_avg": 2.8
             },
             "away": {
               "n": 5,
@@ -13332,6 +13332,18 @@
               "goals_against_avg": 1.8
             },
             "matches": [
+              {
+                "id": "401875001",
+                "date": "2026-11-22T19:45:00Z",
+                "opponent": "FC Internazionale Milano",
+                "venue": "home",
+                "goals_for": 4,
+                "goals_against": 4,
+                "corners_for": 5.0,
+                "corners_against": 6.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874800",
                 "date": "2026-11-08T14:00:00Z",
@@ -13439,31 +13451,19 @@
                 "corners_against": 14.0,
                 "yellow_cards": 1.0,
                 "red_cards": 1.0
-              },
-              {
-                "id": "401874970",
-                "date": "2026-08-31T18:45:00Z",
-                "opponent": "Bologna FC 1909",
-                "venue": "home",
-                "goals_for": 1,
-                "goals_against": 0,
-                "corners_for": 1.0,
-                "corners_against": 2.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.0
+              "avg": 4.4
             },
             "corners_against": {
               "n": 10,
-              "avg": 6.0
+              "avg": 6.4
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.1
+              "avg": 1.2
             },
             "red_cards": {
               "n": 10,
@@ -13473,10 +13473,10 @@
           }
         },
         "Genoa CFC": {
-          "att": 0.7717,
-          "dfn": 1.0247,
-          "P": 11,
-          "F": 11,
+          "att": 0.8336,
+          "dfn": 1.0319,
+          "P": 12,
+          "F": 13,
           "A": 16,
           "prior": "last",
           "pa": 0.889,
@@ -13487,7 +13487,7 @@
             8.952
           ],
           "cd": {
-            "n": 11,
+            "n": 12,
             "y": 22,
             "r": 1
           },
@@ -13504,8 +13504,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.1,
-              "goals_against_avg": 1.4
+              "goals_for_avg": 1.3,
+              "goals_against_avg": 1.3
             },
             "home": {
               "n": 6,
@@ -13514,10 +13514,22 @@
             },
             "away": {
               "n": 4,
-              "goals_for_avg": 0.75,
-              "goals_against_avg": 1.5
+              "goals_for_avg": 1.25,
+              "goals_against_avg": 1.25
             },
             "matches": [
+              {
+                "id": "401874960",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "US Sassuolo Calcio",
+                "venue": "away",
+                "goals_for": 2,
+                "goals_against": 0,
+                "corners_for": 3.0,
+                "corners_against": 5.0,
+                "yellow_cards": 0.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401875018",
                 "date": "2026-11-08T14:00:00Z",
@@ -13625,31 +13637,19 @@
                 "corners_against": 4.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874742",
-                "date": "2026-08-30T18:45:00Z",
-                "opponent": "SS Lazio",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 1,
-                "corners_for": 2.0,
-                "corners_against": 4.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.0
+              "avg": 4.1
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.3
+              "avg": 5.4
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.0
+              "avg": 1.8
             },
             "red_cards": {
               "n": 10,
@@ -14217,11 +14217,11 @@
           }
         },
         "US Sassuolo Calcio": {
-          "att": 0.9681,
-          "dfn": 1.377,
-          "P": 11,
+          "att": 0.9779,
+          "dfn": 1.4704,
+          "P": 12,
           "F": 16,
-          "A": 29,
+          "A": 31,
           "prior": "last",
           "pa": 0.998,
           "pd": 1.085,
@@ -14231,8 +14231,8 @@
             10.649
           ],
           "cd": {
-            "n": 11,
-            "y": 14,
+            "n": 12,
+            "y": 15,
             "r": 1
           },
           "cr": {
@@ -14248,13 +14248,13 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.5,
-              "goals_against_avg": 2.7
+              "goals_for_avg": 1.3,
+              "goals_against_avg": 2.8
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 2.0,
-              "goals_against_avg": 2.8
+              "goals_for_avg": 1.6,
+              "goals_against_avg": 3.0
             },
             "away": {
               "n": 5,
@@ -14262,6 +14262,18 @@
               "goals_against_avg": 2.6
             },
             "matches": [
+              {
+                "id": "401874960",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Genoa CFC",
+                "venue": "home",
+                "goals_for": 0,
+                "goals_against": 2,
+                "corners_for": 5.0,
+                "corners_against": 3.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874803",
                 "date": "2026-11-07T19:45:00Z",
@@ -14369,23 +14381,11 @@
                 "corners_against": 10.0,
                 "yellow_cards": 1.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874743",
-                "date": "2026-08-29T16:30:00Z",
-                "opponent": "Torino FC",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 1,
-                "corners_for": 4.0,
-                "corners_against": 3.0,
-                "yellow_cards": 3.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.8
+              "avg": 3.9
             },
             "corners_against": {
               "n": 10,
@@ -14393,7 +14393,7 @@
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.4
+              "avg": 1.2
             },
             "red_cards": {
               "n": 10,
@@ -14775,11 +14775,11 @@
           }
         },
         "Udinese Calcio": {
-          "att": 0.8449,
-          "dfn": 1.2425,
-          "P": 11,
-          "F": 12,
-          "A": 25,
+          "att": 0.8771,
+          "dfn": 1.2988,
+          "P": 12,
+          "F": 13,
+          "A": 26,
           "prior": "last",
           "pa": 0.976,
           "pd": 1.041,
@@ -14789,8 +14789,8 @@
             13.2
           ],
           "cd": {
-            "n": 11,
-            "y": 18,
+            "n": 12,
+            "y": 20,
             "r": 0
           },
           "cr": {
@@ -14806,8 +14806,8 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.1,
-              "goals_against_avg": 2.4
+              "goals_for_avg": 0.9,
+              "goals_against_avg": 2.3
             },
             "home": {
               "n": 5,
@@ -14816,10 +14816,22 @@
             },
             "away": {
               "n": 5,
-              "goals_for_avg": 1.6,
-              "goals_against_avg": 2.2
+              "goals_for_avg": 1.2,
+              "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401875047",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Bologna FC 1909",
+                "venue": "away",
+                "goals_for": 1,
+                "goals_against": 1,
+                "corners_for": 4.0,
+                "corners_against": 8.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401874815",
                 "date": "2026-11-06T19:45:00Z",
@@ -14927,31 +14939,19 @@
                 "corners_against": 8.0,
                 "yellow_cards": 5.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401874749",
-                "date": "2026-08-29T16:30:00Z",
-                "opponent": "AC Monza",
-                "venue": "away",
-                "goals_for": 3,
-                "goals_against": 2,
-                "corners_for": 3.0,
-                "corners_against": 3.0,
-                "yellow_cards": 0.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.1
+              "avg": 5.2
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.4
+              "avg": 4.9
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.5
+              "avg": 1.7
             },
             "red_cards": {
               "n": 10,
@@ -15164,7 +15164,7 @@
       "prevH": 1.5869,
       "prevA": 1.2426,
       "rho": 0.0,
-      "asof": "2026-11-21",
+      "asof": "2026-11-22",
       "teams": {
         "Paris Saint-Germain FC": {
           "att": 1.5549,
@@ -15539,10 +15539,10 @@
           }
         },
         "Paris FC": {
-          "att": 1.0559,
-          "dfn": 0.8746,
-          "P": 10,
-          "F": 17,
+          "att": 1.1418,
+          "dfn": 0.8431,
+          "P": 11,
+          "F": 21,
           "A": 10,
           "prior": "last",
           "pa": 0.977,
@@ -15553,8 +15553,8 @@
             2.36
           ],
           "cd": {
-            "n": 10,
-            "y": 22,
+            "n": 11,
+            "y": 23,
             "r": 0
           },
           "cr": {
@@ -15570,20 +15570,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.7,
+              "goals_for_avg": 2.1,
               "goals_against_avg": 1.0
             },
             "home": {
-              "n": 5,
-              "goals_for_avg": 2.4,
-              "goals_against_avg": 1.0
+              "n": 6,
+              "goals_for_avg": 2.667,
+              "goals_against_avg": 0.833
             },
             "away": {
-              "n": 5,
-              "goals_for_avg": 1.0,
-              "goals_against_avg": 1.0
+              "n": 4,
+              "goals_for_avg": 1.25,
+              "goals_against_avg": 1.25
             },
             "matches": [
+              {
+                "id": "401876397",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Angers SCO",
+                "venue": "home",
+                "goals_for": 4,
+                "goals_against": 0,
+                "corners_for": 10.0,
+                "corners_against": 2.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401876411",
                 "date": "2026-11-07T18:00:00Z",
@@ -15691,27 +15703,15 @@
                 "corners_against": 4.0,
                 "yellow_cards": 0.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401876485",
-                "date": "2026-08-22T18:45:00Z",
-                "opponent": "ES Troyes AC",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 0,
-                "corners_for": 2.0,
-                "corners_against": 6.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.6
+              "avg": 4.4
             },
             "corners_against": {
               "n": 10,
-              "avg": 3.4
+              "avg": 3.0
             },
             "yellow_cards": {
               "n": 10,
@@ -15725,11 +15725,11 @@
           }
         },
         "Olympique de Marseille": {
-          "att": 1.3911,
-          "dfn": 0.9409,
-          "P": 10,
-          "F": 22,
-          "A": 14,
+          "att": 1.4058,
+          "dfn": 1.0,
+          "P": 11,
+          "F": 24,
+          "A": 17,
           "prior": "last",
           "pa": 1.31,
           "pd": 0.936,
@@ -15739,8 +15739,8 @@
             5.396
           ],
           "cd": {
-            "n": 10,
-            "y": 14,
+            "n": 11,
+            "y": 17,
             "r": 1
           },
           "cr": {
@@ -15756,13 +15756,13 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.2,
-              "goals_against_avg": 1.4
+              "goals_for_avg": 2.0,
+              "goals_against_avg": 1.7
             },
             "home": {
               "n": 5,
-              "goals_for_avg": 2.6,
-              "goals_against_avg": 1.6
+              "goals_for_avg": 2.2,
+              "goals_against_avg": 2.2
             },
             "away": {
               "n": 5,
@@ -15770,6 +15770,18 @@
               "goals_against_avg": 1.2
             },
             "matches": [
+              {
+                "id": "401876400",
+                "date": "2026-11-22T19:45:00Z",
+                "opponent": "Le Mans FC",
+                "venue": "home",
+                "goals_for": 2,
+                "goals_against": 3,
+                "corners_for": 2.0,
+                "corners_against": 5.0,
+                "yellow_cards": 3.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401876404",
                 "date": "2026-11-08T19:45:00Z",
@@ -15877,31 +15889,19 @@
                 "corners_against": 5.0,
                 "yellow_cards": 0.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401876489",
-                "date": "2026-08-21T18:45:00Z",
-                "opponent": "RC Strasbourg Alsace",
-                "venue": "home",
-                "goals_for": 4,
-                "goals_against": 0,
-                "corners_for": 3.0,
-                "corners_against": 4.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 4.5
+              "avg": 4.4
             },
             "corners_against": {
               "n": 10,
-              "avg": 4.1
+              "avg": 4.2
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.4
+              "avg": 1.6
             },
             "red_cards": {
               "n": 10,
@@ -16469,11 +16469,11 @@
           }
         },
         "Stade Rennais FC 1901": {
-          "att": 1.315,
-          "dfn": 1.2129,
-          "P": 10,
-          "F": 21,
-          "A": 21,
+          "att": 1.3023,
+          "dfn": 1.2042,
+          "P": 11,
+          "F": 22,
+          "A": 22,
           "prior": "last",
           "pa": 1.227,
           "pd": 1.039,
@@ -16483,9 +16483,9 @@
             -1.713
           ],
           "cd": {
-            "n": 10,
-            "y": 21,
-            "r": 0
+            "n": 11,
+            "y": 23,
+            "r": 1
           },
           "cr": {
             "n": 10,
@@ -16500,20 +16500,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 2.1,
-              "goals_against_avg": 2.1
+              "goals_for_avg": 2.0,
+              "goals_against_avg": 2.0
             },
             "home": {
-              "n": 6,
-              "goals_for_avg": 2.333,
-              "goals_against_avg": 1.167
+              "n": 5,
+              "goals_for_avg": 2.4,
+              "goals_against_avg": 1.0
             },
             "away": {
-              "n": 4,
-              "goals_for_avg": 1.75,
-              "goals_against_avg": 3.5
+              "n": 5,
+              "goals_for_avg": 1.6,
+              "goals_against_avg": 3.0
             },
             "matches": [
+              {
+                "id": "401876401",
+                "date": "2026-11-22T16:15:00Z",
+                "opponent": "FC Lorient",
+                "venue": "away",
+                "goals_for": 1,
+                "goals_against": 1,
+                "corners_for": 5.0,
+                "corners_against": 7.0,
+                "yellow_cards": 2.0,
+                "red_cards": 1.0
+              },
               {
                 "id": "401876406",
                 "date": "2026-11-08T14:00:00Z",
@@ -16621,27 +16633,15 @@
                 "corners_against": 6.0,
                 "yellow_cards": 3.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401876487",
-                "date": "2026-08-23T18:45:00Z",
-                "opponent": "Paris Saint-Germain FC",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 2,
-                "corners_for": 0.0,
-                "corners_against": 10.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 5.7
+              "avg": 6.2
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.5
+              "avg": 5.2
             },
             "yellow_cards": {
               "n": 10,
@@ -16649,7 +16649,7 @@
             },
             "red_cards": {
               "n": 10,
-              "avg": 0.0
+              "avg": 0.1
             },
             "source": "ESPN completed match scores and available summary statistics"
           }
@@ -16841,11 +16841,11 @@
           }
         },
         "FC Lorient": {
-          "att": 0.8211,
-          "dfn": 0.8244,
-          "P": 10,
-          "F": 9,
-          "A": 8,
+          "att": 0.8217,
+          "dfn": 0.8239,
+          "P": 11,
+          "F": 10,
+          "A": 9,
           "prior": "last",
           "pa": 0.998,
           "pd": 1.06,
@@ -16855,8 +16855,8 @@
             -3.369
           ],
           "cd": {
-            "n": 10,
-            "y": 13,
+            "n": 11,
+            "y": 15,
             "r": 0
           },
           "cr": {
@@ -16872,20 +16872,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 0.9,
-              "goals_against_avg": 0.8
+              "goals_for_avg": 1.0,
+              "goals_against_avg": 0.9
             },
             "home": {
-              "n": 5,
+              "n": 6,
               "goals_for_avg": 1.0,
-              "goals_against_avg": 1.2
+              "goals_against_avg": 1.167
             },
             "away": {
-              "n": 5,
-              "goals_for_avg": 0.8,
-              "goals_against_avg": 0.4
+              "n": 4,
+              "goals_for_avg": 1.0,
+              "goals_against_avg": 0.5
             },
             "matches": [
+              {
+                "id": "401876401",
+                "date": "2026-11-22T16:15:00Z",
+                "opponent": "Stade Rennais FC 1901",
+                "venue": "home",
+                "goals_for": 1,
+                "goals_against": 1,
+                "corners_for": 7.0,
+                "corners_against": 5.0,
+                "yellow_cards": 2.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401876409",
                 "date": "2026-11-08T16:15:00Z",
@@ -16993,31 +17005,19 @@
                 "corners_against": 5.0,
                 "yellow_cards": 0.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401876488",
-                "date": "2026-08-22T18:45:00Z",
-                "opponent": "OGC Nice",
-                "venue": "away",
-                "goals_for": 0,
-                "goals_against": 0,
-                "corners_for": 3.0,
-                "corners_against": 9.0,
-                "yellow_cards": 0.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.3
+              "avg": 3.7
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.2
+              "avg": 4.8
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.3
+              "avg": 1.5
             },
             "red_cards": {
               "n": 10,
@@ -17771,11 +17771,11 @@
           }
         },
         "Le Mans FC": {
-          "att": 0.8491,
-          "dfn": 1.2535,
-          "P": 10,
-          "F": 12,
-          "A": 19,
+          "att": 0.9106,
+          "dfn": 1.2722,
+          "P": 11,
+          "F": 15,
+          "A": 21,
           "prior": "promoted",
           "pa": 0.88,
           "pd": 1.227,
@@ -17785,8 +17785,8 @@
             0.224
           ],
           "cd": {
-            "n": 10,
-            "y": 23,
+            "n": 11,
+            "y": 27,
             "r": 1
           },
           "cr": {
@@ -17802,20 +17802,32 @@
             "complete": true,
             "overall": {
               "n": 10,
-              "goals_for_avg": 1.2,
+              "goals_for_avg": 1.3,
               "goals_against_avg": 1.9
             },
             "home": {
-              "n": 5,
-              "goals_for_avg": 1.4,
-              "goals_against_avg": 1.8
+              "n": 4,
+              "goals_for_avg": 1.25,
+              "goals_against_avg": 1.75
             },
             "away": {
-              "n": 5,
-              "goals_for_avg": 1.0,
+              "n": 6,
+              "goals_for_avg": 1.333,
               "goals_against_avg": 2.0
             },
             "matches": [
+              {
+                "id": "401876400",
+                "date": "2026-11-22T19:45:00Z",
+                "opponent": "Olympique de Marseille",
+                "venue": "away",
+                "goals_for": 3,
+                "goals_against": 2,
+                "corners_for": 5.0,
+                "corners_against": 2.0,
+                "yellow_cards": 4.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401876408",
                 "date": "2026-11-08T16:15:00Z",
@@ -17923,31 +17935,19 @@
                 "corners_against": 8.0,
                 "yellow_cards": 2.0,
                 "red_cards": 1.0
-              },
-              {
-                "id": "401876491",
-                "date": "2026-08-22T18:45:00Z",
-                "opponent": "Stade Brestois 29",
-                "venue": "home",
-                "goals_for": 2,
-                "goals_against": 2,
-                "corners_for": 1.0,
-                "corners_against": 10.0,
-                "yellow_cards": 1.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 3.0
+              "avg": 3.4
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.9
+              "avg": 5.1
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 2.3
+              "avg": 2.6
             },
             "red_cards": {
               "n": 10,
@@ -17957,11 +17957,11 @@
           }
         },
         "Angers SCO": {
-          "att": 0.6057,
-          "dfn": 1.1287,
-          "P": 10,
+          "att": 0.5855,
+          "dfn": 1.2129,
+          "P": 11,
           "F": 9,
-          "A": 19,
+          "A": 23,
           "prior": "last",
           "pa": 0.603,
           "pd": 0.998,
@@ -17971,8 +17971,8 @@
             -0.531
           ],
           "cd": {
-            "n": 10,
-            "y": 16,
+            "n": 11,
+            "y": 17,
             "r": 1
           },
           "cr": {
@@ -17989,19 +17989,31 @@
             "overall": {
               "n": 10,
               "goals_for_avg": 0.9,
-              "goals_against_avg": 1.9
+              "goals_against_avg": 2.1
             },
             "home": {
-              "n": 6,
-              "goals_for_avg": 0.833,
-              "goals_against_avg": 1.833
+              "n": 5,
+              "goals_for_avg": 1.0,
+              "goals_against_avg": 1.8
             },
             "away": {
-              "n": 4,
-              "goals_for_avg": 1.0,
-              "goals_against_avg": 2.0
+              "n": 5,
+              "goals_for_avg": 0.8,
+              "goals_against_avg": 2.4
             },
             "matches": [
+              {
+                "id": "401876397",
+                "date": "2026-11-22T14:00:00Z",
+                "opponent": "Paris FC",
+                "venue": "away",
+                "goals_for": 0,
+                "goals_against": 4,
+                "corners_for": 2.0,
+                "corners_against": 10.0,
+                "yellow_cards": 1.0,
+                "red_cards": 0.0
+              },
               {
                 "id": "401876412",
                 "date": "2026-11-08T16:15:00Z",
@@ -18109,31 +18121,19 @@
                 "corners_against": 7.0,
                 "yellow_cards": 2.0,
                 "red_cards": 0.0
-              },
-              {
-                "id": "401876493",
-                "date": "2026-08-23T13:00:00Z",
-                "opponent": "Lille OSC",
-                "venue": "home",
-                "goals_for": 0,
-                "goals_against": 2,
-                "corners_for": 8.0,
-                "corners_against": 3.0,
-                "yellow_cards": 2.0,
-                "red_cards": 0.0
               }
             ],
             "corners_for": {
               "n": 10,
-              "avg": 6.0
+              "avg": 5.4
             },
             "corners_against": {
               "n": 10,
-              "avg": 5.5
+              "avg": 6.2
             },
             "yellow_cards": {
               "n": 10,
-              "avg": 1.6
+              "avg": 1.5
             },
             "red_cards": {
               "n": 10,
@@ -18676,233 +18676,6 @@
     }
   },
   "fixtures": [
-    {
-      "lg": "de.1",
-      "t": "2026-11-22T14:30:00Z",
-      "h": "FC Augsburg",
-      "a": "1. FSV Mainz 05",
-      "o": [
-        35.4,
-        24.5,
-        40.1
-      ],
-      "w": {
-        "c": "Augsburg",
-        "hi": 2.5,
-        "lo": -1.2,
-        "pc": 35,
-        "pt": null
-      },
-      "ref_status": "appointed",
-      "ref_source": "Football-Data.org match referees",
-      "ref_stats_available": true,
-      "espn_event_id": "401884733",
-      "ref": "Martin Petersen"
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T15:15:00Z",
-      "h": "Real Racing Club de Santander",
-      "a": "Real Sociedad de Fútbol",
-      "o": [
-        30.1,
-        23.0,
-        46.9
-      ],
-      "w": {
-        "c": "Santander",
-        "hi": 15.8,
-        "lo": 10.4,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "appointed",
-      "ref_source": "Football-Data.org match referees",
-      "ref_stats_available": false,
-      "espn_event_id": "401882800",
-      "ref": "Manuel Orellana Cid"
-    },
-    {
-      "lg": "fr.1",
-      "t": "2026-11-22T16:15:00Z",
-      "h": "FC Lorient",
-      "a": "Stade Rennais FC 1901",
-      "o": [
-        33.4,
-        27.5,
-        39.1
-      ],
-      "ref": "Marc Bollengier",
-      "w": {
-        "c": "Lorient",
-        "hi": 12.8,
-        "lo": 8.7,
-        "pc": 45,
-        "pt": "rain"
-      },
-      "ref_status": "appointed",
-      "ref_source": "Football-Data.org match referees",
-      "ref_stats_available": true,
-      "espn_event_id": "401876401"
-    },
-    {
-      "lg": "en.1",
-      "t": "2026-11-22T16:30:00Z",
-      "h": "Liverpool FC",
-      "a": "Manchester United FC",
-      "o": [
-        54.4,
-        22.6,
-        23.0
-      ],
-      "ref": "Samuel Barrott",
-      "w": {
-        "c": "Liverpool",
-        "hi": 7.6,
-        "lo": 2.9,
-        "pc": 15,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401878755"
-    },
-    {
-      "lg": "de.1",
-      "t": "2026-11-22T16:30:00Z",
-      "h": "SV Werder Bremen",
-      "a": "Hamburger SV",
-      "o": [
-        57.3,
-        22.1,
-        20.6
-      ],
-      "w": {
-        "c": "Bremen",
-        "hi": 6.1,
-        "lo": -0.2,
-        "pc": 5,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401884730"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T17:00:00Z",
-      "h": "AC Milan",
-      "a": "Frosinone Calcio",
-      "o": [
-        62.6,
-        19.5,
-        17.9
-      ],
-      "ref": "Luca Pairetto",
-      "w": {
-        "c": "Milano",
-        "hi": 7.3,
-        "lo": 4.8,
-        "pc": 75,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401874989"
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T17:30:00Z",
-      "h": "CA Osasuna",
-      "a": "Málaga CF",
-      "o": [
-        52.5,
-        26.2,
-        21.3
-      ],
-      "w": {
-        "c": "Pamplona",
-        "hi": 12.8,
-        "lo": 5.7,
-        "pc": 30,
-        "pt": "rain"
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401882801"
-    },
-    {
-      "lg": "it.1",
-      "t": "2026-11-22T19:45:00Z",
-      "h": "Atalanta BC",
-      "a": "FC Internazionale Milano",
-      "o": [
-        19.4,
-        20.7,
-        59.9
-      ],
-      "ref": "Fabio Maresca",
-      "w": {
-        "c": "Bergamo",
-        "hi": 6.6,
-        "lo": 4.5,
-        "pc": 65,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401875001"
-    },
-    {
-      "lg": "fr.1",
-      "t": "2026-11-22T19:45:00Z",
-      "h": "Olympique de Marseille",
-      "a": "Le Mans FC",
-      "o": [
-        65.6,
-        19.0,
-        15.4
-      ],
-      "ref": "Eric Wattellier",
-      "w": {
-        "c": "Marseille",
-        "hi": 15.3,
-        "lo": 11.7,
-        "pc": 60,
-        "pt": "rain"
-      },
-      "ref_status": "previously_recorded_unverified",
-      "ref_source": "existing JSON",
-      "ref_stats_available": false,
-      "espn_event_id": "401876400"
-    },
-    {
-      "lg": "es.1",
-      "t": "2026-11-22T20:00:00Z",
-      "h": "Getafe CF",
-      "a": "Club Atlético de Madrid",
-      "o": [
-        15.2,
-        23.1,
-        61.7
-      ],
-      "w": {
-        "c": "Madrid",
-        "hi": 14.1,
-        "lo": 3.1,
-        "pc": 0,
-        "pt": null
-      },
-      "ref_status": "not_confirmed",
-      "ref_source": null,
-      "ref_stats_available": false,
-      "espn_event_id": "401882803"
-    },
     {
       "lg": "it.1",
       "t": "2026-11-23T19:45:00Z",
@@ -20032,9 +19805,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-22T14:27:16Z",
+  "updated": "2026-11-22T23:27:25Z",
   "sync_meta": {
-    "last_attempt": "2026-11-22T14:27:16Z",
+    "last_attempt": "2026-11-22T23:27:25Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "es.1": "ok",
@@ -20045,23 +19818,21 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 124,
+    "events_matched": 118,
     "fixtures_added": 0,
-    "referees_verified_this_run": 3,
+    "referees_verified_this_run": 0,
     "football_data_referee_lookup": {
       "requests": 5,
       "matched": 108,
-      "appointed": 3,
-      "matches_with_referees": 3,
-      "referee_types": {
-        "REFEREE": 3
-      },
-      "referee_names_present": 3
+      "appointed": 0,
+      "matches_with_referees": 0,
+      "referee_types": {},
+      "referee_names_present": 0
     },
     "team_statistics_refreshed": true,
-    "completed_matches_applied": 1,
+    "completed_matches_applied": 15,
     "matches_with_corners_updated": 0,
-    "matches_with_cards_updated": 1,
+    "matches_with_cards_updated": 15,
     "recent_form_target_per_team": 10,
     "recent_form_teams_complete": 96,
     "recent_form_teams_partial": 0,
@@ -20069,33 +19840,48 @@
     "note": "Recent form uses up to ten completed matches per team. Missing match-level corners/cards are excluded from their sample averages."
   },
   "processed_espn_event_ids": [
+    "401874960",
     "401874967",
     "401874981",
+    "401874989",
+    "401875001",
     "401875008",
+    "401875047",
     "401875056",
     "401875067",
     "401876395",
     "401876396",
+    "401876397",
     "401876398",
     "401876399",
+    "401876400",
+    "401876401",
     "401876402",
     "401876403",
     "401878754",
+    "401878755",
     "401878756",
     "401879232",
     "401879233",
+    "401879234",
     "401879235",
     "401879236",
     "401879238",
     "401882797",
     "401882798",
     "401882799",
+    "401882800",
+    "401882801",
+    "401882803",
+    "401882804",
     "401882805",
     "401882806",
     "401884728",
     "401884729",
+    "401884730",
     "401884731",
     "401884732",
+    "401884733",
     "401884734",
     "401884735",
     "401884736"
@@ -21813,6 +21599,38 @@
         },
         "referee": null,
         "_corner_parser_version": 2
+      },
+      "401879234": {
+        "by_team": {
+          "Hull City AFC": {
+            "corners": 3.0,
+            "yellow": 2.0,
+            "red": 0.0
+          },
+          "Brighton & Hove Albion FC": {
+            "corners": 5.0,
+            "yellow": 2.0,
+            "red": 1.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401878755": {
+        "by_team": {
+          "Liverpool FC": {
+            "corners": 15.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "Manchester United FC": {
+            "corners": 5.0,
+            "yellow": 0.0,
+            "red": 1.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
       }
     },
     "es.1": {
@@ -23511,6 +23329,70 @@
         },
         "referee": null,
         "_corner_parser_version": 2
+      },
+      "401882804": {
+        "by_team": {
+          "FC Barcelona": {
+            "corners": 10.0,
+            "yellow": 2.0,
+            "red": 1.0
+          },
+          "Villarreal CF": {
+            "corners": 0.0,
+            "yellow": 4.0,
+            "red": 1.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401882803": {
+        "by_team": {
+          "Getafe CF": {
+            "corners": 2.0,
+            "yellow": 2.0,
+            "red": 1.0
+          },
+          "Club Atlético de Madrid": {
+            "corners": 7.0,
+            "yellow": 2.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401882801": {
+        "by_team": {
+          "CA Osasuna": {
+            "corners": 4.0,
+            "yellow": 2.0,
+            "red": 1.0
+          },
+          "Málaga CF": {
+            "corners": 1.0,
+            "yellow": 0.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401882800": {
+        "by_team": {
+          "Real Racing Club de Santander": {
+            "corners": 7.0,
+            "yellow": 2.0,
+            "red": 0.0
+          },
+          "Real Sociedad de Fútbol": {
+            "corners": 14.0,
+            "yellow": 2.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
       }
     },
     "de.1": {
@@ -25044,6 +24926,38 @@
           "VfB Stuttgart": {
             "corners": 5.0,
             "yellow": 1.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401884733": {
+        "by_team": {
+          "FC Augsburg": {
+            "corners": 6.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "1. FSV Mainz 05": {
+            "corners": 0.0,
+            "yellow": 3.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401884730": {
+        "by_team": {
+          "SV Werder Bremen": {
+            "corners": 1.0,
+            "yellow": 3.0,
+            "red": 0.0
+          },
+          "Hamburger SV": {
+            "corners": 8.0,
+            "yellow": 3.0,
             "red": 0.0
           }
         },
@@ -26731,6 +26645,70 @@
         },
         "referee": null,
         "_corner_parser_version": 2
+      },
+      "401875047": {
+        "by_team": {
+          "Bologna FC 1909": {
+            "corners": 8.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "Udinese Calcio": {
+            "corners": 4.0,
+            "yellow": 2.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401875001": {
+        "by_team": {
+          "Atalanta BC": {
+            "corners": 5.0,
+            "yellow": 2.0,
+            "red": 0.0
+          },
+          "FC Internazionale Milano": {
+            "corners": 6.0,
+            "yellow": 1.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401874989": {
+        "by_team": {
+          "AC Milan": {
+            "corners": 2.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "Frosinone Calcio": {
+            "corners": 9.0,
+            "yellow": 4.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401874960": {
+        "by_team": {
+          "US Sassuolo Calcio": {
+            "corners": 5.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "Genoa CFC": {
+            "corners": 3.0,
+            "yellow": 0.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
       }
     },
     "fr.1": {
@@ -28263,6 +28241,54 @@
           },
           "Stade Brestois 29": {
             "corners": 1.0,
+            "yellow": 1.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401876401": {
+        "by_team": {
+          "FC Lorient": {
+            "corners": 7.0,
+            "yellow": 2.0,
+            "red": 0.0
+          },
+          "Stade Rennais FC 1901": {
+            "corners": 5.0,
+            "yellow": 2.0,
+            "red": 1.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401876400": {
+        "by_team": {
+          "Olympique de Marseille": {
+            "corners": 2.0,
+            "yellow": 3.0,
+            "red": 0.0
+          },
+          "Le Mans FC": {
+            "corners": 5.0,
+            "yellow": 4.0,
+            "red": 0.0
+          }
+        },
+        "referee": null,
+        "_corner_parser_version": 2
+      },
+      "401876397": {
+        "by_team": {
+          "Paris FC": {
+            "corners": 10.0,
+            "yellow": 1.0,
+            "red": 0.0
+          },
+          "Angers SCO": {
+            "corners": 2.0,
             "yellow": 1.0,
             "red": 0.0
           }

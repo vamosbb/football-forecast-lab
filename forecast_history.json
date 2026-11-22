@@ -717,7 +717,16 @@
       "p_goals_over_2_5": 0.83107933,
       "p_corners_over": 0.86151559,
       "p_cards_over": 0.35853665,
-      "result": null
+      "result": {
+        "home_goals": 3,
+        "away_goals": 2,
+        "outcome": "1",
+        "logloss": 0.189857,
+        "brier": 0.045415,
+        "goals_over_2_5_brier": 0.028534,
+        "corners_brier": 0.019178,
+        "cards_brier": 0.411475
+      }
     },
     {
       "league": "en.1",
@@ -734,7 +743,16 @@
       "p_goals_over_2_5": 0.48852819,
       "p_corners_over": 0.64989638,
       "p_cards_over": 0.57601484,
-      "result": null
+      "result": {
+        "home_goals": 2,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 1.775843,
+        "brier": 1.077374,
+        "goals_over_2_5_brier": 0.23866,
+        "corners_brier": 0.422365,
+        "cards_brier": 0.179763
+      }
     },
     {
       "league": "it.1",
@@ -751,7 +769,16 @@
       "p_goals_over_2_5": 0.57431577,
       "p_corners_over": 0.59811522,
       "p_cards_over": 0.28273672,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.52093,
+        "brier": 0.982172,
+        "goals_over_2_5_brier": 0.329839,
+        "corners_brier": 0.161511,
+        "cards_brier": 0.07994
+      }
     },
     {
       "league": "it.1",
@@ -768,7 +795,16 @@
       "p_goals_over_2_5": 0.5729666,
       "p_corners_over": 0.47011859,
       "p_cards_over": 0.26563257,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 2,
+        "outcome": "2",
+        "logloss": 0.984043,
+        "brier": 0.598443,
+        "goals_over_2_5_brier": 0.328291,
+        "corners_brier": 0.221011,
+        "cards_brier": 0.070561
+      }
     },
     {
       "league": "fr.1",
@@ -785,7 +821,16 @@
       "p_goals_over_2_5": 0.52042144,
       "p_corners_over": 0.52931384,
       "p_cards_over": 0.33647359,
-      "result": null
+      "result": {
+        "home_goals": 4,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.334258,
+        "brier": 0.124585,
+        "goals_over_2_5_brier": 0.229996,
+        "corners_brier": 0.221545,
+        "cards_brier": 0.113214
+      }
     },
     {
       "league": "de.1",
@@ -802,7 +847,16 @@
       "p_goals_over_2_5": 0.7277661,
       "p_corners_over": 0.6922361,
       "p_cards_over": 0.32022822,
-      "result": null
+      "result": {
+        "home_goals": 3,
+        "away_goals": 1,
+        "outcome": "1",
+        "logloss": 0.721323,
+        "brier": 0.39998,
+        "goals_over_2_5_brier": 0.074111,
+        "corners_brier": 0.479191,
+        "cards_brier": 0.102546
+      }
     },
     {
       "league": "es.1",
@@ -819,7 +873,16 @@
       "p_goals_over_2_5": 0.77257736,
       "p_corners_over": 0.92382717,
       "p_cards_over": 0.521199,
-      "result": null
+      "result": {
+        "home_goals": 3,
+        "away_goals": 2,
+        "outcome": "1",
+        "logloss": 1.202404,
+        "brier": 0.778612,
+        "goals_over_2_5_brier": 0.051721,
+        "corners_brier": 0.005802,
+        "cards_brier": 0.271648
+      }
     },
     {
       "league": "fr.1",
@@ -836,7 +899,16 @@
       "p_goals_over_2_5": 0.59301283,
       "p_corners_over": 0.71774148,
       "p_cards_over": 0.26462478,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.439468,
+        "brier": 0.880963,
+        "goals_over_2_5_brier": 0.351664,
+        "corners_brier": 0.07967,
+        "cards_brier": 0.540777
+      }
     },
     {
       "league": "en.1",
@@ -853,7 +925,16 @@
       "p_goals_over_2_5": 0.60999133,
       "p_corners_over": 0.66937224,
       "p_cards_over": 0.4951795,
-      "result": null
+      "result": {
+        "home_goals": 4,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.638262,
+        "brier": 0.33442,
+        "goals_over_2_5_brier": 0.152107,
+        "corners_brier": 0.109315,
+        "cards_brier": 0.245203
+      }
     },
     {
       "league": "de.1",
@@ -870,7 +951,16 @@
       "p_goals_over_2_5": 0.55269619,
       "p_corners_over": 0.55649089,
       "p_cards_over": 0.24118325,
-      "result": null
+      "result": {
+        "home_goals": 4,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.498867,
+        "brier": 0.232582,
+        "goals_over_2_5_brier": 0.200081,
+        "corners_brier": 0.1967,
+        "cards_brier": 0.575803
+      }
     },
     {
       "league": "it.1",
@@ -887,7 +977,16 @@
       "p_goals_over_2_5": 0.6394395,
       "p_corners_over": 0.6216235,
       "p_cards_over": 0.30184202,
-      "result": null
+      "result": {
+        "home_goals": 5,
+        "away_goals": 1,
+        "outcome": "1",
+        "logloss": 0.471838,
+        "brier": 0.212339,
+        "goals_over_2_5_brier": 0.130004,
+        "corners_brier": 0.143169,
+        "cards_brier": 0.487425
+      }
     },
     {
       "league": "es.1",
@@ -904,7 +1003,16 @@
       "p_goals_over_2_5": 0.42424811,
       "p_corners_over": 0.61578668,
       "p_cards_over": 0.55891733,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.615941,
+        "brier": 0.318893,
+        "goals_over_2_5_brier": 0.179986,
+        "corners_brier": 0.379193,
+        "cards_brier": 0.312389
+      }
     },
     {
       "league": "it.1",
@@ -921,7 +1029,16 @@
       "p_goals_over_2_5": 0.70778842,
       "p_corners_over": 0.68865142,
       "p_cards_over": 0.14216698,
-      "result": null
+      "result": {
+        "home_goals": 4,
+        "away_goals": 4,
+        "outcome": "X",
+        "logloss": 1.741803,
+        "brier": 1.145248,
+        "goals_over_2_5_brier": 0.085388,
+        "corners_brier": 0.096938,
+        "cards_brier": 0.020211
+      }
     },
     {
       "league": "fr.1",
@@ -938,7 +1055,16 @@
       "p_goals_over_2_5": 0.78407962,
       "p_corners_over": 0.4157987,
       "p_cards_over": 0.33647359,
-      "result": null
+      "result": {
+        "home_goals": 2,
+        "away_goals": 3,
+        "outcome": "2",
+        "logloss": 2.471188,
+        "brier": 1.48415,
+        "goals_over_2_5_brier": 0.046622,
+        "corners_brier": 0.172889,
+        "cards_brier": 0.440267
+      }
     },
     {
       "league": "es.1",
@@ -955,7 +1081,16 @@
       "p_goals_over_2_5": 0.31051684,
       "p_corners_over": 0.61568946,
       "p_cards_over": 0.67229079,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 3,
+        "outcome": "2",
+        "logloss": 0.590876,
+        "brier": 0.306049,
+        "goals_over_2_5_brier": 0.475387,
+        "corners_brier": 0.147695,
+        "cards_brier": 0.107393
+      }
     },
     {
       "league": "it.1",
