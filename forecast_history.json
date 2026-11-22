@@ -457,7 +457,16 @@
       "p_goals_over_2_5": 0.39214829,
       "p_corners_over": 0.56082535,
       "p_cards_over": 0.39459323,
-      "result": null
+      "result": {
+        "home_goals": 2,
+        "away_goals": 2,
+        "outcome": "X",
+        "logloss": 1.281327,
+        "brier": 0.894216,
+        "goals_over_2_5_brier": 0.369484,
+        "corners_brier": 0.192874,
+        "cards_brier": 0.366517
+      }
     },
     {
       "league": "es.1",
@@ -474,7 +483,16 @@
       "p_goals_over_2_5": 0.5494795,
       "p_corners_over": 0.51517598,
       "p_cards_over": 0.47554558,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.390146,
+        "brier": 0.851696,
+        "goals_over_2_5_brier": 0.301928,
+        "corners_brier": 0.235054,
+        "cards_brier": 0.275052
+      }
     },
     {
       "league": "de.1",
@@ -491,7 +509,16 @@
       "p_goals_over_2_5": 0.44050672,
       "p_corners_over": 0.67446812,
       "p_cards_over": 0.19618212,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 0,
+        "outcome": "X",
+        "logloss": 1.29216,
+        "brier": 0.807779,
+        "goals_over_2_5_brier": 0.194046,
+        "corners_brier": 0.105971,
+        "cards_brier": 0.038487
+      }
     },
     {
       "league": "it.1",
@@ -508,7 +535,16 @@
       "p_goals_over_2_5": 0.57398232,
       "p_corners_over": 0.6478767,
       "p_cards_over": 0.09580002,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.481293,
+        "brier": 0.219424,
+        "goals_over_2_5_brier": 0.329456,
+        "corners_brier": 0.123991,
+        "cards_brier": 0.009178
+      }
     },
     {
       "league": "fr.1",
@@ -525,7 +561,16 @@
       "p_goals_over_2_5": 0.62343276,
       "p_corners_over": 0.50294992,
       "p_cards_over": 0.35108831,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.569414,
+        "brier": 1.01578,
+        "goals_over_2_5_brier": 0.388668,
+        "corners_brier": 0.247059,
+        "cards_brier": 0.123263
+      }
     },
     {
       "league": "fr.1",
@@ -542,7 +587,16 @@
       "p_goals_over_2_5": 0.31119678,
       "p_corners_over": 0.59307427,
       "p_cards_over": 0.22335201,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 1,
+        "outcome": "2",
+        "logloss": 1.413437,
+        "brier": 0.86992,
+        "goals_over_2_5_brier": 0.096843,
+        "corners_brier": 0.165589,
+        "cards_brier": 0.049886
+      }
     },
     {
       "league": "fr.1",
@@ -559,7 +613,16 @@
       "p_goals_over_2_5": 0.64710358,
       "p_corners_over": 0.67302176,
       "p_cards_over": 0.35108831,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.743253,
+        "brier": 1.178441,
+        "goals_over_2_5_brier": 0.418743,
+        "corners_brier": 0.452958,
+        "cards_brier": 0.123263
+      }
     },
     {
       "league": "fr.1",
@@ -576,7 +639,16 @@
       "p_goals_over_2_5": 0.7020799,
       "p_corners_over": 0.35514487,
       "p_cards_over": 0.23689947,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 1,
+        "outcome": "2",
+        "logloss": 1.129884,
+        "brier": 0.717629,
+        "goals_over_2_5_brier": 0.492916,
+        "corners_brier": 0.415838,
+        "cards_brier": 0.056121
+      }
     },
     {
       "league": "es.1",
@@ -593,7 +665,16 @@
       "p_goals_over_2_5": 0.49826196,
       "p_corners_over": 0.51211912,
       "p_cards_over": 0.40830457,
-      "result": null
+      "result": {
+        "home_goals": 2,
+        "away_goals": 1,
+        "outcome": "1",
+        "logloss": 0.300658,
+        "brier": 0.105791,
+        "goals_over_2_5_brier": 0.251741,
+        "corners_brier": 0.238028,
+        "cards_brier": 0.166713
+      }
     },
     {
       "league": "it.1",
@@ -2429,6 +2510,278 @@
       "p_goals_over_2_5": 0.58298752,
       "p_corners_over": 0.67653241,
       "p_cards_over": 0.36530228,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875017",
+      "kickoff": "2026-12-06T11:30:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Genoa CFC",
+      "away": "Torino FC",
+      "p_1x2": [
+        0.38575045,
+        0.26313134,
+        0.35111821
+      ],
+      "p_goals_over_2_5": 0.4733277,
+      "p_corners_over": 0.52256035,
+      "p_cards_over": 0.21162681,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882781",
+      "kickoff": "2026-12-06T13:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "CA Osasuna",
+      "away": "Elche CF",
+      "p_1x2": [
+        0.39356101,
+        0.26919575,
+        0.33724324
+      ],
+      "p_goals_over_2_5": 0.46768419,
+      "p_corners_over": 0.5769549,
+      "p_cards_over": 0.60405935,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879212",
+      "kickoff": "2026-12-06T14:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Everton FC",
+      "away": "Fulham FC",
+      "p_1x2": [
+        0.44229416,
+        0.33970331,
+        0.21800254
+      ],
+      "p_goals_over_2_5": 0.32374382,
+      "p_corners_over": 0.71239826,
+      "p_cards_over": 0.36441714,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401878748",
+      "kickoff": "2026-12-06T14:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Newcastle United FC",
+      "away": "Sunderland AFC",
+      "p_1x2": [
+        0.53281564,
+        0.28246402,
+        0.18472034
+      ],
+      "p_goals_over_2_5": 0.46579971,
+      "p_corners_over": 0.41605815,
+      "p_cards_over": 0.48471346,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876377",
+      "kickoff": "2026-12-06T14:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "ES Troyes AC",
+      "away": "Olympique Lyonnais",
+      "p_1x2": [
+        0.20780479,
+        0.25603207,
+        0.53616314
+      ],
+      "p_goals_over_2_5": 0.43161986,
+      "p_corners_over": 0.68514993,
+      "p_cards_over": 0.22956417,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875029",
+      "kickoff": "2026-12-06T14:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "SS Lazio",
+      "away": "Atalanta BC",
+      "p_1x2": [
+        0.6140639,
+        0.21014933,
+        0.17578677
+      ],
+      "p_goals_over_2_5": 0.56186342,
+      "p_corners_over": 0.495369,
+      "p_cards_over": 0.15265654,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884711",
+      "kickoff": "2026-12-06T14:30:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "FC Schalke 04",
+      "away": "Borussia Dortmund",
+      "p_1x2": [
+        0.1425476,
+        0.29107485,
+        0.56637755
+      ],
+      "p_goals_over_2_5": 0.28744672,
+      "p_corners_over": 0.43002066,
+      "p_cards_over": 0.27002205,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882785",
+      "kickoff": "2026-12-06T15:15:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Athletic Club",
+      "away": "Real Madrid CF",
+      "p_1x2": [
+        0.17713403,
+        0.22959776,
+        0.5932682
+      ],
+      "p_goals_over_2_5": 0.5027024,
+      "p_corners_over": 0.70519302,
+      "p_cards_over": 0.46725897,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876380",
+      "kickoff": "2026-12-06T16:15:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Stade Rennais FC 1901",
+      "away": "Stade Brestois 29",
+      "p_1x2": [
+        0.48523411,
+        0.21354392,
+        0.30122197
+      ],
+      "p_goals_over_2_5": 0.69970511,
+      "p_corners_over": 0.72589789,
+      "p_cards_over": 0.27404299,
+      "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884710",
+      "kickoff": "2026-12-06T16:30:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "SV 07 Elversberg",
+      "away": "VfB Stuttgart",
+      "p_1x2": [
+        0.36735052,
+        0.23487982,
+        0.39776966
+      ],
+      "p_goals_over_2_5": 0.6465929,
+      "p_corners_over": 0.83899821,
+      "p_cards_over": 0.18911586,
+      "result": null
+    },
+    {
+      "league": "en.1",
+      "event_id": "401879209",
+      "kickoff": "2026-12-06T16:30:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Tottenham Hotspur FC",
+      "away": "Arsenal FC",
+      "p_1x2": [
+        0.15559831,
+        0.32317237,
+        0.52122932
+      ],
+      "p_goals_over_2_5": 0.31174878,
+      "p_corners_over": 0.85161847,
+      "p_cards_over": 0.30525148,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875006",
+      "kickoff": "2026-12-06T17:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Juventus FC",
+      "away": "Udinese Calcio",
+      "p_1x2": [
+        0.67909482,
+        0.19113224,
+        0.12977294
+      ],
+      "p_goals_over_2_5": 0.5544762,
+      "p_corners_over": 0.82503957,
+      "p_cards_over": 0.20009307,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882782",
+      "kickoff": "2026-12-06T17:30:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Getafe CF",
+      "away": "Valencia CF",
+      "p_1x2": [
+        0.37763618,
+        0.35590281,
+        0.26646101
+      ],
+      "p_goals_over_2_5": 0.21160192,
+      "p_corners_over": 0.5371874,
+      "p_cards_over": 0.68680205,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876383",
+      "kickoff": "2026-12-06T19:45:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Olympique de Marseille",
+      "away": "OGC Nice",
+      "p_1x2": [
+        0.70710073,
+        0.16116667,
+        0.1317326
+      ],
+      "p_goals_over_2_5": 0.71718079,
+      "p_corners_over": 0.55137187,
+      "p_cards_over": 0.32556174,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401874995",
+      "kickoff": "2026-12-06T19:45:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "AC Milan",
+      "away": "Parma Calcio 1913",
+      "p_1x2": [
+        0.75879053,
+        0.15962118,
+        0.08158829
+      ],
+      "p_goals_over_2_5": 0.55800988,
+      "p_corners_over": 0.20816497,
+      "p_cards_over": 0.2562151,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882784",
+      "kickoff": "2026-12-06T20:00:00Z",
+      "recorded_at": "2026-11-22T05:58:24.905415+00:00",
+      "home": "Club Atlético de Madrid",
+      "away": "Real Betis Balompié",
+      "p_1x2": [
+        0.56670295,
+        0.23429844,
+        0.19899861
+      ],
+      "p_goals_over_2_5": 0.51420189,
+      "p_corners_over": 0.67823982,
+      "p_cards_over": 0.42338,
       "result": null
     }
   ]
