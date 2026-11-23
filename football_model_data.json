@@ -19803,11 +19803,41 @@
       "ref_status": "not_confirmed",
       "ref_source": null,
       "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-12-07T17:30:00Z",
+      "h": "Venezia FC",
+      "a": "US Sassuolo Calcio",
+      "espn_event_id": "401875011",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "it.1",
+      "t": "2026-12-07T19:45:00Z",
+      "h": "ACF Fiorentina",
+      "a": "Cagliari Calcio",
+      "espn_event_id": "401875107",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
+    },
+    {
+      "lg": "es.1",
+      "t": "2026-12-07T20:00:00Z",
+      "h": "Sevilla FC",
+      "a": "Málaga CF",
+      "espn_event_id": "401882778",
+      "ref_status": "not_confirmed",
+      "ref_source": null,
+      "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-22T23:27:25Z",
+  "updated": "2026-11-23T06:48:37Z",
   "sync_meta": {
-    "last_attempt": "2026-11-22T23:27:25Z",
+    "last_attempt": "2026-11-23T06:48:37Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "es.1": "ok",
@@ -19818,8 +19848,8 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 118,
-    "fixtures_added": 0,
+    "events_matched": 108,
+    "fixtures_added": 3,
     "referees_verified_this_run": 0,
     "football_data_referee_lookup": {
       "requests": 5,
@@ -19829,10 +19859,10 @@
       "referee_types": {},
       "referee_names_present": 0
     },
-    "team_statistics_refreshed": true,
-    "completed_matches_applied": 15,
+    "team_statistics_refreshed": false,
+    "completed_matches_applied": 0,
     "matches_with_corners_updated": 0,
-    "matches_with_cards_updated": 15,
+    "matches_with_cards_updated": 0,
     "recent_form_target_per_team": 10,
     "recent_form_teams_complete": 96,
     "recent_form_teams_partial": 0,

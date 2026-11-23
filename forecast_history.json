@@ -2927,6 +2927,57 @@
       "p_corners_over": 0.67823982,
       "p_cards_over": 0.42338,
       "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875011",
+      "kickoff": "2026-12-07T17:30:00Z",
+      "recorded_at": "2026-11-23T06:49:10.101479+00:00",
+      "home": "Venezia FC",
+      "away": "US Sassuolo Calcio",
+      "p_1x2": [
+        0.29289127,
+        0.22678739,
+        0.48032134
+      ],
+      "p_goals_over_2_5": 0.6180066,
+      "p_corners_over": 0.51938916,
+      "p_cards_over": 0.2277239,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401875107",
+      "kickoff": "2026-12-07T19:45:00Z",
+      "recorded_at": "2026-11-23T06:49:10.101479+00:00",
+      "home": "ACF Fiorentina",
+      "away": "Cagliari Calcio",
+      "p_1x2": [
+        0.43586334,
+        0.24801639,
+        0.31612027
+      ],
+      "p_goals_over_2_5": 0.53018714,
+      "p_corners_over": 0.73546216,
+      "p_cards_over": 0.30062729,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882778",
+      "kickoff": "2026-12-07T20:00:00Z",
+      "recorded_at": "2026-11-23T06:49:10.101479+00:00",
+      "home": "Sevilla FC",
+      "away": "Málaga CF",
+      "p_1x2": [
+        0.61209758,
+        0.22804091,
+        0.1598615
+      ],
+      "p_goals_over_2_5": 0.48174579,
+      "p_corners_over": 0.38381337,
+      "p_cards_over": 0.58116559,
+      "result": null
     }
   ]
 }
