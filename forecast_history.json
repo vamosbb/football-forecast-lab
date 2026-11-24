@@ -3021,7 +3021,16 @@
       "p_goals_over_2_5": 0.74557987,
       "p_corners_over": 0.42594036,
       "p_cards_over": 0.23125075,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.656115,
+        "brier": 0.35031,
+        "goals_over_2_5_brier": 0.555889,
+        "corners_brier": 0.181425,
+        "cards_brier": 0.053477
+      }
     },
     {
       "league": "uefa.champions",
@@ -3038,7 +3047,16 @@
       "p_goals_over_2_5": 0.69363619,
       "p_corners_over": 0.66036171,
       "p_cards_over": 0.2526578,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.977698,
+        "brier": 0.600659,
+        "goals_over_2_5_brier": 0.481131,
+        "corners_brier": 0.436078,
+        "cards_brier": 0.55852
+      }
     },
     {
       "league": "uefa.champions",
@@ -3055,7 +3073,14 @@
       "p_goals_over_2_5": 0.52772942,
       "p_corners_over": null,
       "p_cards_over": null,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 1,
+        "outcome": "X",
+        "logloss": 1.535199,
+        "brier": 1.028402,
+        "goals_over_2_5_brier": 0.278498
+      }
     },
     {
       "league": "uefa.champions",
@@ -3072,7 +3097,16 @@
       "p_goals_over_2_5": 0.84578696,
       "p_corners_over": 0.0463259,
       "p_cards_over": 0.27899325,
-      "result": null
+      "result": {
+        "home_goals": 1,
+        "away_goals": 0,
+        "outcome": "1",
+        "logloss": 0.300629,
+        "brier": 0.101157,
+        "goals_over_2_5_brier": 0.715356,
+        "corners_brier": 0.002146,
+        "cards_brier": 0.519851
+      }
     },
     {
       "league": "uefa.champions",
@@ -3089,7 +3123,14 @@
       "p_goals_over_2_5": 0.68670195,
       "p_corners_over": null,
       "p_cards_over": null,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 1,
+        "outcome": "2",
+        "logloss": 1.018578,
+        "brier": 0.631716,
+        "goals_over_2_5_brier": 0.47156
+      }
     },
     {
       "league": "uefa.champions",
@@ -3106,7 +3147,16 @@
       "p_goals_over_2_5": 0.70254285,
       "p_corners_over": 0.6971555,
       "p_cards_over": 0.31648201,
-      "result": null
+      "result": {
+        "home_goals": 2,
+        "away_goals": 2,
+        "outcome": "X",
+        "logloss": 1.632067,
+        "brier": 1.04195,
+        "goals_over_2_5_brier": 0.088481,
+        "corners_brier": 0.091715,
+        "cards_brier": 0.100161
+      }
     },
     {
       "league": "uefa.champions",
@@ -3123,7 +3173,14 @@
       "p_goals_over_2_5": 0.77330742,
       "p_corners_over": null,
       "p_cards_over": null,
-      "result": null
+      "result": {
+        "home_goals": 3,
+        "away_goals": 1,
+        "outcome": "1",
+        "logloss": 0.548993,
+        "brier": 0.268888,
+        "goals_over_2_5_brier": 0.05139
+      }
     },
     {
       "league": "uefa.champions",
@@ -3140,7 +3197,14 @@
       "p_goals_over_2_5": 0.72575709,
       "p_corners_over": null,
       "p_cards_over": null,
-      "result": null
+      "result": {
+        "home_goals": 5,
+        "away_goals": 1,
+        "outcome": "1",
+        "logloss": 0.444478,
+        "brier": 0.193151,
+        "goals_over_2_5_brier": 0.075209
+      }
     },
     {
       "league": "uefa.champions",
@@ -3157,7 +3221,14 @@
       "p_goals_over_2_5": 0.71866745,
       "p_corners_over": null,
       "p_cards_over": null,
-      "result": null
+      "result": {
+        "home_goals": 0,
+        "away_goals": 2,
+        "outcome": "2",
+        "logloss": 0.673194,
+        "brier": 0.362888,
+        "goals_over_2_5_brier": 0.516483
+      }
     },
     {
       "league": "uefa.champions",
