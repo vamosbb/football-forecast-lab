@@ -697,16 +697,49 @@ def bootstrap_ucl(session, data, now, warnings):
     lg = 'uefa.champions'
     url = BASE.format(league=lg)
     events = {}
-    for offset in range(-14, 365, 14):
+    headers = {'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+    successful = 0
+    failures = []
+    def load(params):
+        nonlocal successful
+        r = session.get(url, params=params, headers=headers, timeout=20)
+        r.raise_for_status()
+        rows = r.json().get('events')
+        if not isinstance(rows, list):
+            raise ValueError('missing events list')
+        successful += 1
+        for e in rows:
+            if e.get('id'): events[str(e['id'])] = e
+    def diagnostic(exc):
+        response = getattr(exc, 'response', None)
+        return f'{type(exc).__name__}: HTTP {getattr(response, "status_code", "unknown")} {str(exc)[:180]}'
+    # Match the working domestic-league request format; no limit parameter.
+    for offset in range(-14, 365, 7):
         end = now.date() - dt.timedelta(days=offset)
-        start = end - dt.timedelta(days=13)
+        start = end - dt.timedelta(days=6)
         try:
-            r = session.get(url, params={'dates': f'{start:%Y%m%d}-{end:%Y%m%d}', 'limit': 1000}, timeout=20)
-            r.raise_for_status()
-            for e in r.json()['events']:
-                if e.get('id'): events[str(e['id'])] = e
-        except (requests.RequestException, ValueError, KeyError, TypeError):
-            warnings.append(f'UCL history unavailable: {start} to {end}')
+            load({'dates': f'{start:%Y%m%d}-{end:%Y%m%d}'})
+        except (requests.RequestException, ValueError, KeyError, TypeError) as exc:
+            if not failures:
+                print('UCL range request:', diagnostic(exc))
+            failures.append(diagnostic(exc))
+            for i in range(7):
+                day = start + dt.timedelta(days=i)
+                try:
+                    load({'dates': f'{day:%Y%m%d}'})
+                except (requests.RequestException, ValueError, KeyError, TypeError) as daily_exc:
+                    failures.append(diagnostic(daily_exc))
+                    if i == 0:
+                        print('UCL daily request:', day, diagnostic(daily_exc))
+                    if getattr(getattr(daily_exc, 'response', None), 'status_code', None) in (400, 401, 403, 404, 429):
+                        break
+        if successful == 0 and len(failures) >= 6:
+            break
+    print('UCL history:', json.dumps({'successful_requests': successful, 'events': len(events), 'failed_requests': len(failures)}))
+    if failures:
+        warnings.append(f'UCL history: {len(failures)} failed requests; {failures[0]}')
+    if not successful:
+        return False
     names = set(data.get('leagues', {}).get(lg, {}).get('teams', {}))
     active = set()
     for e in events.values():
@@ -754,6 +787,7 @@ def bootstrap_ucl(session, data, now, warnings):
     if len(teams)<2: return False
     data['leagues'][lg]={'teams':teams,'avgH':avgH,'avgA':avgA,'rho':0.0,'asof':now.date().isoformat(),'refs':{},'ext':{'ks':8,'cf':cf or 1,'ch':ch or cf or 1,'ca':ca or cf or 1,'kc':kc or 0,'rbar':2*(kc or 0)}}
     apply_recent_form(data,lg,{t:recent[t] for t in teams})
+    print("UCL coverage:", json.dumps({"teams": len(teams), "corners_ready": sum(t["ucl_corners_ready"] for t in teams.values()), "cards_ready": sum(t["ucl_cards_ready"] for t in teams.values())}))
     return True
 
 def sync(path=DATA, days=14, network=True):
@@ -778,7 +812,11 @@ def sync(path=DATA, days=14, network=True):
     if network:
         with requests.Session() as session:
             ucl_ready = bootstrap_ucl(session, data, now, warnings)
+            if not ucl_ready:
+                status_by_league["uefa.champions"] = "failed"
             for league, league_data in sorted(data['leagues'].items(), key=lambda item: (item[0] != 'es.1', item[0])):
+                if league == "uefa.champions" and not ucl_ready:
+                    continue
                 try:
                     events, covered_days, fetch_errors = fetch(session, league, start, end)
                     status_by_league[league] = 'ok' if covered_days == (end - start).days + 1 else 'partial'
