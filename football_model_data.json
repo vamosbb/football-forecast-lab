@@ -19767,9 +19767,9 @@
       "ref_stats_available": false
     }
   ],
-  "updated": "2026-11-23T23:38:45Z",
+  "updated": "2026-11-24T09:15:23Z",
   "sync_meta": {
-    "last_attempt": "2026-11-23T23:38:45Z",
+    "last_attempt": "2026-11-24T09:15:23Z",
     "source": "ESPN public scoreboard (unofficial)",
     "league_fetch_status": {
       "es.1": "ok",
@@ -19780,7 +19780,7 @@
     },
     "warnings": [],
     "warnings_count": 0,
-    "events_matched": 111,
+    "events_matched": 108,
     "fixtures_added": 0,
     "referees_verified_this_run": 0,
     "football_data_referee_lookup": {
@@ -19791,10 +19791,10 @@
       "referee_types": {},
       "referee_names_present": 0
     },
-    "team_statistics_refreshed": true,
-    "completed_matches_applied": 3,
+    "team_statistics_refreshed": false,
+    "completed_matches_applied": 0,
     "matches_with_corners_updated": 0,
-    "matches_with_cards_updated": 3,
+    "matches_with_cards_updated": 0,
     "recent_form_target_per_team": 10,
     "recent_form_teams_complete": 96,
     "recent_form_teams_partial": 0,
