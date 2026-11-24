@@ -71,7 +71,7 @@ def main():
                 values = [hg.get(field), ag.get(field)]
             else:
                 values = [g.get('yellow_cards') + g.get('red_cards') if g.get('yellow_cards') is not None and g.get('red_cards') is not None else None for g in (hg, ag)]
-            if all(v is not None for v in values):
+            if row.get(f'p_{label}_over') is not None and all(v is not None for v in values):
                 row['result'][f'{label}_brier'] = round((row[f'p_{label}_over'] - int(sum(values) > threshold)) ** 2, 6)
         scored += 1
 
@@ -96,8 +96,8 @@ def main():
             'recorded_at': now.isoformat(), 'home': f['h'], 'away': f['a'],
             'p_1x2': [round(float(x), 8) for x in p['1X2']],
             'p_goals_over_2_5': round(float(p['over2.5']), 8),
-            'p_corners_over': round(float(poisson_over(sum(p['corners']), 8.5)), 8),
-            'p_cards_over': round(float(poisson_over(sum(p['cards']), 4.5)), 8),
+            'p_corners_over': round(float(poisson_over(sum(p['corners']), 8.5)), 8) if lg != 'uefa.champions' or all(league['teams'][team].get('ucl_corners_ready') for team in (f['h'], f['a'])) else None,
+            'p_cards_over': round(float(poisson_over(sum(p['cards']), 4.5)), 8) if lg != 'uefa.champions' or all(league['teams'][team].get('ucl_cards_ready') for team in (f['h'], f['a'])) else None,
             'result': None,
         })
         seen.add((lg, eid))

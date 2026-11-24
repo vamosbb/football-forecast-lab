@@ -16,9 +16,9 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'football_model_data.json'
 OVERRIDES = ROOT / 'referee_overrides.csv'
 BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard'
-ESPN_LEAGUES = {'en.1': 'eng.1', 'es.1': 'esp.1', 'de.1': 'ger.1', 'it.1': 'ita.1', 'fr.1': 'fra.1'}
+ESPN_LEAGUES = {'en.1': 'eng.1', 'es.1': 'esp.1', 'de.1': 'ger.1', 'it.1': 'ita.1', 'fr.1': 'fra.1', 'uefa.champions': 'uefa.champions'}
 UTC = dt.timezone.utc
-FOOTBALL_DATA_COMPETITIONS = {'en.1': 'PL', 'es.1': 'PD', 'de.1': 'BL1', 'it.1': 'SA', 'fr.1': 'FL1'}
+FOOTBALL_DATA_COMPETITIONS = {'en.1': 'PL', 'es.1': 'PD', 'de.1': 'BL1', 'it.1': 'SA', 'fr.1': 'FL1', 'uefa.champions': 'CL'}
 
 
 def norm(value):
@@ -692,6 +692,70 @@ def apply_recent_form(data, league, history):
         }
 
 
+
+def bootstrap_ucl(session, data, now, warnings):
+    lg = 'uefa.champions'
+    url = BASE.format(league=lg)
+    events = {}
+    for offset in range(-14, 365, 14):
+        end = now.date() - dt.timedelta(days=offset)
+        start = end - dt.timedelta(days=13)
+        try:
+            r = session.get(url, params={'dates': f'{start:%Y%m%d}-{end:%Y%m%d}', 'limit': 1000}, timeout=20)
+            r.raise_for_status()
+            for e in r.json()['events']:
+                if e.get('id'): events[str(e['id'])] = e
+        except (requests.RequestException, ValueError, KeyError, TypeError):
+            warnings.append(f'UCL history unavailable: {start} to {end}')
+    names = set(data.get('leagues', {}).get(lg, {}).get('teams', {}))
+    active = set()
+    for e in events.values():
+        try:
+            kickoff = parse_time(e['date'])
+            sides = e['competitions'][0]['competitors']
+            pair = {x['team']['displayName'] for x in sides}
+            if len(pair) != 2: continue
+            names.update(pair)
+            if now - dt.timedelta(days=100) <= kickoff <= now + dt.timedelta(days=28): active.update(pair)
+        except (KeyError, IndexError, ValueError, TypeError): continue
+    if not active: return False
+    history = {name: [] for name in names}
+    for eid, e in events.items():
+        try:
+            state = e['status']['type']
+            if state.get('name') not in ('STATUS_FINAL', 'STATUS_FULL_TIME'): continue
+            if any(x in str(state).lower() for x in ('extra time', 'penalt', 'shootout', 'aet')): continue
+            kickoff = parse_time(e['date'])
+            if kickoff >= now: continue
+            sides = e['competitions'][0]['competitors']
+            h = next(x for x in sides if x['homeAway']=='home'); a = next(x for x in sides if x['homeAway']=='away')
+            hn, an = h['team']['displayName'], a['team']['displayName']
+            hg, ag = int(h['score']), int(a['score'])
+            for t,o,gf,ga,v in ((hn,an,hg,ag,'home'),(an,hn,ag,hg,'away')):
+                history[t].append(dict(id=eid,date=kickoff.strftime('%Y-%m-%dT%H:%M:%SZ'),opponent=o,venue=v,goals_for=gf,goals_against=ga))
+        except (KeyError, IndexError, ValueError, TypeError, StopIteration): continue
+    for t in history: history[t].sort(key=lambda g:g['date'],reverse=True)
+    rows = [g for games in history.values() for g in games if g['venue']=='home']
+    if not rows: return False
+    avgH = max(.1,sum(g['goals_for'] for g in rows)/len(rows)); avgA=max(.1,sum(g['goals_against'] for g in rows)/len(rows)); avg=(avgH+avgA)/2
+    recent = {t: games[:10] for t,games in history.items()}
+    collect_recent_details(session,lg,recent,data.setdefault('recent_details_cache',{}),max_new_requests=120)
+    # Competition averages only from observed statistics, never invented zeros.
+    allgames=[g for games in recent.values() for g in games]
+    def mean(values): return sum(values)/len(values) if values else None
+    cf=mean([g['corners_for'] for g in allgames if 'corners_for' in g]); ch=mean([g['corners_for'] for g in allgames if g['venue']=='home' and 'corners_for' in g]); ca=mean([g['corners_for'] for g in allgames if g['venue']=='away' and 'corners_for' in g]); kc=mean([g['yellow_cards']+g['red_cards'] for g in allgames if 'yellow_cards' in g and 'red_cards' in g])
+    teams={}
+    for t in active:
+        games=history[t]; n=len(games); gf=sum(g['goals_for'] for g in games); ga=sum(g['goals_against'] for g in games)
+        if not n: continue
+        rr=recent[t]; cr=[g for g in rr if 'corners_for' in g and 'corners_against' in g]; cd=[g for g in rr if 'yellow_cards' in g and 'red_cards' in g]
+        # Require actual team observations before exposing either market.
+        teams[t]={'P':n,'F':gf,'A':ga,'att':(gf+12*avg)/(n+12)/avg,'dfn':(ga+12*avg)/(n+12)/avg,'cr':{'n':len(cr),'f':mean([g['corners_for'] for g in cr]) or 0,'ag':mean([g['corners_against'] for g in cr]) or 0,'h':mean([g['corners_for'] for g in cr if g['venue']=='home']) if any(g['venue']=='home' for g in cr) else (cf or 1),'a':mean([g['corners_for'] for g in cr if g['venue']=='away']) if any(g['venue']=='away' for g in cr) else (cf or 1)},'cd':{'n':len(cd),'y':sum(g['yellow_cards'] for g in cd),'r':sum(g['red_cards'] for g in cd)},'ucl_corners_ready':len(cr)>=3 and bool(cf and ch and ca),'ucl_cards_ready':len(cd)>=3 and kc is not None}
+    if len(teams)<2: return False
+    data['leagues'][lg]={'teams':teams,'avgH':avgH,'avgA':avgA,'rho':0.0,'asof':now.date().isoformat(),'refs':{},'ext':{'ks':8,'cf':cf or 1,'ch':ch or cf or 1,'ca':ca or cf or 1,'kc':kc or 0,'rbar':2*(kc or 0)}}
+    apply_recent_form(data,lg,{t:recent[t] for t in teams})
+    return True
+
 def sync(path=DATA, days=14, network=True):
     path = Path(path)
     original = json.loads(path.read_text(encoding='utf-8'))
@@ -713,6 +777,7 @@ def sync(path=DATA, days=14, network=True):
 
     if network:
         with requests.Session() as session:
+            ucl_ready = bootstrap_ucl(session, data, now, warnings)
             for league, league_data in sorted(data['leagues'].items(), key=lambda item: (item[0] != 'es.1', item[0])):
                 try:
                     events, covered_days, fetch_errors = fetch(session, league, start, end)
@@ -724,9 +789,11 @@ def sync(path=DATA, days=14, network=True):
                     status = getattr(getattr(exc, 'response', None), 'status_code', None)
                     warnings.append(f'{league}: ESPN fetch failed ({type(exc).__name__}, HTTP {status or "unknown"})')
                     continue
+                if league == 'uefa.champions' and not ucl_ready:
+                    continue
                 # Rebuild recent form from the last ten *matches* per team.
                 # This is separate from incremental post-baseline updates.
-                history, recent_errors = collect_recent_matches(session, league, league_data, now)
+                history, recent_errors = ( {t: v.get('recent_form', {}).get('matches', []) for t,v in league_data['teams'].items()}, []) if league == 'uefa.champions' else collect_recent_matches(session, league, league_data, now)
                 history_errors += len(recent_errors)
                 req, err = collect_recent_details(session, league, history, details_cache)
                 details_requests += req
@@ -742,7 +809,7 @@ def sync(path=DATA, days=14, network=True):
                         eid = str(event.get('id') or '')
                         if eid and eid not in seen:
                             event = enrich_completed(session, league, event)
-                    g, c, ca = update_finished(data, league, event, seen, warnings)
+                    g, c, ca = (False, False, False) if league == 'uefa.champions' else update_finished(data, league, event, seen, warnings)
                     goals_updated += int(g)
                     corners_updated += int(c)
                     cards_updated += int(ca)
@@ -827,7 +894,7 @@ def sync(path=DATA, days=14, network=True):
                 continue
             fixture['t'] = parse_time(event['date']).strftime('%Y-%m-%dT%H:%M:%SZ')
         # Never delete old fixtures just because ESPN is unreachable. Drop only past ones.
-        if parse_time(fixture['t']) >= now:
+        if parse_time(fixture['t']) >= now and fixture['h'] in data['leagues'][league]['teams'] and fixture['a'] in data['leagues'][league]['teams']:
             output.append(fixture)
 
     # New ESPN events are appended only for teams that exist in model data.

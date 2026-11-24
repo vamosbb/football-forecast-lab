@@ -5,10 +5,10 @@ from engine import predict,fair_odds,poisson_over,expected_value,quarter_kelly
 
 st.set_page_config(page_title='Football Forecast Lab',page_icon='⚽',layout='wide')
 st.title('⚽ Football Forecast Lab')
-st.caption('Five leagues • Dixon–Coles goals • Corners • Cards • Transparent data freshness')
+st.caption('Six competitions • Dixon–Coles goals • Corners • Cards • Transparent data freshness')
 path=Path(__file__).parent/'football_model_data.json'
 with path.open(encoding='utf-8') as f:data=json.load(f)
-league_names={'en.1':'Premier League','es.1':'La Liga','de.1':'Bundesliga','it.1':'Serie A','fr.1':'Ligue 1'}
+league_names={'en.1':'Premier League','es.1':'La Liga','de.1':'Bundesliga','it.1':'Serie A','fr.1':'Ligue 1','uefa.champions':'Champions League'}
 with st.sidebar:
     st.header('Settings')
     lg=st.selectbox('League',list(data['leagues']),format_func=lambda k:league_names.get(k,k))
@@ -61,14 +61,20 @@ with c1:
     for p,s in r['scorelines']:st.write(f'{s}: {p:.1%}')
 with c2:
     st.subheader('Corners')
-    h,a=r['corners'];st.write(f'Expected: **{h:.2f} – {a:.2f}**')
-    for line in [7.5,8.5,9.5,10.5]:st.write(f'Over {line}: **{poisson_over(h+a,line):.1%}**')
+    if lg == 'uefa.champions' and not all(league['teams'][t].get('ucl_corners_ready') for t in (home,away)):
+        st.info('Insufficient verified Champions League corners data.')
+    else:
+        h,a=r['corners'];st.write(f'Expected: **{h:.2f} – {a:.2f}**')
+        for line in [7.5,8.5,9.5,10.5]:st.write(f'Over {line}: **{poisson_over(h+a,line):.1%}**')
 with c3:
     st.subheader('Cards')
-    h,a=r['cards'];st.write(f'Expected: **{h:.2f} – {a:.2f}**')
-    st.write(f"Referee factor: **{r['referee_factor']:.3f}**")
-    st.caption('Referee factor applies only to verified appointments or custom scenarios with available historical data.')
-    for line in [3.5,4.5,5.5]:st.write(f'Over {line}: **{poisson_over(h+a,line):.1%}**')
+    if lg == 'uefa.champions' and not all(league['teams'][t].get('ucl_cards_ready') for t in (home,away)):
+        st.info('Insufficient verified Champions League cards data.')
+    else:
+        h,a=r['cards'];st.write(f'Expected: **{h:.2f} – {a:.2f}**')
+        st.write(f"Referee factor: **{r['referee_factor']:.3f}**")
+        st.caption('Referee factor applies only to verified appointments or custom scenarios with available historical data.')
+        for line in [3.5,4.5,5.5]:st.write(f'Over {line}: **{poisson_over(h+a,line):.1%}**')
 st.caption(f"Recent-match adjustment: corners {'used' if r['recent_corners_used'] else 'not used (insufficient verified observations)'}; cards {'used' if r['recent_cards_used'] else 'not used (insufficient verified observations)'}")
 st.divider()
 st.subheader('Value calculator — home win')
