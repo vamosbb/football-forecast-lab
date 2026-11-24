@@ -957,6 +957,25 @@ def sync(path=DATA, days=14, network=True):
         output.append(fixture)
         added += 1
 
+    # Attach domestic form only to uniquely matched UCL teams, after all leagues refresh.
+    ucl = data['leagues'].get('uefa.champions')
+    if ucl and network:
+        ucl['competition_id'] = 'uefa.champions'
+        linked = 0
+        for name, team in ucl['teams'].items():
+            team.pop('domestic_form', None)
+            candidates = []
+            for code in ('en.1', 'es.1', 'de.1', 'it.1', 'fr.1'):
+                domestic = data['leagues'].get(code, {}).get('teams', {})
+                key = match_team(name, code, domestic)
+                if key and status_by_league.get(code) in ('ok', 'partial'):
+                    candidates.append((code, key, domestic[key].get('recent_form')))
+            if len(candidates) == 1 and candidates[0][2]:
+                code, key, form = candidates[0]
+                team['domestic_form'] = {**form, 'league': code, 'team': key}
+                linked += 1
+        print('UCL domestic form linked:', linked, '/', len(ucl['teams']))
+
     data['processed_espn_event_ids'] = sorted(seen)
     output.sort(key=lambda x: x.get('t', ''))
     data['fixtures'] = output
