@@ -3535,6 +3535,176 @@
       "p_corners_over": 0.35721448,
       "p_cards_over": 0.38441271,
       "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915283",
+      "kickoff": "2026-12-09T17:45:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Real Betis",
+      "away": "Como",
+      "p_1x2": [
+        0.37495635,
+        0.21096575,
+        0.4140779
+      ],
+      "p_goals_over_2_5": 0.74007431,
+      "p_corners_over": 0.23715298,
+      "p_cards_over": 0.32618926,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915282",
+      "kickoff": "2026-12-09T17:45:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Slovan Bratislava",
+      "away": "Shakhtar Donetsk",
+      "p_1x2": [
+        0.28781341,
+        0.22831134,
+        0.48387525
+      ],
+      "p_goals_over_2_5": 0.61788742,
+      "p_corners_over": 0.21759405,
+      "p_cards_over": 0.32327295,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882849",
+      "kickoff": "2026-12-09T19:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Rayo Vallecano de Madrid",
+      "away": "Athletic Club",
+      "p_1x2": [
+        0.38939458,
+        0.28316883,
+        0.32743659
+      ],
+      "p_goals_over_2_5": 0.41287262,
+      "p_corners_over": 0.81751974,
+      "p_cards_over": 0.51168872,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915367",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Arsenal",
+      "away": "Real Madrid",
+      "p_1x2": [
+        0.54406953,
+        0.21358696,
+        0.24234351
+      ],
+      "p_goals_over_2_5": 0.64921176,
+      "p_corners_over": 0.83635291,
+      "p_cards_over": 0.17362119,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915368",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Borussia Dortmund",
+      "away": "Internazionale",
+      "p_1x2": [
+        0.51618828,
+        0.22885151,
+        0.25496021
+      ],
+      "p_goals_over_2_5": 0.58920171,
+      "p_corners_over": 0.76320985,
+      "p_cards_over": 0.29319549,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915281",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "LASK Linz",
+      "away": "Fenerbahce",
+      "p_1x2": [
+        0.5712104,
+        0.19134861,
+        0.237441
+      ],
+      "p_goals_over_2_5": 0.75434412,
+      "p_corners_over": 0.65088523,
+      "p_cards_over": 0.34301065,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915370",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Lens",
+      "away": "Bodo/Glimt",
+      "p_1x2": [
+        0.28224759,
+        0.20136912,
+        0.51638329
+      ],
+      "p_goals_over_2_5": 0.74761589,
+      "p_corners_over": 0.69385727,
+      "p_cards_over": 0.20973888,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915369",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "Liverpool",
+      "away": "FC Porto",
+      "p_1x2": [
+        0.60930345,
+        0.19103449,
+        0.19966205
+      ],
+      "p_goals_over_2_5": 0.70424771,
+      "p_corners_over": 0.73412129,
+      "p_cards_over": 0.20471657,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915366",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "PSV Eindhoven",
+      "away": "Atlético Madrid",
+      "p_1x2": [
+        0.37293269,
+        0.23753212,
+        0.38953519
+      ],
+      "p_goals_over_2_5": 0.60349332,
+      "p_corners_over": 0.63926133,
+      "p_cards_over": 0.28733497,
+      "result": null
+    },
+    {
+      "league": "uefa.champions",
+      "event_id": "401915365",
+      "kickoff": "2026-12-09T20:00:00Z",
+      "recorded_at": "2026-11-25T07:52:07.752417+00:00",
+      "home": "VfB Stuttgart",
+      "away": "Lille",
+      "p_1x2": [
+        0.60523804,
+        0.19634431,
+        0.19841766
+      ],
+      "p_goals_over_2_5": 0.67572112,
+      "p_corners_over": 0.5627919,
+      "p_cards_over": 0.30140672,
+      "result": null
     }
   ]
 }

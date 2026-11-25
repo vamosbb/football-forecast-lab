@@ -1,8 +1,8 @@
 {
   "note": "Only pre-kickoff saved production-engine predictions. Results require both teams in recent match histories; coverage may be incomplete.",
-  "recorded": 180,
+  "recorded": 190,
   "completed": 54,
-  "pending": 126,
+  "pending": 136,
   "1x2_logloss": {
     "n": 54,
     "mean": 0.92949
