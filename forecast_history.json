@@ -3782,6 +3782,74 @@
       "p_corners_over": 0.5627919,
       "p_cards_over": 0.30140672,
       "result": null
+    },
+    {
+      "league": "de.1",
+      "event_id": "401884704",
+      "kickoff": "2026-12-11T19:30:00Z",
+      "recorded_at": "2026-11-27T07:41:03.815610+00:00",
+      "home": "Hamburger SV",
+      "away": "FC Schalke 04",
+      "p_1x2": [
+        0.39539771,
+        0.30894575,
+        0.29565654
+      ],
+      "p_goals_over_2_5": 0.34020661,
+      "p_corners_over": 0.52665706,
+      "p_cards_over": 0.22851782,
+      "result": null
+    },
+    {
+      "league": "fr.1",
+      "event_id": "401876375",
+      "kickoff": "2026-12-11T19:45:00Z",
+      "recorded_at": "2026-11-27T07:41:03.815610+00:00",
+      "home": "AJ Auxerre",
+      "away": "Toulouse FC",
+      "p_1x2": [
+        0.28801541,
+        0.24762249,
+        0.4643621
+      ],
+      "p_goals_over_2_5": 0.52932758,
+      "p_corners_over": 0.54920557,
+      "p_cards_over": 0.35722174,
+      "result": null
+    },
+    {
+      "league": "it.1",
+      "event_id": "401874775",
+      "kickoff": "2026-12-11T19:45:00Z",
+      "recorded_at": "2026-11-27T07:41:03.815610+00:00",
+      "home": "Udinese Calcio",
+      "away": "Frosinone Calcio",
+      "p_1x2": [
+        0.30198174,
+        0.20934187,
+        0.48867639
+      ],
+      "p_goals_over_2_5": 0.71240694,
+      "p_corners_over": 0.90277514,
+      "p_cards_over": 0.28728833,
+      "result": null
+    },
+    {
+      "league": "es.1",
+      "event_id": "401882773",
+      "kickoff": "2026-12-11T20:00:00Z",
+      "recorded_at": "2026-11-27T07:41:03.815610+00:00",
+      "home": "Elche CF",
+      "away": "Sevilla FC",
+      "p_1x2": [
+        0.44452079,
+        0.24405025,
+        0.31142895
+      ],
+      "p_goals_over_2_5": 0.56796971,
+      "p_corners_over": 0.3094987,
+      "p_cards_over": 0.63774662,
+      "result": null
     }
   ]
 }
