@@ -1,26 +1,26 @@
 {
   "note": "Only pre-kickoff saved production-engine predictions. Results require both teams in recent match histories; coverage may be incomplete.",
-  "recorded": 194,
-  "completed": 63,
-  "pending": 131,
+  "recorded": 215,
+  "completed": 68,
+  "pending": 147,
   "1x2_logloss": {
-    "n": 63,
-    "mean": 0.96479
+    "n": 68,
+    "mean": 0.99346
   },
   "1x2_brier": {
-    "n": 63,
-    "mean": 0.57642
+    "n": 68,
+    "mean": 0.59825
   },
   "goals_over_2_5_brier": {
-    "n": 63,
-    "mean": 0.26675
+    "n": 68,
+    "mean": 0.26096
   },
   "corners_over_8_5_brier": {
-    "n": 56,
-    "mean": 0.22403
+    "n": 61,
+    "mean": 0.22282
   },
   "cards_over_4_5_brier": {
-    "n": 56,
-    "mean": 0.19599
+    "n": 61,
+    "mean": 0.20831
   }
 }
